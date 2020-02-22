@@ -1,0 +1,1665 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 2781
+    y: 70
+    width: 1012
+    height: 981
+  m_ShowMode: 4
+  m_Title: 
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 950, y: 542}
+  m_MaxSize: {x: 10000, y: 10000}
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1012
+    height: 931
+  m_MinSize: {x: 508, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 92
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 431
+    y: 0
+    width: 581
+    height: 931
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 12}
+  - {fileID: 16}
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 212
+    height: 563
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 563
+    width: 431
+    height: 368
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1012
+    height: 981
+  m_MinSize: {x: 950, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1012
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 961
+    width: 1012
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 5}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 431
+    height: 931
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 93
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 431
+    height: 563
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 94
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 212
+    y: 0
+    width: 219
+    height: 563
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  - {fileID: 19}
+  - {fileID: 14}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 3214
+    y: 119
+    width: 579
+    height: 910
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 12}
+    newResultList:
+    - id: '[Manage][suite]'
+      name: Manage
+      fullName: Manage
+      resultStatus: 1
+      duration: 3.3176787
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[C:/Users/emonsob/Documents/Manage/Library/ScriptAssemblies/Tests.dll][suite]'
+      name: Tests.dll
+      fullName: C:/Users/emonsob/Documents/Manage/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 1
+      duration: 3.2741916
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[manage][suite]'
+      name: manage
+      fullName: manage
+      resultStatus: 1
+      duration: 0.1004678
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[manage.Units][suite]'
+      name: Units
+      fullName: manage.Units
+      resultStatus: 1
+      duration: 0.0677554
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[manage.Units.Tests][suite]'
+      name: Tests
+      fullName: manage.Units.Tests
+      resultStatus: 1
+      duration: 0.0394375
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][manage.Units.Tests.WeaponTypeTests][suite]'
+      name: WeaponTypeTests
+      fullName: manage.Units.Tests.WeaponTypeTests
+      resultStatus: 1
+      duration: 0.0050411
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Manage][suite]'
+      name: Manage
+      fullName: Manage
+      resultStatus: 1
+      duration: 3.3176787
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Manage.Characters][suite]'
+      name: Characters
+      fullName: Manage.Characters
+      resultStatus: 1
+      duration: 0.5724284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Manage.Characters.Tests][suite]'
+      name: Tests
+      fullName: Manage.Characters.Tests
+      resultStatus: 1
+      duration: 0.5381627
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Characters.Tests.CharacterCultureTests][suite]'
+      name: CharacterCultureTests
+      fullName: Manage.Characters.Tests.CharacterCultureTests
+      resultStatus: 1
+      duration: 0.3228555
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Characters.Tests.CharacterCultureTests.RandomFirstNameTest]'
+      name: RandomFirstNameTest
+      fullName: Manage.Characters.Tests.CharacterCultureTests.RandomFirstNameTest
+      resultStatus: 1
+      duration: 0.1619214
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Characters.Tests.CharacterCultureTests.RandomSurnameTest]'
+      name: RandomSurnameTest
+      fullName: Manage.Characters.Tests.CharacterCultureTests.RandomSurnameTest
+      resultStatus: 1
+      duration: 0.1220004
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Characters.Tests.CharacterTests][suite]'
+      name: CharacterTests
+      fullName: Manage.Characters.Tests.CharacterTests
+      resultStatus: 1
+      duration: 0.1486169
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Characters.Tests.CharacterTests.CharacterTest1]'
+      name: CharacterTest1
+      fullName: Manage.Characters.Tests.CharacterTests.CharacterTest1
+      resultStatus: 1
+      duration: 0.1293094
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Manage.Map][suite]'
+      name: Map
+      fullName: Manage.Map
+      resultStatus: 1
+      duration: 0.1164138
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Manage.Map.Tests][suite]'
+      name: Tests
+      fullName: Manage.Map.Tests
+      resultStatus: 1
+      duration: 0.0832272
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Map.Tests.VectorTests][suite]'
+      name: VectorTests
+      fullName: Manage.Map.Tests.VectorTests
+      resultStatus: 1
+      duration: 0.0498796
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Map.Tests.VectorTests.DistanceTest]'
+      name: DistanceTest
+      fullName: Manage.Map.Tests.VectorTests.DistanceTest
+      resultStatus: 1
+      duration: 0.0215667
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Manage.Resources][suite]'
+      name: Resources
+      fullName: Manage.Resources
+      resultStatus: 1
+      duration: 2.1206615
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Manage.Resources.Tests][suite]'
+      name: Tests
+      fullName: Manage.Resources.Tests
+      resultStatus: 1
+      duration: 2.0873497
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.InfoParserTests][suite]'
+      name: InfoParserTests
+      fullName: Manage.Resources.Tests.InfoParserTests
+      resultStatus: 1
+      duration: 0.0499552
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.InfoParserTests.MergeNamesAndDescriptionsTest]'
+      name: MergeNamesAndDescriptionsTest
+      fullName: Manage.Resources.Tests.InfoParserTests.MergeNamesAndDescriptionsTest
+      resultStatus: 1
+      duration: 0.0181447
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceDepotTests][suite]'
+      name: ResourceDepotTests
+      fullName: Manage.Resources.Tests.ResourceDepotTests
+      resultStatus: 1
+      duration: 0.1991387
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceDepotTests.AddResourcesTest]'
+      name: AddResourcesTest
+      fullName: Manage.Resources.Tests.ResourceDepotTests.AddResourcesTest
+      resultStatus: 1
+      duration: 0.0209759
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceDepotTests.CheckResourceRemoveCapacityPercentageTest]'
+      name: CheckResourceRemoveCapacityPercentageTest
+      fullName: Manage.Resources.Tests.ResourceDepotTests.CheckResourceRemoveCapacityPercentageTest
+      resultStatus: 1
+      duration: 0.0188776
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceDepotTests.SubstractResourcesTest1]'
+      name: SubstractResourcesTest1
+      fullName: Manage.Resources.Tests.ResourceDepotTests.SubstractResourcesTest1
+      resultStatus: 1
+      duration: 0.0177385
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceDepotTests.SubstractResourcesTest2]'
+      name: SubstractResourcesTest2
+      fullName: Manage.Resources.Tests.ResourceDepotTests.SubstractResourcesTest2
+      resultStatus: 1
+      duration: 0.0177634
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierListTests][suite]'
+      name: ResourceModifierListTests
+      fullName: Manage.Resources.Tests.ResourceModifierListTests
+      resultStatus: 1
+      duration: 0.1990479
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestAdd]'
+      name: ResourceModifierListTestAdd
+      fullName: Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestAdd
+      resultStatus: 1
+      duration: 0.0169911
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestMultipleResources]'
+      name: ResourceModifierListTestMultipleResources
+      fullName: Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestMultipleResources
+      resultStatus: 1
+      duration: 0.0175857
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestSubstract]'
+      name: ResourceModifierListTestSubstract
+      fullName: Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestSubstract
+      resultStatus: 1
+      duration: 0.0164656
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestSubstractAndAdd]'
+      name: ResourceModifierListTestSubstractAndAdd
+      fullName: Manage.Resources.Tests.ResourceModifierListTests.ResourceModifierListTestSubstractAndAdd
+      resultStatus: 1
+      duration: 0.0169242
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierSpeedListTests][suite]'
+      name: ResourceModifierSpeedListTests
+      fullName: Manage.Resources.Tests.ResourceModifierSpeedListTests
+      resultStatus: 1
+      duration: 0.1497392
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierSpeedListTests.ResourceModifierSpeedListTest_Add]'
+      name: ResourceModifierSpeedListTest_Add
+      fullName: Manage.Resources.Tests.ResourceModifierSpeedListTests.ResourceModifierSpeedListTest_Add
+      resultStatus: 1
+      duration: 0.017961
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierSpeedListTests.ResourceModifierSpeedListTest_Substract]'
+      name: ResourceModifierSpeedListTest_Substract
+      fullName: Manage.Resources.Tests.ResourceModifierSpeedListTests.ResourceModifierSpeedListTest_Substract
+      resultStatus: 1
+      duration: 0.0160924
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceModifierSpeedListTests.ResourceModifierSpeedListTest_SubstractAndAdd]'
+      name: ResourceModifierSpeedListTest_SubstractAndAdd
+      fullName: Manage.Resources.Tests.ResourceModifierSpeedListTests.ResourceModifierSpeedListTest_SubstractAndAdd
+      resultStatus: 1
+      duration: 0.0170176
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests][suite]'
+      name: ResourcePlantTests
+      fullName: Manage.Resources.Tests.ResourcePlantTests
+      resultStatus: 1
+      duration: 0.5963569
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.CostPerTickTest1]'
+      name: CostPerTickTest1
+      fullName: Manage.Resources.Tests.ResourcePlantTests.CostPerTickTest1
+      resultStatus: 1
+      duration: 0.0251459
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.CostPerTickTest2]'
+      name: CostPerTickTest2
+      fullName: Manage.Resources.Tests.ResourcePlantTests.CostPerTickTest2
+      resultStatus: 1
+      duration: 0.0191876
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest1]'
+      name: ProduceTest1
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest1
+      resultStatus: 1
+      duration: 0.0178968
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest2]'
+      name: ProduceTest2
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest2
+      resultStatus: 1
+      duration: 0.0174766
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest3]'
+      name: ProduceTest3
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest3
+      resultStatus: 1
+      duration: 0.017501
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest4]'
+      name: ProduceTest4
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest4
+      resultStatus: 1
+      duration: 0.0183278
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest5]'
+      name: ProduceTest5
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest5
+      resultStatus: 1
+      duration: 0.0173588
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest6]'
+      name: ProduceTest6
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest6
+      resultStatus: 1
+      duration: 0.017422
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProduceTest7]'
+      name: ProduceTest7
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProduceTest7
+      resultStatus: 1
+      duration: 0.0178627
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProductionPerTickTest1]'
+      name: ProductionPerTickTest1
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProductionPerTickTest1
+      resultStatus: 1
+      duration: 0.0178244
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProductionPerTickTest2]'
+      name: ProductionPerTickTest2
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProductionPerTickTest2
+      resultStatus: 1
+      duration: 0.0183019
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourcePlantTests.ProductionPerTickTest3]'
+      name: ProductionPerTickTest3
+      fullName: Manage.Resources.Tests.ResourcePlantTests.ProductionPerTickTest3
+      resultStatus: 1
+      duration: 0.0177407
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceTypesParserTests][suite]'
+      name: ResourceTypesParserTests
+      fullName: Manage.Resources.Tests.ResourceTypesParserTests
+      resultStatus: 1
+      duration: 0.050121
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceTypesParserTests.ResourceTypesParserTest]'
+      name: ResourceTypesParserTest
+      fullName: Manage.Resources.Tests.ResourceTypesParserTests.ResourceTypesParserTest
+      resultStatus: 1
+      duration: 0.0247635
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceTypeTests][suite]'
+      name: ResourceTypeTests
+      fullName: Manage.Resources.Tests.ResourceTypeTests
+      resultStatus: 1
+      duration: 0.0995421
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceTypeTests.EqualsTest]'
+      name: EqualsTest
+      fullName: Manage.Resources.Tests.ResourceTypeTests.EqualsTest
+      resultStatus: 1
+      duration: 0.0172839
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceTypeTests.NotEqualsTest]'
+      name: NotEqualsTest
+      fullName: Manage.Resources.Tests.ResourceTypeTests.NotEqualsTest
+      resultStatus: 1
+      duration: 0.0189364
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueListTests][suite]'
+      name: ResourceValueListTests
+      fullName: Manage.Resources.Tests.ResourceValueListTests
+      resultStatus: 1
+      duration: 0.0991694
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueListTests.AddTest]'
+      name: AddTest
+      fullName: Manage.Resources.Tests.ResourceValueListTests.AddTest
+      resultStatus: 1
+      duration: 0.0177137
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueListTests.MultiplyTest]'
+      name: MultiplyTest
+      fullName: Manage.Resources.Tests.ResourceValueListTests.MultiplyTest
+      resultStatus: 1
+      duration: 0.0175323
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests][suite]'
+      name: ResourceValueTests
+      fullName: Manage.Resources.Tests.ResourceValueTests
+      resultStatus: 1
+      duration: 0.3480138
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.AddValueTest]'
+      name: AddValueTest
+      fullName: Manage.Resources.Tests.ResourceValueTests.AddValueTest
+      resultStatus: 1
+      duration: 0.0168934
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.AddValueTestWrongResource]'
+      name: AddValueTestWrongResource
+      fullName: Manage.Resources.Tests.ResourceValueTests.AddValueTestWrongResource
+      resultStatus: 1
+      duration: 0.0243077
+      messages: 
+      output: 
+      stacktrace: "at Manage.Resources.Tests.ResourceValueTests.AddValueTestWrongResource
+        () [0x00046] in C:\\Users\\emonsob\\Documents\\Manage\\Assets\\Scripts\\Manage\\Tests\\Resources\\ResourceValueTests.cs:41\r\n"
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.EqualValueTest]'
+      name: EqualValueTest
+      fullName: Manage.Resources.Tests.ResourceValueTests.EqualValueTest
+      resultStatus: 1
+      duration: 0.0173497
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.MultiplyValueTest]'
+      name: MultiplyValueTest
+      fullName: Manage.Resources.Tests.ResourceValueTests.MultiplyValueTest
+      resultStatus: 1
+      duration: 0.0167886
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.NotEqualValueTest1]'
+      name: NotEqualValueTest1
+      fullName: Manage.Resources.Tests.ResourceValueTests.NotEqualValueTest1
+      resultStatus: 1
+      duration: 0.0176322
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.NotEqualValueTest2]'
+      name: NotEqualValueTest2
+      fullName: Manage.Resources.Tests.ResourceValueTests.NotEqualValueTest2
+      resultStatus: 1
+      duration: 0.0169133
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Resources.Tests.ResourceValueTests.SubstractValueTest]'
+      name: SubstractValueTest
+      fullName: Manage.Resources.Tests.ResourceValueTests.SubstractValueTest
+      resultStatus: 1
+      duration: 0.0170203
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Manage.Units][suite]'
+      name: Units
+      fullName: Manage.Units
+      resultStatus: 1
+      duration: 0.1656361
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Manage.Units.Tests][suite]'
+      name: Tests
+      fullName: Manage.Units.Tests
+      resultStatus: 1
+      duration: 0.1330473
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Units.Tests.AttackTypeTests][suite]'
+      name: AttackTypeTests
+      fullName: Manage.Units.Tests.AttackTypeTests
+      resultStatus: 1
+      duration: 0.0992272
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Tests][Manage.Units.Tests.AttackTypeTests.GetDamageTest1]'
+      name: GetDamageTest1
+      fullName: Manage.Units.Tests.AttackTypeTests.GetDamageTest1
+      resultStatus: 1
+      duration: 0.0176257
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Tests][Manage.Units.Tests.AttackTypeTests.GetDamageTest2]'
+      name: GetDamageTest2
+      fullName: Manage.Units.Tests.AttackTypeTests.GetDamageTest2
+      resultStatus: 1
+      duration: 0.0176462
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    m_ResultText: ResourceDepotTests (0.199s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 425}
+      m_SelectedIDs: 77571568
+      m_LastClickedID: 1746229111
+      m_ExpandedIDs: ffd77f93377640a0af8f3cbbe605b2cb59bef4cdc2a7edcfb4bf30d02ef078d56b1308e17d4d6dee816c53f53fff2b0b0bfc8323c02b8d38287fd23dce6fe83e03217b48ba38f2481d5c9c5aa215785b23805d6777571568fdd3c874ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories: []
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 12}
+    newResultList:
+    - id: '[Manage][suite]'
+      name: Manage
+      fullName: Manage
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories: []
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12157, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Services
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1528
+    y: 100
+    width: 384
+    height: 910
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
+  m_GlobalObjectTypeName: 
+  m_RegisteredViewURLs:
+  - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
+  m_RegisteredViewInstances:
+  - {fileID: 0}
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 2048, y: 2048}
+  m_TitleContent:
+    m_Text: Asset Store
+    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 468
+    y: 181
+    width: 973
+    height: 501
+  m_PersistentViewDataDictionary: {fileID: 0}
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2781
+    y: 682
+    width: 429
+    height: 347
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_ScenePaths: []
+    m_ShowAllHits: 0
+    m_SearchArea: 0
+    m_Folders:
+    - Assets/Scripts/Manage
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Scripts/manage
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\emonsob\Documents\Manage
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: ca0a0000
+    m_LastClickedID: 2762
+    m_ExpandedIDs: 000000005c090000e009000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 000000005c090000e0090000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 5}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -6905738622615590433, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1528
+    y: 100
+    width: 384
+    height: 910
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewResizer:
+    m_CachedPref: 160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2781
+    y: 119
+    width: 210
+    height: 542
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 5003feff7803feff780afeff140efeff380efeffc412feff2a1cfeff4e1cfeffdc20feffe034feff0435feff7639feffdc3afeff003bfeff6e3ffeff2841feff4c41feff6a45feff3847feff5c47feff244bfeff2857feffb457feff2a5cfeff6666fefff266feff106bfeffc66cfeff526dfeff9a71feffd47afefff87afeff947ffeffe68afeff788bfeffae8ffeff209efeff449efeffb6a2feff92a3feff24a4feff96a8fefff6a9feff7aaafeffecaefeff48b0feff6cb0feff7eb4feffaeb6feff3eb7feffc0bbfeff9ac1feff2ac2feff54c6feffd2d0feff32d4feffbed4feff22d9feffc4e4feff56e5feff66eafeff52ebfeff76ebfeff34f0feff5602ffff7a02ffff9a06ffffb206ffff4407ffff160cffffcc13ffff4218ffff6618ffffda1cfffff41cffff181dffff8a21ffffe622ffff7823ffffea27ffffda28ffff6c29ffffde2dffffac2fffffd02fffff4234ffff1c35ffff5435ffffca39ffffd03efffff43effff6643ffffc444ffff5645ffff6e49ffffca4affff5c4bffffce4fffff2a51ffff4e51ffffcc55ffff165cffffa85cffffd660ffffa465ffffc865ffff6a6affffc66bffffea6bffffbe6fffff0276ffff6876ffff807affffc67bffffea7bffff1880ffff1486ffff8886fffffa8affff568cffff7a8cffff9490ffff36a8ffffbca8ffffa4acffffe2baffff72bbfffffabfffffd4c0ffff66c1ffff28c5ffffdcc6ffff00c7ffff60cbffffa2ccffffc6ccffffced1ffff4edefffff2e2ffff72eeffff04efffff34f5fffff0fbffff00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+  m_ExpandedScenes:
+  - InitTestScene637025057429139615
+  m_CurrenRootInstanceID: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentSortingName: TransformSorting
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2995
+    y: 119
+    width: 215
+    height: 542
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneLighting: 1
+  lastFramingTime: 0
+  m_2DMode: 0
+  m_isRotationLocked: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_SceneViewState:
+    showFog: 1
+    showMaterialUpdate: 0
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+  grid:
+    xGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+    yGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
+  m_Rotation:
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    speed: 2
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+  m_Ortho:
+    m_Target: 0
+    speed: 2
+    m_Value: 0
+  m_ShowGlobalGrid: 1
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2995
+    y: 119
+    width: 215
+    height: 542
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_MaximizeOnPlay: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_TargetDisplay: 0
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    m_HBaseRangeMin: -107.5
+    m_HBaseRangeMax: 107.5
+    m_VBaseRangeMin: -262.5
+    m_VBaseRangeMax: 262.5
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoom: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 17
+      width: 215
+      height: 525
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 107.5, y: 262.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -107.5
+      y: -262.5
+      width: 215
+      height: 525
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_TargetTexture: {fileID: 0}
+  m_CurrentColorSpace: 0
+  m_LastWindowPixelSize: {x: 215, y: 542}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000100000100
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 665
+    width: 1529
+    height: 353
+  m_PersistentViewDataDictionary: {fileID: 0}

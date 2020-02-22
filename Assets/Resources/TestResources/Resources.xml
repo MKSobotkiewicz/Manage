@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+  <resource name="testResource1" isVolatile="true"/>
+  <resource name="testResource2" isVolatile="false"/>
+</root>
