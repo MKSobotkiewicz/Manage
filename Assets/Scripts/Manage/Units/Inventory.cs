@@ -26,6 +26,10 @@ namespace Manage.Units
 
         public int GetArmor()
         {
+            if (Vehicle != null)
+            {
+                return Vehicle.Armour;
+            }
             var value = ArmorType.Value;
             if (Vest != null)
             {

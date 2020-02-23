@@ -121,6 +121,7 @@
     <Compile Include="Assets\Scripts\Manage\UI\UnitIds.cs" />
     <Compile Include="Assets\Scripts\Manage\UI\Vest.cs" />
     <Compile Include="Assets\Scripts\Manage\UI\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Manage\Units\ActivateColliderTimerBehaviour.cs" />
     <Compile Include="Assets\Scripts\Manage\Units\AllUnitsList.cs" />
     <Compile Include="Assets\Scripts\Manage\Units\ArmorType.cs" />
     <Compile Include="Assets\Scripts\Manage\Units\ArmorTypes.cs" />

@@ -13,6 +13,8 @@ namespace Manage.Control
 
         private float time;
 
+        private float RoutDistance = 30;
+
         public void Start()
         {
             time = 0;
@@ -50,12 +52,10 @@ namespace Manage.Control
                 {
                     if (!Equals(otherUnit.Character.Organization, unit.Character.Organization))
                     {
-                        if (unit.IsInRange(otherUnit))
+                        if (unit.IsInRange(otherUnit)&&
+                            !enemyUnitsInRange.ContainsKey(Vector3.Distance(otherUnit.Position(), unit.Position())))
                         {
-                            if (!enemyUnitsInRange.ContainsKey(Vector3.Distance(otherUnit.Position(), unit.Position())))
-                            {
-                                enemyUnitsInRange.Add(Vector3.Distance(otherUnit.Position(), unit.Position()), otherUnit);
-                            }
+                            enemyUnitsInRange.Add(Vector3.Distance(otherUnit.Position(), unit.Position()), otherUnit);
                         }
                     }
                     else
@@ -78,29 +78,34 @@ namespace Manage.Control
 
                 if (CheckVisibilityOfTarget(unit, targetUnit))
                 {
-                    unit.Attack(targetUnit);
-                    if (!Equals(unit.Character.Organization, Player.Organization) &&
-                        ourUnitsClose.Count > 0)
+                    if (unit.CanPenetrate(targetUnit) || enemyUnitsInRange.Count <= 0)
                     {
-                        foreach (var ourUnitClose in ourUnitsClose)
+                        unit.Attack(targetUnit);
+                        if (!Equals(unit.Character.Organization, Player.Organization) &&
+                            ourUnitsClose.Count > 0)
                         {
-                            if (!ourUnitClose.Value.Attacking)
+                            foreach (var ourUnitClose in ourUnitsClose)
                             {
-                                ourUnitClose.Value.Attack(targetUnit);
+                                if (!ourUnitClose.Value.Attacking)
+                                {
+                                    ourUnitClose.Value.Attack(targetUnit);
+                                }
                             }
                         }
+                        return;
+                    }
+                    if (Vector3.Distance(targetUnit.Position(), unit.Position()) < RoutDistance)
+                    {
+                        unit.Move(Vector3.LerpUnclamped(targetUnit.Position(), unit.Position(), 1.8f));
                     }
                     return;
                 }
-                else
-                {
-                    if (!(unit.Attacking|| unit.Shot||unit.Reloading|| unit.ThrowingGrenade))
-                    { 
-                        unit.Attack(null);
-                        if (!Equals(unit.Character.Organization, Player.Organization))
-                        {
-                            unit.Move(Vector3.Lerp(targetUnit.Position(), unit.Position(), 0.8f));
-                        }
+                if (!(unit.Attacking|| unit.Shot||unit.Reloading|| unit.ThrowingGrenade))
+                { 
+                    unit.Attack(null);
+                    if (!Equals(unit.Character.Organization, Player.Organization))
+                    {
+                        unit.Move(Vector3.Lerp(targetUnit.Position(), unit.Position(), 0.8f));
                     }
                 }
             }

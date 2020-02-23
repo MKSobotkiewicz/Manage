@@ -12,13 +12,12 @@ namespace Manage.Units
         public GameObject Explosion;
         public int Damage;
 
-        private float timer;
+        private float timer=4f;
 
         private List<Collider> triggerList=new List<Collider>();
 
         public void Start()
         {
-            timer = 4f;
         }
         public void Update()
         {

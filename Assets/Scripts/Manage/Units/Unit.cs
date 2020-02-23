@@ -40,75 +40,6 @@ namespace Manage.Units
         {
         }
 
-        /*public static Unit Create(Player.Player player,
-                                  WeaponType weaponType,
-                                  ArmorType armorType,
-                                  HelmetType helmetType,
-                                  VestType vestType,
-                                  Vehicle vehicle,
-                                  Character character,
-                                  Transform transform)
-        {
-            GameObject go;
-            if (vehicle==null)
-            {
-                go = Inventory.PutOnArmor(armorType, transform, character.Gender);
-            }
-            else
-            {
-                go = Inventory.SpawnVehicle(vehicle, transform);
-            }
-            go.transform.parent = null;
-            var unit = go.GetComponent<Unit>();
-            unit.Character = character;
-            unit.animators = new List<Animator>();
-            unit.Selected = false;
-            unit.Dead = false;
-            unit.Attacking = false;
-            unit.Reloading = false;
-            unit.ThrowingGrenade = false;
-            unit.hitPoints = unit.GetMaxHitPoints();
-            unit.randomTime = (float)random.NextDouble() * 30 + 5;
-            var children = unit.GetComponentsInChildren<Transform>();
-            unit.grenadeTime = (float)random.NextDouble() * 25 + 5 - 10 * unit.Character.CharacterTraits.Contains(CharacterTraitsList.Grenadier);
-            unit.Inventory.ArmGrenade(GrenadeTypes.FragGrenade);
-            if (vehicle == null)
-            {
-                unit.Arm(weaponType);
-                unit.PutOnHelmet(helmetType);
-                unit.PutOnVest(vestType);
-            }
-            else
-            {
-                unit.Arm(vehicle.WeaponType);
-            }
-            foreach (var child in children)
-            {
-                if (child.name == "Flag")
-                {
-                    child.GetComponent<RawImage>().texture = character.Organization.Flag;
-                }
-            }
-            if (player != null)
-            {
-                if (character.Organization == player.Organization)
-                {
-                    unit.Player = true;
-                }
-                else
-                {
-                    unit.Player = false;
-                }
-            }
-            else
-            {
-                unit.Player = false;
-            }
-
-            AllUnitsList.Units.Add(unit);
-            return unit;
-        }*/
-
         private Unit CopyArmor(ArmorType armorType)
         {
             var factory = new UnitFactory();
@@ -214,7 +145,10 @@ namespace Manage.Units
                 else
                 {
                     HealTime = 1;
-                    Heal(1+Character.CharacterTraits.Contains(CharacterTraitsList.Healthy));
+                    if (Inventory.Vehicle == null)
+                    {
+                        Heal(1 + Character.CharacterTraits.Contains(CharacterTraitsList.Healthy));
+                    }
                 }
                 foreach (var animator in animators)
                 {
@@ -279,7 +213,10 @@ namespace Manage.Units
                 if (Attacking)
                 {
                     Attack(target);
-                    grenadeTime -= Time.fixedDeltaTime;
+                    if (Inventory.Vehicle == null)
+                    {
+                        grenadeTime -= Time.fixedDeltaTime;
+                    }
                     if (grenadeTime <= 0)
                     {
                         grenadeTime = (float)random.NextDouble() * 25+5-10* Character.CharacterTraits.Contains(CharacterTraitsList.Grenadier);
@@ -575,7 +512,7 @@ namespace Manage.Units
             }
             else
             {
-                hitPoints -= Mathf.Max(value- Inventory.Vehicle.Armour,0);
+                hitPoints -= Mathf.Max(value- Inventory.GetArmor(),0);
             }
             if (hitPoints <= 0)
             {
@@ -613,6 +550,24 @@ namespace Manage.Units
         {
             Dispose();
             Destroy(gameObject);
+        }
+
+        public bool CanBePenetrated(BulletType bulletType)
+        {
+            if (Inventory.Vehicle == null)
+            {
+                return (bulletType.Damage > Inventory.GetArmor() + Character.CharacterTraits.Contains(CharacterTraitsList.Tough) * 5);
+            }
+            return (bulletType.Damage > Inventory.GetArmor());
+        }
+
+        public bool CanPenetrate(Unit unit)
+        {
+            if (Inventory.Vehicle == null)
+            {
+                return (unit.CanBePenetrated(Inventory.Weapon.WeaponType.BulletType));
+            }
+            return (unit.CanBePenetrated(Inventory.Vehicle.WeaponType.BulletType));
         }
 
         private void SetSpeed()
