@@ -20,6 +20,8 @@ namespace Manage.Camera
         public float CameraZoomSpeed = 50.0F;
         public float RotationSpeed = 10.0F;
 
+        public float MaxCameraZoomout = 50.0F;
+
         public UnityEngine.Camera Camera;
         public Transform anchor;
 
@@ -37,9 +39,9 @@ namespace Manage.Camera
             {
                 CameraZoomTarget = 1f;
             }
-            if (CameraZoomTarget > 100)
+            if (CameraZoomTarget > MaxCameraZoomout)
             {
-                CameraZoomTarget = 100f;
+                CameraZoomTarget = MaxCameraZoomout;
             }
             anchor.localPosition = Vector3.Slerp(anchor.localPosition,
                                             new Vector3(XAxisValue,

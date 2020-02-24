@@ -129,7 +129,7 @@ namespace Manage.Control
             var ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100))
+            if (Physics.Raycast(ray, out hit, 200))
             {
                 var go = hit.transform.gameObject;
                 var point = hit.point;

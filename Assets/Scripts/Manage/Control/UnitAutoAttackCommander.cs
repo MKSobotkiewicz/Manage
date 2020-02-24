@@ -71,34 +71,38 @@ namespace Manage.Control
                     }
                 }
             }
+            var totalEnemyUnitsInRange = enemyUnitsInRange.Count;
             while (enemyUnitsInRange.Count > 0)
             {
-                Unit targetUnit = enemyUnitsInRange[enemyUnitsInRange.Keys.Min()];
-                enemyUnitsInRange.Remove(enemyUnitsInRange.Keys.Min());
+                var targetUnit = enemyUnitsInRange[enemyUnitsInRange.Keys.Max()];
+                enemyUnitsInRange.Remove(enemyUnitsInRange.Keys.Max());
 
                 if (CheckVisibilityOfTarget(unit, targetUnit))
                 {
-                    if (unit.CanPenetrate(targetUnit) || enemyUnitsInRange.Count <= 0)
+                    if (unit.CanPenetrate(targetUnit))
                     {
                         unit.Attack(targetUnit);
+                        
                         if (!Equals(unit.Character.Organization, Player.Organization) &&
                             ourUnitsClose.Count > 0)
                         {
                             foreach (var ourUnitClose in ourUnitsClose)
                             {
-                                if (!ourUnitClose.Value.Attacking)
+                                if (!ourUnitClose.Value.Attacking )
                                 {
                                     ourUnitClose.Value.Attack(targetUnit);
+                                    continue;
                                 }
                             }
                         }
-                        return;
+                        continue;
                     }
                     if (Vector3.Distance(targetUnit.Position(), unit.Position()) < RoutDistance)
                     {
                         unit.Move(Vector3.LerpUnclamped(targetUnit.Position(), unit.Position(), 1.8f));
                     }
-                    return;
+                    unit.AttackWithGrenade(targetUnit);
+                    continue;
                 }
                 if (!(unit.Attacking|| unit.Shot||unit.Reloading|| unit.ThrowingGrenade))
                 { 
@@ -108,6 +112,22 @@ namespace Manage.Control
                         unit.Move(Vector3.Lerp(targetUnit.Position(), unit.Position(), 0.8f));
                     }
                 }
+            }
+
+            if (!unit.Attacking && unit.AttackedBy.Count > 0)
+            {
+                var minDistance = 9999f;
+                var unitToAttack = unit.AttackedBy.Last().Key;
+                foreach (var attackedByUnit in unit.AttackedBy)
+                {
+                    if (attackedByUnit.Value < minDistance)
+                    {
+                        minDistance = attackedByUnit.Value;
+                        unitToAttack = attackedByUnit.Key;
+                    }
+                }
+                unit.Attack(unitToAttack);
+                return;
             }
         }
 
