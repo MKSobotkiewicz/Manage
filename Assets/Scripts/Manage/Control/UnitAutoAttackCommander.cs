@@ -74,8 +74,8 @@ namespace Manage.Control
             var totalEnemyUnitsInRange = enemyUnitsInRange.Count;
             while (enemyUnitsInRange.Count > 0)
             {
-                var targetUnit = enemyUnitsInRange[enemyUnitsInRange.Keys.Max()];
-                enemyUnitsInRange.Remove(enemyUnitsInRange.Keys.Max());
+                var targetUnit = enemyUnitsInRange[enemyUnitsInRange.Keys.Min()];
+                enemyUnitsInRange.Remove(enemyUnitsInRange.Keys.Min());
 
                 if (CheckVisibilityOfTarget(unit, targetUnit))
                 {
@@ -95,6 +95,7 @@ namespace Manage.Control
                                 }
                             }
                         }
+                        enemyUnitsInRange.Clear();
                         continue;
                     }
                     if (Vector3.Distance(targetUnit.Position(), unit.Position()) < RoutDistance)
