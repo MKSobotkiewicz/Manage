@@ -448,6 +448,10 @@ namespace Manage.Units
                     grenadeTarget = null;
                 }
             }
+            if (grenadeTarget == null)
+            {
+                return;
+            }
             if (Vector3.Distance(transform.position, grenadeTarget.transform.position) > 30)
             {
                 foreach (var animator in Animators)
@@ -469,7 +473,7 @@ namespace Manage.Units
                 }
                 return;
             }
-            Move(Vector3.LerpUnclamped(grenadeTarget.Position(), Position(), 3f));
+            //Move(Vector3.LerpUnclamped(grenadeTarget.Position(), Position(), 3f));
         }
 
         private void EndTossGrenade()

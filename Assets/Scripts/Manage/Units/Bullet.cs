@@ -51,7 +51,6 @@ namespace Manage.Units
             bullet.lifetime = 2;
             bullet.organization = unit.Character.Organization;
             
-            UnityEngine.Debug.DrawRay(go.transform.position, go.transform.eulerAngles,Color.red);
             return bullet;
         }
 

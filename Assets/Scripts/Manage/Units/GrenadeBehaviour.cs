@@ -55,7 +55,7 @@ namespace Manage.Units
             var damagedUnitList = new List<Unit>();
             foreach (var trigger in triggerList)
             {
-                if (trigger is null)
+                if ( trigger == null)
                 {
                     continue;
                 }

@@ -12,12 +12,20 @@ namespace Manage.Control
         public Player.Player Player;
 
         private float time;
+        private float manouverTime;
+        private float timeToSpreadout;
 
         private float RoutDistance = 30;
+
+        private UnitManouvers unitManouvers = new UnitManouvers();
+
+        private System.Random random = new System.Random();
 
         public void Start()
         {
             time = 0;
+            manouverTime = (float)random.NextDouble()*10+10;
+            timeToSpreadout = 0;
         }
 
         public void Update()
@@ -28,6 +36,8 @@ namespace Manage.Control
                 OneSecondUpdate();
                 time = 0;
             }
+            manouverTime -= Time.fixedDeltaTime;
+            timeToSpreadout -= Time.fixedDeltaTime;
         }
 
         public void OneSecondUpdate()
@@ -35,6 +45,34 @@ namespace Manage.Control
             foreach (var unit in AllUnitsList.Units)
             {
                 Check(unit);
+            }
+        }
+
+        private void Manouver(Dictionary<float, Unit> ourUnitsClose,Unit target)
+        {
+
+            if (timeToSpreadout <= 0)
+            {
+                timeToSpreadout= (float)random.Next(0, 20)  + 10;
+                unitManouvers.Clear();
+                foreach (var unit in ourUnitsClose)
+                {
+                    unitManouvers.Add(unit.Value);
+                }
+                unitManouvers.SpreadOut(10);
+                return;
+            }
+            if (manouverTime <= 0)
+            {
+                manouverTime = (float)random.Next(0,20) + 10;
+                unitManouvers.Clear();
+                var unitToMoveCount = random.Next(ourUnitsClose.Count / 3, ourUnitsClose.Count/2);
+                for (int i=0;i< unitToMoveCount; i++)
+                {
+                    unitManouvers.Add(ourUnitsClose[ourUnitsClose.Keys.Min()]);
+                    ourUnitsClose.Remove(ourUnitsClose.Keys.Min());
+                }
+                unitManouvers.Flank(target);
             }
         }
 
@@ -82,10 +120,11 @@ namespace Manage.Control
                     if (unit.CanPenetrate(targetUnit))
                     {
                         unit.Attack(targetUnit);
-                        
+
                         if (!Equals(unit.Character.Organization, Player.Organization) &&
                             ourUnitsClose.Count > 0)
                         {
+                            Manouver(ourUnitsClose, targetUnit);
                             foreach (var ourUnitClose in ourUnitsClose)
                             {
                                 if (!ourUnitClose.Value.Attacking )

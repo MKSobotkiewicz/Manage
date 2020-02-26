@@ -310,6 +310,7 @@ Assets\Scripts\Manage\Characters\Stats.cs
 Assets\Scripts\Manage\Control\MouseRaycasting.cs
 Assets\Scripts\Manage\Control\MoveOrderPositions.cs
 Assets\Scripts\Manage\Control\UnitAutoAttackCommander.cs
+Assets\Scripts\Manage\Control\UnitManouvers.cs
 Assets\Scripts\Manage\Debug\Logger.cs
 Assets\Scripts\Manage\Dialog\Dialog.cs
 Assets\Scripts\Manage\Dialog\DialogOption.cs
