@@ -8,6 +8,32 @@ namespace Manage.Units
 {
     public static class WeaponTypes
     {
+        public enum EWeaponType
+        {
+            None,
+            AC1_Assault_Rifle,
+            C15_Carbine,
+            Cannon_85mm,
+            Gun_13mm
+        }
+
+        public static WeaponType ToWeaponType(EWeaponType weaponType)
+        {
+            switch (weaponType)
+            {
+                case EWeaponType.AC1_Assault_Rifle:
+                    return AC1_Assault_Rifle;
+                case EWeaponType.C15_Carbine:
+                    return C15_Carbine;
+                case EWeaponType.Cannon_85mm:
+                    return Cannon_85mm;
+                case EWeaponType.Gun_13mm:
+                    return Gun_13mm;
+                default:
+                    return null;
+            }
+        }
+
         public static readonly WeaponType AC1_Assault_Rifle = new WeaponType(
             "AR1 rifle",
             "Old but reliable construction, packs powerful 8x50mm bullets. Before the collapse was used mostly by second line units. Good at medium to long range.",

@@ -21,11 +21,11 @@ namespace Manage.Units
             return go;
         }
 
-        public GameObject SpawnVehicle(Vehicle vehicle, Transform transform)
+        public GameObject SpawnVehicle(VehicleType vehicleType, Transform transform)
         {
-            var go = Vehicle.Load(vehicle, transform);
+            var go = VehicleType.Load(vehicleType, transform);
             go.GetComponent<Unit>().Inventory = new Inventory();
-            go.GetComponent<Unit>().Inventory.Vehicle = vehicle;
+            go.GetComponent<Unit>().Inventory.VehicleType = vehicleType;
             return go;
         }
     }

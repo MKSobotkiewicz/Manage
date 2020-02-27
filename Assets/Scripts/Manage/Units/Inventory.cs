@@ -10,7 +10,7 @@ namespace Manage.Units
     {
         public Weapon Weapon { get; private set; }
         public Grenade Grenade { get; private set; }
-        public Vehicle Vehicle { get; set; }
+        public VehicleType VehicleType { get; set; }
         public ArmorType ArmorType { get; set; }
         public Vest Vest { get; private set; }
         public Helmet Helmet { get; private set; }
@@ -26,9 +26,9 @@ namespace Manage.Units
 
         public int GetArmor()
         {
-            if (Vehicle != null)
+            if (VehicleType != null)
             {
-                return Vehicle.Armour;
+                return VehicleType.Armour;
             }
             var value = ArmorType.Value;
             if (Vest != null)

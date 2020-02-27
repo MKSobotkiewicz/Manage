@@ -50,7 +50,7 @@ namespace Manage.Units
                                       armorType,
                                       Inventory.Helmet.HelmetType,
                                       Inventory.Vest.VestType,
-                                      Inventory.Vehicle,
+                                      Inventory.VehicleType,
                                       Character,
                                       transform);
 
@@ -103,7 +103,7 @@ namespace Manage.Units
             {
                 gameObject.AddComponent<Animator>();
             }
-            if (Inventory.Vehicle == null)
+            if (Inventory.VehicleType == null)
             {
                 Animators.AddRange(GetComponents<Animator>());
                 var locRandom = (float)random.NextDouble() * 5;
@@ -148,7 +148,7 @@ namespace Manage.Units
                 else
                 {
                     HealTime = 1;
-                    if (Inventory.Vehicle == null)
+                    if (Inventory.VehicleType == null)
                     {
                         Heal(1 + Character.CharacterTraits.Contains(CharacterTraitsList.Healthy));
                     }
@@ -196,7 +196,7 @@ namespace Manage.Units
                 if (Attacking)
                 {
                     Attack(target);
-                    if (Inventory.Vehicle == null)
+                    if (Inventory.VehicleType == null)
                     {
                         grenadeTime -= Time.fixedDeltaTime;
                     }
@@ -221,11 +221,11 @@ namespace Manage.Units
             {
                 throw new Exception(gameObject.name);
             }
-            if (Inventory.Vehicle == null)
+            if (Inventory.VehicleType == null)
             {
                 return (int)(100 * (1 + Mathf.Log(Character.CharacterStats.GetEndurance() + Inventory.GetEndurance())));
             }
-            return (int)Inventory.Vehicle.HitPoints;
+            return (int)Inventory.VehicleType.HitPoints;
         }
 
         public void Arm(Weapon weapon)
@@ -311,7 +311,7 @@ namespace Manage.Units
             Attacking = true;
             if (!ThrowingGrenade)
             {
-                if (Inventory.Vehicle == null)
+                if (Inventory.VehicleType == null)
                 {
                     transform.LookAt(target.transform);
                 }
@@ -549,7 +549,7 @@ namespace Manage.Units
 
         public bool Damage(int value)
         {
-            if (Inventory.Vehicle == null)
+            if (Inventory.VehicleType == null)
             {
                 Attacking = false;
                 StartShot();
@@ -600,7 +600,7 @@ namespace Manage.Units
 
         public bool CanBePenetrated(BulletType bulletType)
         {
-            if (Inventory.Vehicle == null)
+            if (Inventory.VehicleType == null)
             {
                 return (bulletType.Damage > Inventory.GetArmor() + Character.CharacterTraits.Contains(CharacterTraitsList.Tough) * 5);
             }
@@ -609,21 +609,21 @@ namespace Manage.Units
 
         public bool CanPenetrate(Unit unit)
         {
-            if (Inventory.Vehicle == null)
+            if (Inventory.VehicleType == null)
             {
                 return (unit.CanBePenetrated(Inventory.Weapon.WeaponType.BulletType));
             }
-            return (unit.CanBePenetrated(Inventory.Vehicle.WeaponType.BulletType));
+            return (unit.CanBePenetrated(Inventory.VehicleType.WeaponType.BulletType));
         }
 
         private void SetSpeed()
         {
-            if (Inventory.Vehicle == null)
+            if (Inventory.VehicleType == null)
             {
                 navMeshAgent.speed = (16 * (1 + Mathf.Log(Character.CharacterStats.GetStamina() + Inventory.GetStamina()))) / 4;
                 return;
             }
-            navMeshAgent.speed = Inventory.Vehicle.Speed;
+            navMeshAgent.speed = Inventory.VehicleType.Speed;
         }
 
         private void Heal(int value)

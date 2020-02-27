@@ -3,6 +3,38 @@ namespace Manage.Units
 {
     public static class ArmorTypes
     {
+        public enum EArmorType
+        {
+            None,
+            SoldierCamoArmor,
+            SoldierBlueArmor,
+            SoldierJungleArmor,
+            SoldierCamoAndJungleArmor,
+            MercenaryBlackArmor,
+            MercenaryOrangeArmor
+        }
+
+        public static ArmorType ToArmorType(EArmorType armorType)
+        {
+            switch (armorType)
+            {
+                case EArmorType.SoldierCamoArmor:
+                    return SoldierCamoArmor;
+                case EArmorType.SoldierBlueArmor:
+                    return SoldierBlueArmor;
+                case EArmorType.SoldierJungleArmor:
+                    return SoldierJungleArmor;
+                case EArmorType.SoldierCamoAndJungleArmor:
+                    return SoldierCamoAndJungleArmor;
+                case EArmorType.MercenaryBlackArmor:
+                    return MercenaryBlackArmor;
+                case EArmorType.MercenaryOrangeArmor:
+                    return MercenaryOrangeArmor;
+                default:
+                    return null;
+            }
+        }
+
         public static readonly ArmorType SoldierCamoArmor = new ArmorType(
             "Camouflaged battle dress uniform", 
             "Standard battle dress uniform of the imperial armed forces. As there were many produced before the collapse, they still are abundant today.",

@@ -2,6 +2,29 @@
 {
     public static class HelmetTypes
     {
+        public enum EHelmetType
+        {
+            None,
+            CamouflagedCombatHelmet,
+            DesertCombatHelmet,
+            SteelHelmet
+        }
+
+        public static HelmetType ToHelmetType(EHelmetType helmetType)
+        {
+            switch (helmetType)
+            {
+                case EHelmetType.CamouflagedCombatHelmet:
+                    return CamouflagedCombatHelmet;
+                case EHelmetType.DesertCombatHelmet:
+                    return DesertCombatHelmet;
+                case EHelmetType.SteelHelmet:
+                    return SteelHelmet;
+                default:
+                    return null;
+            }
+        }
+
         public static readonly HelmetType CamouflagedCombatHelmet = new HelmetType(
             "Forest combat helmet",
             "Combat helmet used by the imperial armed forces. Effective against small caliber bullets. Forest camouflage variant.",

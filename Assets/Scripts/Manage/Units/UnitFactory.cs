@@ -14,30 +14,30 @@ namespace Manage.Units
         }
 
         public Unit Create(Player.Player player,
-                                  WeaponType weaponType,
-                                  ArmorType armorType,
-                                  HelmetType helmetType,
-                                  VestType vestType,
-                                  Vehicle vehicle,
-                                  Character character,
-                                  Transform transform)
+                           WeaponType weaponType,
+                           ArmorType armorType,
+                           HelmetType helmetType,
+                           VestType vestType,
+                           VehicleType vehicleType,
+                           Character character,
+                           Transform transform)
         {
             var inventoryFactory = new InventoryFactory();
             GameObject go;
-            if (vehicle == null)
+            if (vehicleType == null)
             {
                 go = inventoryFactory.PutOnArmor(armorType, transform, character.Gender);
             }
             else
             {
-                go = inventoryFactory.SpawnVehicle(vehicle, transform);
+                go = inventoryFactory.SpawnVehicle(vehicleType, transform);
             }
             go.transform.parent = null;
             var unit = go.GetComponent<Unit>();
             unit.Character = character;
             var children = unit.GetComponentsInChildren<Transform>();
             unit.Inventory.ArmGrenade(GrenadeTypes.FragGrenade);
-            if (vehicle == null)
+            if (vehicleType == null)
             {
                 unit.Arm(weaponType);
                 unit.PutOnHelmet(helmetType);
@@ -45,7 +45,7 @@ namespace Manage.Units
             }
             else
             {
-                unit.Arm(vehicle.WeaponType);
+                unit.Arm(vehicleType.WeaponType);
             }
             foreach (var child in children)
             {

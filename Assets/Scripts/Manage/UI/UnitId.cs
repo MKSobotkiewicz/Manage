@@ -49,7 +49,7 @@ namespace Manage.UI
                 UnitIdNickname.text = Unit.Character.Nickname;
             }
             Portrait.texture = Unit.Character.Portrait;
-            if (Unit.Inventory.Vehicle==null)
+            if (Unit.Inventory.VehicleType == null)
             {
                 Weapon.texture = Unit.Inventory.Weapon.WeaponType.CombatIcon();
             }
@@ -118,7 +118,7 @@ namespace Manage.UI
 
         private void SetAmmo()
         {
-            if (Unit.Inventory.Vehicle==null)
+            if (Unit.Inventory.VehicleType == null)
             {
                 UnitIdAmmo.text = Unit.Inventory.Weapon.Ammo.ToString() + "/" + Unit.Inventory.Weapon.WeaponType.Ammo.ToString();
                 float value = (Mathf.Clamp((float)Unit.Inventory.Weapon.Ammo, 0, float.MaxValue) / (float)Unit.Inventory.Weapon.WeaponType.Ammo) * 2;

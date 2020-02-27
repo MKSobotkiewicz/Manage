@@ -61,7 +61,7 @@
      <Compile Include="Assets\Scripts\Manage\Characters\Body.cs" />
      <Compile Include="Assets\Scripts\Manage\Characters\Character.cs" />
      <Compile Include="Assets\Scripts\Manage\Characters\CharacterCulture.cs" />
-     <Compile Include="Assets\Scripts\Manage\Characters\CharacterCulturesList.cs" />
+     <Compile Include="Assets\Scripts\Manage\Characters\CharacterCultureTypes.cs" />
      <Compile Include="Assets\Scripts\Manage\Characters\CharacterGenerator.cs" />
      <Compile Include="Assets\Scripts\Manage\Characters\CharacterInfo.cs" />
      <Compile Include="Assets\Scripts\Manage\Characters\CharacterInfoParser.cs" />
@@ -84,7 +84,7 @@
      <Compile Include="Assets\Scripts\Manage\Organizations\FlagLoader.cs" />
      <Compile Include="Assets\Scripts\Manage\Organizations\Info.cs" />
      <Compile Include="Assets\Scripts\Manage\Organizations\Organization.cs" />
-     <Compile Include="Assets\Scripts\Manage\Organizations\OrganizationsList.cs" />
+     <Compile Include="Assets\Scripts\Manage\Organizations\OrganizationTypes.cs" />
      <Compile Include="Assets\Scripts\Manage\Particles\AutoDestroyer.cs" />
      <Compile Include="Assets\Scripts\Manage\Player\Player.cs" />
      <Compile Include="Assets\Scripts\Manage\Player\PlayerInventory.cs" />
@@ -139,12 +139,13 @@
      <Compile Include="Assets\Scripts\Manage\Units\InventoryFactory.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\ItemType.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\Unit.cs" />
+     <Compile Include="Assets\Scripts\Manage\Units\UnitCreator.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\UnitFactory.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\UnitGenerator.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\UnitType.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\UnitTypes.cs" />
-     <Compile Include="Assets\Scripts\Manage\Units\Vehicle.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\VehicleBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Manage\Units\VehicleType.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\VehicleTypes.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\Vest.cs" />
      <Compile Include="Assets\Scripts\Manage\Units\VestType.cs" />

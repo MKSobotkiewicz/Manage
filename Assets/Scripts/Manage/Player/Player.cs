@@ -18,7 +18,7 @@ namespace Manage.Player
         
         public void Awake()
         {
-            Organization = OrganizationsList.Empire;
+            Organization = OrganizationTypes.Empire;
             PlayerInventory = new PlayerInventory();
             PlayerInventory.Add(WeaponTypes.AC1_Assault_Rifle);
             PlayerInventory.Add(WeaponTypes.C15_Carbine);

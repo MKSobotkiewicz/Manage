@@ -97,7 +97,7 @@ namespace Manage.Units
                 dying = true;
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 unit.Damage(BulletType.Damage);
-                if (unit.Inventory.Vehicle==null)
+                if (unit.Inventory.VehicleType == null)
                 {
                     var go = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHitBlood") as GameObject);
                     go.transform.position = collision.GetContact(0).point;

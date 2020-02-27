@@ -21,8 +21,8 @@ namespace Manage.Units
         private WeaponType C15Carbine = WeaponTypes.C15_Carbine;
         private ArmorType InfantryArmor = ArmorTypes.SoldierCamoArmor;
         private ArmorType MercenaryArmor = ArmorTypes.MercenaryOrangeArmor;
-        private Vehicle MGS = VehicleTypes.MGS;
-        private Vehicle Jeep = VehicleTypes.Jeep;
+        private VehicleType ScoutTank = VehicleTypes.ScoutTank;
+        private VehicleType Jeep = VehicleTypes.Jeep;
 
         private static readonly System.Random random = new System.Random();
 
@@ -38,13 +38,13 @@ namespace Manage.Units
             switch (Organization)
             {
                 case EOrganization.Empire:
-                    organization = Organizations.OrganizationsList.Empire;
+                    organization = Organizations.OrganizationTypes.Empire;
                     break;
                 case EOrganization.Bandits:
-                    organization = Organizations.OrganizationsList.Bandits;
+                    organization = Organizations.OrganizationTypes.Bandits;
                     break;
                 case EOrganization.Rebels:
-                    organization = Organizations.OrganizationsList.Rebels;
+                    organization = Organizations.OrganizationTypes.Rebels;
                     break;
                 default:
                     organization = null;
@@ -54,7 +54,7 @@ namespace Manage.Units
             {
                 for (int i = 0; i < Count; i++)
                 {
-                    var character = new Characters.Character(Characters.CharacterCulturesList.BasicCulture, organization, Level);
+                    var character = new Characters.Character(Characters.CharacterCultureTypes.BasicCulture, organization, Level);
                     WeaponType weaponType;
                     ArmorType armor;
                     var rand = random.Next(0, 2);
@@ -84,7 +84,7 @@ namespace Manage.Units
                 }
                 return;
             }
-            var character2 = new Characters.Character(Characters.CharacterCulturesList.BasicCulture, organization,Level);
+            var character2 = new Characters.Character(Characters.CharacterCultureTypes.BasicCulture, organization,Level);
             var unit2 = unitFactory.Create(Player, C15Carbine, InfantryArmor, HelmetTypes.CamouflagedCombatHelmet, VestTypes.CamouflagedCombatVest, Jeep, character2, transform);
             //AllUnitsList.AllUnits.Add(unit2);
         }

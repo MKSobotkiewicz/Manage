@@ -2,6 +2,29 @@
 {
     public static class VestTypes
     {
+        public enum EVestType
+        {
+            None,
+            CamouflagedCombatVest,
+            DesertCombatVest,
+            SteelVest
+        }
+
+        public static VestType ToVestType(EVestType vestType)
+        {
+            switch (vestType)
+            {
+                case EVestType.CamouflagedCombatVest:
+                    return CamouflagedCombatVest;
+                case EVestType.DesertCombatVest:
+                    return DesertCombatVest;
+                case EVestType.SteelVest:
+                    return SteelVest;
+                default:
+                    return null;
+            }
+        }
+
         public static readonly VestType CamouflagedCombatVest = new VestType(
             "Forest combat vest",
             "Combat vest used by the imperial armed forces. Effective against small caliber bullets. Forest camouflage variant.",

@@ -12,8 +12,8 @@ namespace Manage.UI
 {
     class AddTrait: MonoBehaviour
     {
-        public List<Text> Traits;
-        public List<Image> SelectPanel;
+        public List<Text> Traits=new List<Text>();
+        public List<Image> SelectPanel=new List<Image>();
         public Text TraitInfoText;
 
         private Unit unit;

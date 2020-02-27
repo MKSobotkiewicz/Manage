@@ -68,7 +68,7 @@ namespace Manage.Units
                     }
                     unit.Damage(Damage);
                     damagedUnitList.Add(unit);
-                    if (unit.Inventory.Vehicle == null)
+                    if (unit.Inventory.VehicleType == null)
                     {
                         var bh = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHitBlood") as GameObject);
                         bh.transform.position = trigger.transform.position;

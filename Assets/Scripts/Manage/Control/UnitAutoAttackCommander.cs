@@ -181,12 +181,12 @@ namespace Manage.Control
             var hit=new RaycastHit();
             Vector3 unitPos = unit.transform.position + new Vector3(0, 2f, 0);
             Vector3 targetPos = target.transform.position + new Vector3(0, 2f, 0);
-            if (unit.Inventory.Vehicle != null)
+            if (unit.Inventory.VehicleType != null)
             {
                 unitPos += new Vector3(0, 2f, 0);
                 unitPos = Vector3.Lerp(unitPos, targetPos, 0.1f);
             }
-            if (target.Inventory.Vehicle != null)
+            if (target.Inventory.VehicleType != null)
             {
                 targetPos += new Vector3(0, 2f, 0);
                 targetPos = Vector3.Lerp(targetPos, unitPos, 0.1f);

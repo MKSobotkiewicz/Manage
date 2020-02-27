@@ -8,14 +8,34 @@ namespace Manage.Units
 {
     public static class VehicleTypes
     {
-        public static readonly Vehicle MGS = new Vehicle(
+        public enum EVehicleType
+        {
+            None,
+            ScoutTank,
+            Jeep
+        }
+
+        public static VehicleType ToVehicleType(EVehicleType vehicleType)
+        {
+            switch (vehicleType)
+            {
+                case EVehicleType.ScoutTank:
+                    return ScoutTank;
+                case EVehicleType.Jeep:
+                    return Jeep;
+                default:
+                    return null;
+            }
+        }
+
+        public static readonly VehicleType ScoutTank = new VehicleType(
             10,
             100,
             1000,
             WeaponTypes.Cannon_85mm,
             "Units/MGS"
             );
-        public static readonly Vehicle Jeep = new Vehicle(
+        public static readonly VehicleType Jeep = new VehicleType(
             20,
             50,
             400,

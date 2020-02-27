@@ -13,7 +13,7 @@ namespace Manage.Characters
 
         public static Character Generate(Organization organization)
         {
-            return new Character(CharacterCulturesList.BasicCulture, organization);
+            return new Character(CharacterCultureTypes.BasicCulture, organization);
         }
 
         public static HashSet<Character> GenerateFamily(Organization organization, CharacterCulture culture)
