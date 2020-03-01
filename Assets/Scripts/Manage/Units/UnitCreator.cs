@@ -3,12 +3,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using Manage.Characters;
 using Manage.Organizations;
+using Manage.Dialog;
 
 namespace Manage.Units
 {
     public class UnitCreator: MonoBehaviour
     {
         public Player.Player Player;
+        public Canvas MainCanvas;
         public WeaponTypes.EWeaponType WeaponType;
         public ArmorTypes.EArmorType ArmorType;
         public HelmetTypes.EHelmetType HelmetType;
@@ -29,10 +31,15 @@ namespace Manage.Units
         public uint Age=25;
         [ContextMenuItem("Randomize portrait", "RandomizePortrait")]
         public Texture2D Portrait;
+        public Dialog.Dialog Dialog;
 
         public void Start()
         {
-            Create();
+            var unit =Create();
+            if (Dialog != null)
+            {
+                var dialogManager = DialogManager.Create(Dialog, unit, MainCanvas);
+            }
             Destroy(gameObject);
         }
 

@@ -136,7 +136,8 @@ namespace Manage.Control
                 var hitUnit = go.GetComponentInParent<Unit>();
                 if (hitUnit != null)
                 {
-                    if (hitUnit.Player != true)
+                    if (SelectedUnits.Last().Character.Organization.Enemies.Contains(hitUnit.Character.Organization) ||
+                        hitUnit.Character.Organization.Enemies.Contains(SelectedUnits.Last().Character.Organization))
                     {
                         foreach (var unit in SelectedUnits)
                         {
@@ -147,6 +148,23 @@ namespace Manage.Control
                             }
                             unit.Stop();
                             unit.Attack(hitUnit);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var unit in SelectedUnits)
+                        {
+                            if (beganOrdering == false)
+                            {
+                                beganOrdering = true;
+                                Instantiate(MoveOrder, point + new Vector3(0, 1, 0), new Quaternion());
+                            }
+                            unit.Stop();
+                            unit.Move(hitUnit.transform.position);
+                            if (!Equals(hitUnit.DialogManager, null))
+                            {
+                                hitUnit.DialogManager.PoolDialog(unit);
+                            }
                         }
                     }
                 }

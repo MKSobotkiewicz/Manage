@@ -15,6 +15,7 @@ namespace Manage.Dialog
         public Sentence FirstSentence;
         public List<DialogOption> NextDialogOptions { get; private set; }
         private Sentence CurrentSentence;
+        private bool Unit = false;
 
         public void Start()
         {

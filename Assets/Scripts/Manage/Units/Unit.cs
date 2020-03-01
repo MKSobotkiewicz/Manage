@@ -25,6 +25,7 @@ namespace Manage.Units
         public bool Player { get; set; } = false;
         public List<Animator> Animators = new List<Animator>();
         public Dictionary<Unit, float> AttackedBy;
+        public Dialog.DialogManager DialogManager;
 
         private int hitPoints;
 

@@ -1,0 +1,507 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &159782917635743833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782917635743832}
+  - component: {fileID: 159782917635743835}
+  m_Layer: 0
+  m_Name: SecondSentence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782917635743832
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782917635743833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 159782918452487941}
+  - {fileID: 159782919462058557}
+  - {fileID: 159782919466343367}
+  m_Father: {fileID: 159782918685818031}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782917635743835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782917635743833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: Lets be friends.
+  NextSentence: {fileID: 0}
+  DialogOptions:
+  - {fileID: 159782918452487938}
+  - {fileID: 159782919462058556}
+  - {fileID: 159782919466343366}
+--- !u!1 &159782917789286636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782917789286639}
+  - component: {fileID: 159782917789286638}
+  m_Layer: 0
+  m_Name: Third Sentence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782917789286639
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782917789286636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 159782918452487941}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782917789286638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782917789286636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: Yay! Friends!
+  NextSentence: {fileID: 159782918629188976}
+  DialogOptions: []
+--- !u!1 &159782918452487939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782918452487941}
+  - component: {fileID: 159782918452487938}
+  m_Layer: 0
+  m_Name: FirstDialogOption
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782918452487941
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782918452487939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 159782917789286639}
+  m_Father: {fileID: 159782917635743832}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782918452487938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782918452487939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa3e9b6fb72eb54d97e5a2133b487fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: That's great idea!
+  NextSentence: {fileID: 159782917789286638}
+--- !u!1 &159782918629188977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782918629188979}
+  - component: {fileID: 159782918629188976}
+  m_Layer: 0
+  m_Name: FirstSentence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782918629188979
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782918629188977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 159782918685818031}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782918629188976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782918629188977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: Hello friend.
+  NextSentence: {fileID: 159782917635743835}
+  DialogOptions: []
+--- !u!1 &159782918685818028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782918685818031}
+  - component: {fileID: 159782918685818030}
+  m_Layer: 0
+  m_Name: Dialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782918685818031
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782918685818028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 159782918629188979}
+  - {fileID: 159782917635743832}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782918685818030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782918685818028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446aa2a08e405184ca27617d883fd540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstSentence: {fileID: 159782918629188976}
+--- !u!1 &159782919088627226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782919088627229}
+  - component: {fileID: 159782919088627228}
+  m_Layer: 0
+  m_Name: Fourth Sentence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782919088627229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782919088627226}
+  m_LocalRotation: {x: 0.00000005960463, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00006421421}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 159782919462058557}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782919088627228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782919088627226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: "Nam strzela\u0107 nie kazano. - Wst\u0105pi\u0142em na dzia\u0142o  I sp\xF3jrza\u0142em
+    na pole; dwie\u015Bcie armat grzmia\u0142o.  Artyleryi ruskiej ci\u0105gn\u0105
+    si\u0119 szeregi,  Prosto, d\u0142ugo, daleko, jako morza brzegi;  I widzia\u0142em
+    ich wodza: przybieg\u0142, mieczem skin\u0105\u0142  I jak ptak jedno skrzyd\u0142o
+    wojska swego zwin\u0105\u0142;  Wylewa si\u0119 spod skrzyd\u0142a \u015Bci\u015Bniona
+    piechota  D\u0142ug\u0105 czarn\u0105 kolumn\u0105, jako lawa b\u0142ota,  Nasypana
+    iskrami bagnet\xF3w. Jak s\u0119py  Czarne chor\u0105gwie na \u015Bmier\u0107
+    prowadz\u0105 zast\u0119py.     Przeciw nim sterczy bia\u0142a, w\u0105ska, zaostrzona,
+    \ Jak g\u0142az bodz\u0105cy morze, reduta Ordona.  Sze\u015B\u0107 tylko mia\u0142a
+    armat; wci\u0105\u017C dymi\u0105 i \u015Bwiec\u0105;  I nie tyle pr\u0119dkich
+    s\u0142\xF3w gniewne usta miec\u0105,  Nie tyle przejdzie uczu\u0107 przez dusz\u0119
+    w rozpaczy,  Ile z tych dzia\u0142 lecia\u0142o bomb, kul i kartaczy.  Patrz,
+    tam granat w sam \u015Brodek kolumny si\u0119 nurza,  Jak w fale bry\u0142a lawy,
+    pu\u0142k dymem zachmurza;  P\u0119ka \u015Br\xF3d dymu granat, szyk pod niebo
+    leci  I ogromna \u0142ysina \u015Br\xF3d kolumny \u015Bwieci.     Tam kula, lec\u0105c,
+    z dala grozi, szumi, wyje.  Ryczy jak byk przed bitw\u0105, miota si\u0119, grunt
+    ryje; -  Ju\u017C dopad\u0142a; jak boa \u015Br\xF3d kolumn si\u0119 zwija,  Pali
+    piersi\u0105, rwie z\u0119bem, oddechem zabija.  Najstraszniejszej nie wida\u0107,
+    lecz s\u0142ycha\u0107 po d\u017Awi\u0119ku,  Po waleniu si\u0119 trup\xF3w, po
+    ranionych j\u0119ku:  Gdy kolumn\u0119 od ko\u0144ca do ko\u0144ca przewierci,
+    \ Jak gdyby \u015Brodkiem wojska przeszed\u0142 anio\u0142 \u015Bmierci.     Gdzie\u017C
+    jest kr\xF3l, co na rzezie t\u0142umy te wyprawia?  Czy dzieli ich odwag\u0119,
+    czy pier\u015B sam nadstawia?  Nie, on siedzi o pi\u0119\u0107set mil na swej
+    stolicy,  Kr\xF3l wielki, samow\u0142adnik \u015Bwiata po\u0142owicy;  Zmarszczy\u0142
+    brwi, - i tysi\u0105ce kibitek wnet leci;  Podpisa\u0142, - tysi\u0105c matek
+    op\u0142akuje dzieci;  Skin\u0105\u0142, - padaj\u0105 knuty od Niemna do Chiwy.
+    \ Mocarzu, jak B\xF3g silny, jak szatan z\u0142o\u015Bliwy,  Gdy Turk\xF3w za
+    Ba\u0142kanem twoje strasz\u0105 spi\u017Ce,  Gdy poselstwo paryskie twoje stopy
+    li\u017Ce, -  Warszawa jedna twojej mocy si\u0119 ur\u0105ga,  Podnosi na ci\u0119
+    r\u0119k\u0119 i koron\u0119 \u015Bci\u0105ga,  Koron\u0119 Kazimierz\xF3w, Chrobrych
+    z twojej g\u0142owy,  Bo\u015B j\u0105 ukrad\u0142 i skrwawi\u0142, synu Wasilowy!
+    \    Car dziwi si\u0119 - ze strachu. drz\u0105 Petersburczany,  Car gniewa si\u0119
+    - ze strachu mr\u0105 jego dworzany;  Ale sypi\u0105 si\u0119 wojska, kt\xF3rych
+    B\xF3g i wiara  Jest Car. - Car gniewny: umrzem, rozweselim Cara.  Pos\u0142any
+    w\xF3dz kaukaski z si\u0142ami p\xF3\u0142-\u015Bwiata,  Wierny, czynny i sprawny
+    - jak knut w r\u0119ku kata.     Ura! ura! Patrz, blisko reduty, ju\u017C w rowy
+    \ Wal\u0105 si\u0119, na faszyn\u0119 k\u0142ad\u0105c swe tu\u0142owy;  Ju\u017C
+    czerni\u0105 si\u0119 na bia\u0142ych palisadach wa\u0142\xF3w.  Jeszcze reduta
+    w \u015Brodku, jasna od wystrza\u0142\xF3w,  Czerwieni si\u0119 nad czerni\u0105:
+    jak w \u015Brodek mrowiaka  Wrzucony motyl b\u0142yska, - mrowie go naciska, -
+    \ Zgas\u0142 - tak zgas\u0142a reduta. Czy\u017C ostatnie dzia\u0142o  Str\u0105cone
+    z \u0142o\u017Ca w piasku paszcz\u0119 zagrzeba\u0142o?  Czy zapa\u0142 krwi\u0105
+    ostatni bombardyjer zala\u0142?  Zgasn\u0105\u0142 ogie\u0144. - Ju\u017C Moskal
+    rogatki wywala\u0142.     Gdzie\u017C r\u0119czna bro\u0144? - Ach, dzisiaj pracowa\u0142a
+    wi\u0119cej  Ni\u017C na wszystkich przegl\u0105dach za w\u0142adzy ksi\u0105\u017C\u0119cej;
+    \ Zgad\u0142em, dlaczego milczy, - bo nieraz widzia\u0142em  Garstk\u0119 naszych
+    walcz\u0105c\u0105 z Moskali nawa\u0142em.  Gdy godzin\u0119 wo\u0142ano dwa s\u0142owa:
+    pal, nabij;  Gdy oddechy dym t\u0142umi, trud ramiona s\u0142abi;  A wci\u0105\u017C
+    grzmi rozkaz wodz\xF3w, wre \u017Co\u0142nierza czynno\u015B\u0107;  Na koniec
+    bez rozkazu pe\u0142ni\u0105 sw\u0105 powinno\u015B\u0107,  Na koniec bez rozwagi,
+    bez czucia, pami\u0119ci,  \u017Bo\u0142nierz jako m\u0142yn palny nabija - grzmi
+    - kr\u0119ci  Bro\u0144 od oka do nogi, od nogi na oko:  A\u017C r\u0119ka w \u0142adownicy
+    d\u0142ugo i g\u0142\u0119boko  Szuka\u0142a, nie znalaz\u0142a - i \u017Co\u0142nierz
+    pobladn\u0105\u0142,  Nie znalaz\u0142szy \u0142adunku, ju\u017C broni\u0105 nie
+    w\u0142adn\u0105\u0142;  I uczu\u0142, \u017Ce go pali strzelba rozogniona;  Upu\u015Bci\u0142
+    j\u0105 i upad\u0142; - nim dobij\u0105, skona.  Takem my\u015Bli\u0142, - a w
+    szaniec nieprzyjaci\xF3\u0142 kupa  Ju\u017C \u0142az\u0142a, jak robactwo na
+    \u015Bwie\u017Cego trupa.     Pociemnia\u0142o mi w oczach - a gdym \u0142zy ociera\u0142,
+    \ S\u0142ysza\u0142em, \u017Ce co\u015B do mnie m\xF3wi\u0142 m\xF3j Jenera\u0142.
+    \ On przez lunet\u0119 wspart\u0105 na moim ramieniu  D\u0142ugo na szturm i szaniec
+    pogl\u0105da\u0142 w milczeniu.  Na koniec rzek\u0142; \"Stracona\". - Spod lunety
+    jego  Wymkn\u0119\u0142o si\u0119 \u0142ez kilka, - rzek\u0142 do mnie: \"Kolego,
+    \ Wzrok m\u0142ody od szkie\u0142 lepszy; patrzaj, tam na wale,  Znasz Ordona,
+    czy widzisz, gdzie jest?\" - \"Jenerale,  Czy go znam? - Tam sta\u0142 zawsze,
+    to dzia\u0142o kierowa\u0142.  Nie widz\u0119 - znajd\u0119 - dojrz\u0119! - \u015Br\xF3d
+    dymu si\u0119 schowa\u0142:  Lecz \u015Br\xF3d najg\u0119stszych k\u0142\u0119b\xF3w
+    dymu ile\u017C razy  Widzia\u0142em r\u0119k\u0119 jego, daj\u0105c\u0105 rozkazy.
+    -  Widz\u0119 go znowu, - widz\u0119 r\u0119k\u0119 - b\u0142yskawic\u0119,  Wywija,
+    grozi wrogom, trzyma paln\u0105 \u015Bwi\xE9c\u0119,  Bior\u0105 go - zgin\u0105\u0142
+    - o nie, - skoczy\u0142 w d\xF3\u0142, - do loch\xF3w\"!  \"Dobrze - rzecze Jenera\u0142
+    - nie odda im proch\xF3w\".     Tu blask - dym - chwila cicho - i huk jak stu
+    grom\xF3w.  Za\u0107mi\u0142o si\u0119 powietrze od ziemi wylom\xF3w,  Harmaty
+    podskoczy\u0142y i jak wystrzelone  Toczy\u0142y si\u0119 na ko\u0142ach - lonty
+    zapalone  Nie trafi\u0142y do swoich panew. I dym wion\u0105\u0142  Prosto ku
+    nam; i w g\u0119stej chmurze nas och\u0142on\u0105\u0142.  I nie by\u0142o nic
+    wida\u0107 pr\xF3cz granat\xF3w blasku,  I powoli dym rzednia\u0142, opada\u0142
+    deszcz piasku.  Spojrza\u0142em na redut\u0119; - wa\u0142y, palisady,  Dzia\u0142a
+    i naszych garstka, i wrog\xF3w gromady;  Wszystko jako sen znik\u0142o. - Tylko
+    czarna bry\u0142a  Ziemi niekszta\u0142tnej le\u017Cy - rozjemcza mogi\u0142a.
+    \ Tam i ci, co bronili, -i ci, co si\u0119 wdarli,  Pierwszy raz pok\xF3j szczery
+    i wieczny zawarli.  Cho\u0107by cesarz Moskalom kaza\u0142 wsta\u0107, ju\u017C
+    dusza  Moskiewska. tam raz pierwszy, cesarza nie s\u0142usza.  Tam zagrzebane
+    tylu set cia\u0142a, imiona:  Dusze gdzie? nie wiem; lecz wiem, gdzie dusza Ordona.
+    \ On b\u0119dzie Patron sza\u0144c\xF3w! - Bo dzie\u0142o zniszczenia  W dobrej
+    sprawie jest \u015Bwi\u0119te, Jak dzie\u0142o tworzenia;  B\xF3g wyrzek\u0142
+    s\u0142owo sta\u0144 si\u0119, B\xF3g i zgi\u0144 wyrzecze.  Kiedy od ludzi wiara
+    i wolno\u015B\u0107 uciecze,  Kiedy ziemi\u0119 despotyzm i duma szalona  Oblej\u0105,
+    jak Moskale redut\u0119 Ordona -  Karz\u0105c plemi\u0119 zwyci\u0119\u017Cc\xF3w
+    zbrodniami zatrute,  B\xF3g wysadzi t\u0119 ziemi\u0119, jak on sw\u0105 redut\u0119."
+  NextSentence: {fileID: 159782918629188976}
+  DialogOptions: []
+--- !u!1 &159782919462058554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782919462058557}
+  - component: {fileID: 159782919462058556}
+  m_Layer: 0
+  m_Name: SecondDialogOption
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782919462058557
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782919462058554}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 159782919088627229}
+  m_Father: {fileID: 159782917635743832}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782919462058556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782919462058554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa3e9b6fb72eb54d97e5a2133b487fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: No.
+  NextSentence: {fileID: 159782919088627228}
+--- !u!1 &159782919466343364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 159782919466343367}
+  - component: {fileID: 159782919466343366}
+  m_Layer: 0
+  m_Name: ThirdDialogOption
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &159782919466343367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782919466343364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 159782917635743832}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159782919466343366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159782919466343364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa3e9b6fb72eb54d97e5a2133b487fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: I'm going home, bye.
+  NextSentence: {fileID: 0}
