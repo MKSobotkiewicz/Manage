@@ -10,6 +10,7 @@ namespace Manage.Organizations
     {
         public enum EOrganization
         {
+            Neutral,
             Bandits,
             Empire,
             Rebels,
@@ -21,6 +22,8 @@ namespace Manage.Organizations
         {
             switch (organization)
             {
+                case EOrganization.Neutral:
+                    return Neutral;
                 case EOrganization.Bandits:
                     return Bandits;
                 case EOrganization.Empire:
@@ -36,11 +39,47 @@ namespace Manage.Organizations
             }
         }
 
-        public static Organization Bandits = new Organization("Bandits", "", FlagLoader.LoadFlag("Bandits"),Color.gray);
-        public static Organization Empire = new Organization("Empire", "", FlagLoader.LoadFlag("Empire"), Color.gray);
-        public static Organization Rebels = new Organization("Rebels", "", FlagLoader.LoadFlag("Rebels"), Color.gray);
-        public static Organization Republic = new Organization("Republic", "", FlagLoader.LoadFlag("Republic"), Color.gray);
-        public static Organization RedRats = new Organization("Red Rats", "", FlagLoader.LoadFlag("Bandits"), Color.gray);
+        public static Organization Neutral = new Organization(
+            "Neutral",
+            "",
+            FlagLoader.LoadFlag("Black"),
+            Color.green,
+            new HashSet<Organization> { });
+
+        public static Organization Bandits = new Organization(
+            "Bandits",
+            "", 
+            FlagLoader.LoadFlag("Bandits"),
+            Color.gray,
+            new HashSet<Organization> { Empire, Rebels , Republic, RedRats });
+
+        public static Organization Empire = new Organization(
+            "Empire",
+            "", 
+            FlagLoader.LoadFlag("Empire"),
+            Color.gray,
+            new HashSet<Organization> { Bandits, Rebels, Republic, RedRats });
+
+        public static Organization Rebels = new Organization(
+            "Rebels", 
+            "", 
+            FlagLoader.LoadFlag("Rebels"),
+            Color.gray,
+            new HashSet<Organization> { Empire, Bandits, Republic, RedRats });
+
+        public static Organization Republic = new Organization(
+            "Republic", 
+            "",
+            FlagLoader.LoadFlag("Republic"), 
+            Color.gray,
+            new HashSet<Organization> { Empire, Rebels, Bandits, RedRats });
+
+        public static Organization RedRats = new Organization(
+            "Red Rats",
+            "",
+            FlagLoader.LoadFlag("RedRats"),
+            Color.red,
+            new HashSet<Organization> { Empire, Rebels, Republic, Bandits });
 
         private static System.Random random = new System.Random();
 

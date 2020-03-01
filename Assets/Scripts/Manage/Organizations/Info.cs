@@ -77,10 +77,5 @@ namespace Manage.Organizations
         {
             return Equals(obj as Info);
         }
-
-        public override int GetHashCode()
-        {
-            return (this as object).GetHashCode();
-        }
     }
 }

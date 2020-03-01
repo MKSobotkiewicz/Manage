@@ -19,6 +19,8 @@ namespace Manage.Units
         public string CombatIconPath { get; private set; }
         public BulletType BulletType { get; private set; }
 
+        private GameObject muzzleFlash;
+
         private static readonly System.Random random = new System.Random();
 
         public WeaponType(string name,
@@ -64,10 +66,14 @@ namespace Manage.Units
             {
                 if (transform.gameObject.name == "Muzzle")
                 {
-                    var go = GameObject.Instantiate(UnityEngine.Resources.Load(BulletType.MuzzleFlashPrefabPath) as GameObject);
-                    go.transform.position = transform.position;
-                    go.transform.rotation = transform.rotation;
-                    go.transform.Rotate(0, 180, 0);
+                    if (!(muzzleFlash is null))
+                    {
+                        GameObject.Destroy(muzzleFlash);
+                    }
+                    muzzleFlash = GameObject.Instantiate(UnityEngine.Resources.Load(BulletType.MuzzleFlashPrefabPath) as GameObject);
+                    muzzleFlash.transform.position = transform.position;
+                    muzzleFlash.transform.rotation = transform.rotation;
+                    muzzleFlash.transform.Rotate(0, 180, 0);
                     var bullet = BulletType.CreateBullet(attacking, transform, target.Position());
                     RotateBullet(bullet, attacking);
                 }

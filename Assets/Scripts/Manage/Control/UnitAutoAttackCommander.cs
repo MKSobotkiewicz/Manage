@@ -88,7 +88,8 @@ namespace Manage.Control
             {
                 if (!otherUnit.Dead)
                 {
-                    if (!Equals(otherUnit.Character.Organization, unit.Character.Organization))
+                    if (unit.Character.Organization.Enemies.Contains(otherUnit.Character.Organization)||
+                        otherUnit.Character.Organization.Enemies.Contains(unit.Character.Organization))
                     {
                         if (unit.IsInRange(otherUnit)&&
                             !enemyUnitsInRange.ContainsKey(Vector3.Distance(otherUnit.Position(), unit.Position())))
@@ -96,7 +97,7 @@ namespace Manage.Control
                             enemyUnitsInRange.Add(Vector3.Distance(otherUnit.Position(), unit.Position()), otherUnit);
                         }
                     }
-                    else
+                    else if(unit.Character.Organization.Equals( otherUnit.Character.Organization))
                     {
                         var distance = Vector3.Distance(otherUnit.Position(), unit.Position());
                         if (distance<100)
