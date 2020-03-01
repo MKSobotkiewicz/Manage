@@ -5,7 +5,6 @@ namespace Manage.Units
     {
         public enum EArmorType
         {
-            None,
             SoldierCamoArmor,
             SoldierBlueArmor,
             SoldierJungleArmor,

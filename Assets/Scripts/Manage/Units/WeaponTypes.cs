@@ -10,7 +10,6 @@ namespace Manage.Units
     {
         public enum EWeaponType
         {
-            None,
             AC1_Assault_Rifle,
             C15_Carbine,
             Cannon_85mm,

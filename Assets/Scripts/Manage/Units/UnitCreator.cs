@@ -30,6 +30,12 @@ namespace Manage.Units
         [ContextMenuItem("Randomize portrait", "RandomizePortrait")]
         public Texture2D Portrait;
 
+        public void Start()
+        {
+            Create();
+            Destroy(gameObject);
+        }
+
         public Unit Create()
         {
             var Character = new Character(Level,

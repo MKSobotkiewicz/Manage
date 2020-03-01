@@ -175,7 +175,6 @@ namespace Manage.Units
                             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Toss Grenade"))
                             {
                                 animator.SetBool("Shooting", false);
-                                //animator.SetBool("Toss Grenade", false);
                             }
                         }
                     }
@@ -263,6 +262,10 @@ namespace Manage.Units
 
         public bool PutOnVest(VestType vestType)
         {
+            if (vestType == null)
+            {
+                return false;
+            }
             Inventory.PutOnVest(vestType, transform, Character.Gender);
             Animators.AddRange(Inventory.Vest.GetComponents<Animator>());
             var locRandom = (float)random.NextDouble() * 5;

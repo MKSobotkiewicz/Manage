@@ -8,6 +8,10 @@ namespace Manage.Units
 
         public static Vest Create(VestType vestType, Transform transform, Characters.EGender gender)
         {
+            if (vestType == null)
+            {
+                return null;
+            }
             var go = VestType.Load(vestType, transform, gender);
             var vest = go.GetComponent<Vest>();
             vest.VestType = vestType;
