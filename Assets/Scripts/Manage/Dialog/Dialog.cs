@@ -14,10 +14,32 @@ namespace Manage.Dialog
     {
         public Sentence FirstSentence;
         public List<DialogOption> NextDialogOptions { get; private set; }
+        public bool Endable = false;
         private Sentence CurrentSentence;
         private bool Unit = false;
 
+        public DialogManager DialogManager;
+
         public void Start()
+        {
+            Reset();
+        }
+
+        public void End()
+        {
+            if (!Endable)
+            {
+                Reset();
+                return;
+            }
+            if (!(DialogManager is null))
+            {
+                DialogManager.Delete();
+            }
+            Destroy(gameObject);
+        }
+
+        private void Reset()
         {
             CurrentSentence = FirstSentence;
         }

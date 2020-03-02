@@ -17,6 +17,8 @@ namespace Manage.Dialog
         private Canvas _canvas;
         private Unit _playerUnit;
 
+        private GameObject talkCloud;
+
         private bool isActive = false;
 
         private static string talkCloudPath="UI/Particles/TalkCloudParticleSystem";
@@ -34,9 +36,10 @@ namespace Manage.Dialog
             dialogManager._unit = unit;
             dialogManager._unit.DialogManager = dialogManager;
             dialogManager._canvas = canvas;
+            dialogManager._dialog.DialogManager = dialogManager;
 
-            var tc = Instantiate(UnityEngine.Resources.Load(talkCloudPath), unit.transform) as GameObject;
-            tc.transform.parent = dialogManager._unit.transform;
+            dialogManager.talkCloud = Instantiate(UnityEngine.Resources.Load(talkCloudPath), unit.transform) as GameObject;
+            dialogManager.talkCloud.transform.parent = dialogManager._unit.transform;
 
             return dialogManager;
         }
@@ -77,6 +80,12 @@ namespace Manage.Dialog
             dialog.ThisDialog = _dialog;
             dialog.MainCharacter = _playerUnit;
             dialog.Begin();
+        }
+
+        public void Delete()
+        {
+            Destroy(talkCloud);
+            Destroy(this);
         }
     }
 }

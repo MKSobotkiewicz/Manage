@@ -264,6 +264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstSentence: {fileID: 159782918629188976}
+  Endable: 1
+  DialogManager: {fileID: 0}
 --- !u!1 &159782919088627226
 GameObject:
   m_ObjectHideFlags: 0

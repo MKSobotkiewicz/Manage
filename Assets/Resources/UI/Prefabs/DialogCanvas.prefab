@@ -1085,6 +1085,7 @@ MonoBehaviour:
   Name1: {fileID: 3471098756671168700}
   Name2: {fileID: 5887769021287495693}
   DialogTextbox: {fileID: 8921331355107092929}
+  CloseButton: {fileID: 850991993773659782}
   DialogOptions:
   - {fileID: 305988315385567331}
   - {fileID: 2220763717833903254}
@@ -1921,8 +1922,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3580888074210632125}
-        m_MethodName: Delete
+      - m_Target: {fileID: 692674276258571544}
+        m_MethodName: End
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

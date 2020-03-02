@@ -17,6 +17,7 @@ namespace Manage.UI
         public Text Name1;
         public Text Name2;
         public Text DialogTextbox;
+        public Button CloseButton;
         public List<Text> DialogOptions;
         public List<Image> DialogOptionsSelectPanel;
         public Scrollbar DialogTextBoxScrollbar;
@@ -29,12 +30,24 @@ namespace Manage.UI
         private string targetText;
         private float timer;
 
+        private static bool isAnyDialogOpen=false;
+
         public void Begin()
         {
+            if (isAnyDialogOpen is true)
+            {
+                Delete();
+                return;
+            }
+            isAnyDialogOpen = true;
             ClickingSource.mute = true;
             currentText = "";
             targetText = "";
             timer = 0;
+            if (ThisDialog.Endable)
+            {
+                CloseButton.gameObject.SetActive(false);
+            }
             foreach (var dialogOptionsSelectPanel in DialogOptionsSelectPanel)
             {
                 dialogOptionsSelectPanel.enabled = false;
@@ -97,6 +110,13 @@ namespace Manage.UI
             Destroy(gameObject);
         }
 
+        public void End()
+        {
+            isAnyDialogOpen = false;
+            ThisDialog.End();
+            Delete();
+        }
+
         private void WriteDialogOptions(List<Manage.Dialog.DialogOption> dialogOptions)
         {
             for (var i= 0;i< dialogOptions.Count;i++)
@@ -137,7 +157,7 @@ namespace Manage.UI
             AddTextToDialogTextbox(ThisDialog.NextDialogOptions[i].ToString(MainCharacter.Character));
             if (!ThisDialog.SetNextSentence(ThisDialog.NextDialogOptions[i]))
             {
-                Delete();
+                End();
             }
         }
 
