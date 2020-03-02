@@ -38,6 +38,19 @@ namespace Manage.Units
         {
             RotateTurretAndBarrel();
             RotateWheels();
+            RotateBody();
+        }
+
+        void RotateBody()
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position+ Vector3.up, Vector3.down, out hit, 5f))
+            {
+                UnityEngine.Debug.Log("hit.normal "+ hit.normal);
+                Elements.Body.transform.rotation = Quaternion.Lerp(Elements.Body.transform.rotation ,
+                                                                   Quaternion.LookRotation(Vector3.Cross(transform.right, hit.normal)),
+                                                                   0.1f);
+            }
         }
 
         void RotateWheels()
