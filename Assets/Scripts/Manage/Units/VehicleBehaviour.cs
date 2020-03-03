@@ -49,7 +49,7 @@ namespace Manage.Units
                 UnityEngine.Debug.Log("hit.normal "+ hit.normal);
                 Elements.Body.transform.rotation = Quaternion.Lerp(Elements.Body.transform.rotation ,
                                                                    Quaternion.LookRotation(Vector3.Cross(transform.right, hit.normal)),
-                                                                   0.1f);
+                                                                   Time.deltaTime*3);
             }
         }
 
