@@ -107,7 +107,7 @@ namespace Manage.UI
 
         public void Delete()
         {
-            Destroy(gameObject);
+            LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.1f).setOnComplete(Destroy).setEase(LeanTweenType.easeInCubic);
         }
 
         public void End()
@@ -115,6 +115,11 @@ namespace Manage.UI
             isAnyDialogOpen = false;
             ThisDialog.End();
             Delete();
+        }
+
+        private void Destroy()
+        {
+            Destroy(gameObject);
         }
 
         private void WriteDialogOptions(List<Manage.Dialog.DialogOption> dialogOptions)

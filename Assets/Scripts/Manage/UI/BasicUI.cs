@@ -14,6 +14,12 @@ namespace Manage.UI
     {
         private Vector3 startVector;
 
+        public void Start()
+        {
+            transform.localScale=new Vector3(0, 0, 0);
+            LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.1f).setEase(LeanTweenType.easeInCubic);
+        }
+
         public void Click()
         {
             UnityEngine.Debug.Log("CLICK");
@@ -33,6 +39,11 @@ namespace Manage.UI
         }
 
         public void Delete()
+        {
+            LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.1f).setOnComplete(Destroy).setEase(LeanTweenType.easeInCubic);
+        }
+
+        private void Destroy()
         {
             Destroy(gameObject);
         }

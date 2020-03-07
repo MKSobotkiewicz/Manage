@@ -57,6 +57,10 @@ namespace Manage.UI
             FloatingLifePanel.SetParent(transform.parent);
         }
 
+        public void Start()
+        {
+        }
+
         public void Update()
         {
             lastClick -= Time.fixedDeltaTime;

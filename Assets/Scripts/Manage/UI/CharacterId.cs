@@ -56,6 +56,7 @@ namespace Manage.UI
 
         public void Update()
         {
+            
         }
 
         public void FillFields(Unit _unit, Player.Player _player, UnitId _unitId)

@@ -90,7 +90,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _ScaleRandom: 0.05
-    - _ScaleStripes: 8.1
+    - _ScaleStripes: 100
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpeedRandom: 746
@@ -100,7 +100,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.6666667, g: 0.22352941, b: 0.22352941, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
