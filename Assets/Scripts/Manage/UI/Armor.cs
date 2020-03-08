@@ -60,6 +60,7 @@ namespace Manage.UI
                     InfoPanel.transform.position = position;
                     InfoPanel.gameObject.SetActive(true);
                     InfoPanel.enabled = true;
+                    LeanTween.scale(InfoPanel.gameObject, new Vector3(1, 1, 1), 0.1f).setEase(LeanTweenType.easeInCubic);
                 }
             }
         }
@@ -71,7 +72,12 @@ namespace Manage.UI
 
         public void HideInfo()
         {
-            InfoPanel.transform.SetParent( transform);
+            LeanTween.scale(InfoPanel.gameObject, new Vector3(0, 0, 0), 0.1f).setOnComplete(Hide).setEase(LeanTweenType.easeInCubic);
+        }
+
+        private void Hide()
+        {
+            InfoPanel.transform.SetParent(transform);
             InfoPanel.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
             entered = false;
             showed = false;

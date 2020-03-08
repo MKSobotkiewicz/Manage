@@ -10,7 +10,7 @@ using Manage.Units;
 
 namespace Manage.UI
 {
-    public class Weapon:Item
+    public class Weapon : Item
     {
         public Text WeaponName;
         public Text WeaponInfo;
@@ -22,21 +22,21 @@ namespace Manage.UI
         public Text WeaponRof;
 
         private float infoTime;
-        private static float timeToShowTooltip=1;
-        private bool entered=false;
+        private static float timeToShowTooltip = 1;
+        private bool entered = false;
         private bool showed = false;
 
         public new void Setup(ItemType itemType, Canvas _inventoryCanvas)
         {
             base.Setup(itemType, _inventoryCanvas);
             WeaponName.text = itemType.Name;
-            WeaponInfo.text= itemType.Info;
+            WeaponInfo.text = itemType.Info;
             WeaponDamage.text = (itemType as WeaponType).BulletType.Damage.ToString();
             WeaponPiercing.text = (itemType as WeaponType).BulletType.Piercing.ToString();
             WeaponSpread.text = (itemType as WeaponType).Spread.ToString();
             WeaponRange.text = (itemType as WeaponType).MaxRange.ToString();
             WeaponAmmo.text = (itemType as WeaponType).Ammo.ToString();
-            WeaponRof.text = (1/(itemType as WeaponType).AimingTime).ToString();
+            WeaponRof.text = (1 / (itemType as WeaponType).AimingTime).ToString();
         }
 
         public void Update()
@@ -52,7 +52,7 @@ namespace Manage.UI
             }
             else
             {
-                if ( !showed&&!isDragged)
+                if (!showed && !isDragged)
                 {
                     showed = true;
                     var position = InfoPanel.transform.position;
@@ -60,6 +60,8 @@ namespace Manage.UI
                     InfoPanel.transform.position = position;
                     InfoPanel.gameObject.SetActive(true);
                     InfoPanel.enabled = true;
+                    InfoPanel.transform.localScale = new Vector3(0, 0, 0);
+                    LeanTween.scale(InfoPanel.gameObject, new Vector3(1, 1, 1), 0.1f).setEase(LeanTweenType.easeInCubic);
                 }
             }
         }
@@ -70,6 +72,11 @@ namespace Manage.UI
         }
 
         public void HideInfo()
+        {
+            LeanTween.scale(InfoPanel.gameObject, new Vector3(0, 0, 0), 0.1f).setOnComplete(Hide).setEase(LeanTweenType.easeInCubic);
+        }
+
+        private void Hide()
         {
             InfoPanel.transform.SetParent(transform);
             InfoPanel.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
