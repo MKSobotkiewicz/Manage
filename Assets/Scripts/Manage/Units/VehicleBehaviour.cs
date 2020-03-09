@@ -48,7 +48,7 @@ namespace Manage.Units
             {
                 UnityEngine.Debug.Log("hit.normal "+ hit.normal);
                 Elements.Body.transform.rotation = Quaternion.Lerp(Elements.Body.transform.rotation ,
-                                                                   Quaternion.LookRotation(Vector3.Cross(transform.right, hit.normal)),
+                                                                   Quaternion.LookRotation(Vector3.Cross(transform.right, hit.normal), hit.normal),
                                                                    Time.deltaTime*3);
             }
         }
@@ -107,6 +107,7 @@ namespace Manage.Units
             Quaternion turretToRotation = Quaternion.LookRotation(turretTargetDirection, Elements.Turret.transform.up);
             Quaternion barrelToRotation = Quaternion.LookRotation(barrelTargetDirection, Elements.Turret.transform.up);
             Elements.Turret.transform.rotation = Quaternion.Lerp(Elements.Turret.transform.rotation, turretToRotation, traverseSpeed * Time.fixedDeltaTime);
+            Elements.Turret.localEulerAngles= new Vector3(0,Elements.Turret.transform.localRotation.eulerAngles.y, 0);
             Elements.Barrel.transform.rotation = Quaternion.Lerp(Elements.Barrel.transform.rotation, barrelToRotation, turretSpeed * Time.fixedDeltaTime);
             
             if (Elements.Barrel.localEulerAngles.x < 180)

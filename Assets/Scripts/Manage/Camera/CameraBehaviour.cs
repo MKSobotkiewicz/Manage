@@ -43,9 +43,16 @@ namespace Manage.Camera
             {
                 CameraZoomTarget = MaxCameraZoomout;
             }
+
+            float cameraYPosition = 1.5f;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position + new Vector3(0,100,0), Vector3.down, out hit, 500f))
+            {
+                cameraYPosition = 1.5f+hit.point.y;
+            }
             anchor.localPosition = Vector3.Slerp(anchor.localPosition,
                                             new Vector3(XAxisValue,
-                                                        1.5f/*anchor.localPosition.y*/,
+                                                        cameraYPosition,
                                                         YAxisValue),
                                             Time.deltaTime * Smooth);
             transform.localPosition = Vector3.Slerp(transform.localPosition,
