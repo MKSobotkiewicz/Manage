@@ -43,6 +43,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Height:
+        m_Texture: {fileID: 2800000, guid: 1ebcc265197ba6f4a94958f466698943, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Height0:
         m_Texture: {fileID: 2800000, guid: 68a973bf35d4c494a8504173c406e64c, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -83,12 +87,16 @@ Material:
         m_Texture: {fileID: 2800000, guid: d921ceb708f584a40ad6f6640dd9542f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Random:
+        m_Texture: {fileID: 2800000, guid: 957c0ef86e9d25c4dbcb8f4d07942100, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Blending0: 100
-    - _Blending1: 77
-    - _Blending2: 10.2
-    - _Blending3: 10.8
-    - _BlendingRock: 34.6
+    - _Blending1: 100
+    - _Blending2: 13.7
+    - _Blending3: 19.1
+    - _BlendingRock: 77.1
     - _EdgeLength: 5
     - _Glossiness0: 0.1
     - _Glossiness1: 0.25
@@ -96,11 +104,12 @@ Material:
     - _Glossiness3: 0.1
     - _GlossinessRock: 0.1
     - _Phong: 1
-    - _RockNormal: 0.27
-    - _Tiling0: 50
-    - _Tiling1: 46.5
-    - _Tiling2: 50.6
-    - _Tiling3: 47.2
+    - _RockNormal: -0.05
+    - _Tiling0: 0.0095
+    - _Tiling1: 0.0109
+    - _Tiling2: 0.0108
+    - _Tiling3: 0.0093
+    - _TilingRandom: 415
     - _TilingRock: 52.7
     - _Triplanar0: 0.5
     - _Triplanar1: 54

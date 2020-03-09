@@ -1,33 +1,36 @@
-﻿Shader "Terrain/AdvancedTerrainShader"
+Shader "Terrain/AdvancedTerrainShader"
 {
     Properties
     {
 		[HideInInspector] _Control("Control (RGBA)", 2D) = "red" {}
 
+		_Random("Random", 2D) = "grey" {}
+		_TilingRandom("Tiling Random", Range(0,1000)) = 0.5
+		
+		_Height("Height", 2D) = "grey" {}
+		
 		_Albedo3("Layer 3 (A)", 2D) = "white" {}
 		_Normal3("Normal 3 (A)", 2D) = "normal" {}
-		_Height3("Height 3 (A)", 2D) = "grey" {}
 		_Glossiness3("Smoothness 3 (A)", Range(0,1)) = 0.5
 		_Blending3("Blending 3 (A)", Range(0,100)) = 1
-		_Tiling3("Tiling 3 (A)", Range(0,100)) = 0.5
+		_Tiling3("Tiling 3 (A)", Range(0,0.1)) = 0.5
 
 		_Albedo2("Layer 2 (B)", 2D) = "white" {}
 		_Normal2("Normal 2 (B)", 2D) = "normal" {}
-		_Height2("Height 2 (B)", 2D) = "grey" {}
 		_Glossiness2("Smoothness 2 (B)", Range(0,1)) = 0.5
 		_Blending2("Blending 2 (B)", Range(0,100)) = 1
-		_Tiling2("Tiling 2 (B)", Range(0,100)) = 0.5
+		_Tiling2("Tiling 2 (B)", Range(0,0.1)) = 0.5
 
 		_Albedo1("Layer 1 (G)", 2D) = "white" {}
 		_Normal1("Normal 1 (G)", 2D) = "normal" {}
 		_Glossiness1("Smoothness 1 (G)", Range(0,1)) = 0.5
 		_Blending1("Blending 1 (G)", Range(0,100)) = 1
-		_Tiling1("Tiling 1 (G)", Range(0,100)) = 0.5
+		_Tiling1("Tiling 1 (G)", Range(0,0.1)) = 0.5
 
 		_Albedo0("Layer 0 (R)", 2D) = "white" {}
 		_Normal0("Normal 0 (R)", 2D) = "normal" {}
 		_Glossiness0("Smoothness 0 (R)", Range(0,1)) = 0.5
-		_Tiling0("Tiling 0 (R)", Range(0,100)) = 0.5
+		_Tiling0("Tiling 0 (R)", Range(0,0.1)) = 0.5
 
 		_AlbedoRock("Layer Rock", 2D) = "white" {}
 		_NormalRock("Normal Rock", 2D) = "normal" {}
@@ -53,6 +56,9 @@
 
 		sampler2D _Control;
 
+		sampler2D _Height;
+		sampler2D _Random;
+
 		sampler2D _Albedo3;
 		sampler2D _Albedo2;
 		sampler2D _Albedo1;
@@ -64,9 +70,6 @@
 		sampler2D _Normal1;
 		sampler2D _Normal0;
 		sampler2D _NormalRock;
-
-		sampler2D _Height3;
-		sampler2D _Height2;
 
 		half _Blending3;
 		half _Blending2;
@@ -84,6 +87,7 @@
 		half _Tiling1;
 		half _Tiling0;
 		half _TilingRock;
+		half _TilingRandom;
 
 		half _RockNormal;
 
@@ -148,19 +152,26 @@
         {
 			float3 projnorm = saturate(pow(WorldNormalVector(IN, o.Normal) * 2, 4));
 			fixed4 control = tex2D(_Control, IN.uv_Control);
+			
+			fixed3 random=projectVector(_Random, IN.worldPos, projnorm, _TilingRandom);
+			half2 uv1 = IN.uv_Control;
+			half2 uv2 = IN.uv_Control + half2(0.3, 0.3);
+			half uvRandom = saturate(pow(random.g + 0.5, 10));
 
-			half height2 = projectSingle(_Height2, IN.worldPos, projnorm, _Tiling2);
-			half height3 = projectSingle(_Height3, IN.worldPos, projnorm, _Tiling3);
+			half heightR = projectSingle(_Height, IN.worldPos, projnorm, _TilingRock);
+			half heightG = lerp(tex2D(_Height, uv1 / _Tiling1).g, tex2D(_Height, uv2 / _Tiling1).g, uvRandom);
+			half heightB = lerp(tex2D(_Height, uv1 / _Tiling1).b, tex2D(_Height, uv2 / _Tiling1).b, uvRandom);
+			half heightA = lerp(tex2D(_Height, uv1 / _Tiling1).a, tex2D(_Height, uv2 / _Tiling1).a, uvRandom);
 
-			half control1 = saturate(pow(control.g+0.5 , _Blending1));
-			half control2 = saturate(pow(control.b + (height2 + 0.5)*0.5, _Blending2));
-			half control3 = saturate(pow(control.a + (height3 + 0.5)*0.5, _Blending3));
-			half controlRock = saturate(pow(WorldNormalVector(IN, o.Normal).g + _RockNormal, _BlendingRock));
+			half control1 = saturate(pow(control.g + (heightG + 0.5)*0.5, _Blending1));
+			half control2 = saturate(pow(control.b + (heightB + 0.5)*0.5, _Blending2));
+			half control3 = saturate(pow(control.a + (heightA + 0.5)*0.5, _Blending3));
+			half controlRock = saturate(pow(WorldNormalVector(IN, o.Normal).g + heightR*0.5 + _RockNormal, _BlendingRock));
 
-			fixed3 albedo0 = projectVector(_Albedo0, IN.worldPos, projnorm, _Tiling0);
-			fixed3 albedo1 = projectVector(_Albedo1, IN.worldPos, projnorm, _Tiling1);
-			fixed3 albedo2 = projectVector(_Albedo2, IN.worldPos, projnorm, _Tiling2);
-			fixed3 albedo3 = projectVector(_Albedo3, IN.worldPos, projnorm, _Tiling3);
+			fixed3 albedo0 = lerp(tex2D(_Albedo0, uv1 / _Tiling0), tex2D(_Albedo0, uv2 / _Tiling0), uvRandom);
+			fixed3 albedo1 = lerp(tex2D(_Albedo1, uv1 / _Tiling1), tex2D(_Albedo1, uv2 / _Tiling1), uvRandom);
+			fixed3 albedo2 = lerp(tex2D(_Albedo2, uv1 / _Tiling2), tex2D(_Albedo2, uv2 / _Tiling2), uvRandom);
+			fixed3 albedo3 = lerp(tex2D(_Albedo3, uv1 / _Tiling3), tex2D(_Albedo3, uv2 / _Tiling3), uvRandom);
 			fixed3 albedoRock = projectVector(_AlbedoRock, IN.worldPos, projnorm, _TilingRock);
 
 			fixed3 albedo01 = lerp(albedo0, albedo1, control1);
@@ -168,10 +179,10 @@
 			fixed3 albedo0123 = lerp(albedo012, albedo3, control3);
 			fixed3 albedo= lerp(albedoRock, albedo0123, controlRock);
 
-			fixed3 normal0 = projectNormal(_Normal3, IN.worldPos, projnorm, _Tiling0);
-			fixed3 normal1 = projectNormal(_Normal0, IN.worldPos, projnorm, _Tiling1);
-			fixed3 normal2 = projectNormal(_Normal1, IN.worldPos, projnorm, _Tiling2);
-			fixed3 normal3 = projectNormal(_Normal2, IN.worldPos, projnorm, _Tiling3);
+			fixed3 normal0 = lerp(UnpackNormal(tex2D(_Normal3, uv1 / _Tiling0)), UnpackNormal(tex2D(_Normal3, uv2 / _Tiling0)), uvRandom);
+			fixed3 normal1 = lerp(UnpackNormal(tex2D(_Normal0, uv1 / _Tiling1)), UnpackNormal(tex2D(_Normal0, uv2 / _Tiling1)), uvRandom);
+			fixed3 normal2 = lerp(UnpackNormal(tex2D(_Normal1, uv1 / _Tiling2)), UnpackNormal(tex2D(_Normal1, uv2 / _Tiling2)), uvRandom);
+			fixed3 normal3 = lerp(UnpackNormal(tex2D(_Normal2, uv1 / _Tiling3)), UnpackNormal(tex2D(_Normal2, uv2 / _Tiling3)), uvRandom);
 			fixed3 normalRock = projectNormal(_NormalRock, IN.worldPos, projnorm, _TilingRock);
 
 			fixed3 normal01 = lerp(normal0, normal1, control1);
