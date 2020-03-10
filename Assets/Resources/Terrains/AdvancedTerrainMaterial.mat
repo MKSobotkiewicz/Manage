@@ -93,7 +93,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Blending0: 100
-    - _Blending1: 100
+    - _Blending1: 51.3
     - _Blending2: 13.7
     - _Blending3: 19.1
     - _BlendingRock: 77.1

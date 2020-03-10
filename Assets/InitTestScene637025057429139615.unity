@@ -3294,6 +3294,135 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 44.853, z: 0}
+--- !u!1001 &1930938543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1193830703164065357, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_Name
+      value: UnitCreator (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065357, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 178.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -136.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 567180645}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: ArmorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Organization
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: VehicleType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: MainCanvas
+      value: 
+      objectReference: {fileID: 1201745991}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: FirstName
+      value: Wayne
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Surname
+      value: Camper
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Nickname
+      value: Sugar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Age
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 2800000, guid: 384c6695e885e8140ac1698f35a4b73f, type: 3}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Level
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c82dfa82f17219645b89728fe6a845f7, type: 3}
 --- !u!1001 &2025017776
 PrefabInstance:
   m_ObjectHideFlags: 0
