@@ -10,30 +10,30 @@ Shader "Terrain/AdvancedTerrainShader"
 		_Height("Height", 2D) = "grey" {}
 		
 		_Albedo3("Layer 3 (A)", 2D) = "white" {}
-		_Normal3("Normal 3 (A)", 2D) = "normal" {}
+		_Bump3("Normal 3 (A)", 2D) = "normal" {}
 		_Glossiness3("Smoothness 3 (A)", Range(0,1)) = 0.5
 		_Blending3("Blending 3 (A)", Range(0,100)) = 1
 		_Tiling3("Tiling 3 (A)", Range(0,0.1)) = 0.5
 
 		_Albedo2("Layer 2 (B)", 2D) = "white" {}
-		_Normal2("Normal 2 (B)", 2D) = "normal" {}
+		_Bump2("Normal 2 (B)", 2D) = "normal" {}
 		_Glossiness2("Smoothness 2 (B)", Range(0,1)) = 0.5
 		_Blending2("Blending 2 (B)", Range(0,100)) = 1
 		_Tiling2("Tiling 2 (B)", Range(0,0.1)) = 0.5
 
 		_Albedo1("Layer 1 (G)", 2D) = "white" {}
-		_Normal1("Normal 1 (G)", 2D) = "normal" {}
+		_Bump1("Normal 1 (G)", 2D) = "normal" {}
 		_Glossiness1("Smoothness 1 (G)", Range(0,1)) = 0.5
 		_Blending1("Blending 1 (G)", Range(0,100)) = 1
 		_Tiling1("Tiling 1 (G)", Range(0,0.1)) = 0.5
 
 		_Albedo0("Layer 0 (R)", 2D) = "white" {}
-		_Normal0("Normal 0 (R)", 2D) = "normal" {}
+		_Bump0("Normal 0 (R)", 2D) = "normal" {}
 		_Glossiness0("Smoothness 0 (R)", Range(0,1)) = 0.5
 		_Tiling0("Tiling 0 (R)", Range(0,0.1)) = 0.5
 
 		_AlbedoRock("Layer Rock", 2D) = "white" {}
-		_NormalRock("Normal Rock", 2D) = "normal" {}
+		_BumpRock("Normal Rock", 2D) = "normal" {}
 		_GlossinessRock("Smoothness Rock", Range(0,1)) = 0.5
 		_BlendingRock("Blending Rock", Range(0,100)) = 1
 		_TilingRock("Tiling Rock", Range(0,100)) = 0.5
@@ -56,20 +56,19 @@ Shader "Terrain/AdvancedTerrainShader"
 
 		sampler2D _Control;
 
-		sampler2D _Height;
 		sampler2D _Random;
+		sampler2D _Height;
 
 		sampler2D _Albedo3;
+		sampler2D _Bump3;
 		sampler2D _Albedo2;
+		sampler2D _Bump2;
 		sampler2D _Albedo1;
+		sampler2D _Bump1;
 		sampler2D _Albedo0;
+		sampler2D _Bump0;
 		sampler2D _AlbedoRock;
-
-		sampler2D _Normal3;
-		sampler2D _Normal2;
-		sampler2D _Normal1;
-		sampler2D _Normal0;
-		sampler2D _NormalRock;
+		sampler2D _BumpRock;
 
 		half _Blending3;
 		half _Blending2;
@@ -179,11 +178,11 @@ Shader "Terrain/AdvancedTerrainShader"
 			fixed3 albedo0123 = lerp(albedo012, albedo3, control3);
 			fixed3 albedo= lerp(albedoRock, albedo0123, controlRock);
 
-			fixed3 normal0 = lerp(UnpackNormal(tex2D(_Normal3, uv1 / _Tiling0)), UnpackNormal(tex2D(_Normal3, uv2 / _Tiling0)), uvRandom);
-			fixed3 normal1 = lerp(UnpackNormal(tex2D(_Normal0, uv1 / _Tiling1)), UnpackNormal(tex2D(_Normal0, uv2 / _Tiling1)), uvRandom);
-			fixed3 normal2 = lerp(UnpackNormal(tex2D(_Normal1, uv1 / _Tiling2)), UnpackNormal(tex2D(_Normal1, uv2 / _Tiling2)), uvRandom);
-			fixed3 normal3 = lerp(UnpackNormal(tex2D(_Normal2, uv1 / _Tiling3)), UnpackNormal(tex2D(_Normal2, uv2 / _Tiling3)), uvRandom);
-			fixed3 normalRock = projectNormal(_NormalRock, IN.worldPos, projnorm, _TilingRock);
+			fixed3 normal0 = lerp(UnpackNormal(tex2D(_Bump0, uv1 / _Tiling0)), UnpackNormal(tex2D(_Bump0, uv2 / _Tiling0)), uvRandom);
+			fixed3 normal1 = lerp(UnpackNormal(tex2D(_Bump1, uv1 / _Tiling1)), UnpackNormal(tex2D(_Bump1, uv2 / _Tiling1)), uvRandom);
+			fixed3 normal2 = lerp(UnpackNormal(tex2D(_Bump2, uv1 / _Tiling2)), UnpackNormal(tex2D(_Bump2, uv2 / _Tiling2)), uvRandom);
+			fixed3 normal3 = lerp(UnpackNormal(tex2D(_Bump3, uv1 / _Tiling3)), UnpackNormal(tex2D(_Bump3, uv2 / _Tiling3)), uvRandom);
+			fixed3 normalRock = projectNormal(_BumpRock, IN.worldPos, projnorm, _TilingRock);
 
 			fixed3 normal01 = lerp(normal0, normal1, control1);
 			fixed3 normal012 = lerp(normal01, normal2, control2);

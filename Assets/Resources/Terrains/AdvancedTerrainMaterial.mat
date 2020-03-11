@@ -39,6 +39,26 @@ Material:
         m_Texture: {fileID: 2800000, guid: 9d9b23c2fbf55b440b93b50a8fe783f4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Bump0:
+        m_Texture: {fileID: 2800000, guid: d921ceb708f584a40ad6f6640dd9542f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bump1:
+        m_Texture: {fileID: 2800000, guid: 7ad7b2460f9dec74c9ce7c44668421aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bump2:
+        m_Texture: {fileID: 2800000, guid: efa69148532c6c64b9ac9ea8dbac4d61, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bump3:
+        m_Texture: {fileID: 2800000, guid: 5d75e9455ecf741468693a795d53935b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpRock:
+        m_Texture: {fileID: 2800000, guid: 152902c882f6b0a41a892803d338ef48, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Control:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,7 +88,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal0:
-        m_Texture: {fileID: 2800000, guid: 3f3e535fb7ba5ec46b8a58feefc20d61, type: 3}
+        m_Texture: {fileID: 2800000, guid: 19c7425904f6fac46a847b8b950914a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal1:
@@ -84,7 +104,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalRock:
-        m_Texture: {fileID: 2800000, guid: d921ceb708f584a40ad6f6640dd9542f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 152902c882f6b0a41a892803d338ef48, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Random:
@@ -93,7 +113,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Blending0: 100
-    - _Blending1: 51.3
+    - _Blending1: 32.5
     - _Blending2: 13.7
     - _Blending3: 19.1
     - _BlendingRock: 77.1

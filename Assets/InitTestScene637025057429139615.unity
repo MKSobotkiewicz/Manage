@@ -699,7 +699,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Portrait
       value: 
-      objectReference: {fileID: 2800000, guid: 45761666a8dcfcd489abbfb3a8b9872a, type: 3}
+      objectReference: {fileID: 2800000, guid: 4e30684ecdda40b42aef7ac0f4f6ede8, type: 3}
     - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}
       propertyPath: Dialog
@@ -3415,7 +3415,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Portrait
       value: 
-      objectReference: {fileID: 2800000, guid: 384c6695e885e8140ac1698f35a4b73f, type: 3}
+      objectReference: {fileID: 2800000, guid: c9baa4d6c9a18a349bc6b1bf9e4798c3, type: 3}
     - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}
       propertyPath: Level
@@ -3544,7 +3544,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Portrait
       value: 
-      objectReference: {fileID: 2800000, guid: 384c6695e885e8140ac1698f35a4b73f, type: 3}
+      objectReference: {fileID: 2800000, guid: 082029ca927bf8b449cb76be81cff6ac, type: 3}
     - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}
       propertyPath: Level
@@ -3577,7 +3577,7 @@ PrefabInstance:
     - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.48
+      value: 10.69
       objectReference: {fileID: 0}
     - target: {fileID: 1193830703164065359, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}
@@ -3654,5 +3654,10 @@ PrefabInstance:
       propertyPath: Level
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
+        type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 2800000, guid: ca483b7505cee23438af82a0f71836c1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c82dfa82f17219645b89728fe6a845f7, type: 3}
