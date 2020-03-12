@@ -18,7 +18,7 @@ namespace Manage.Characters
         public List<Texture2D> FemaleIcons { get; private set; }
         public List<Texture2D> MaleIcons { get; private set; }
 
-        private System.Random random;
+        private System.Random random = new System.Random();
 
         public CharacterCulture(string name, 
                                 List<string> femaleFirstNamesFiles,
@@ -29,7 +29,6 @@ namespace Manage.Characters
                                 List<string> femaleIconsFiles,
                                 List<string> maleIconsFiles)
         {
-            random = new System.Random();
             Name =name;
             FemaleFirstNames = new List<string>();
             MaleFirstNames = new List<string>();

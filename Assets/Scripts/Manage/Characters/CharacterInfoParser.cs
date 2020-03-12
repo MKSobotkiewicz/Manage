@@ -35,11 +35,11 @@ namespace Manage.Characters
             var output = new List<Texture2D>();
 
             var directory = new DirectoryInfo(path);
-            var files = directory.GetFiles("*.jpg");
+            var files = directory.GetFiles("*.png");
             var names = new List<string>();
             foreach (var file in files)
             {
-                names.Add(path.Replace("Assets/Resources/","")+"/" + file.Name.Replace(".jpg", ""));
+                names.Add(path.Replace("Assets/Resources/","")+"/" + file.Name.Replace(".png", ""));
             }
             foreach (var name in names)
             {

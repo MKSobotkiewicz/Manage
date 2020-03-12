@@ -215,7 +215,7 @@ namespace Manage.Characters
             return RandomAge();
         }
 
-        private static uint RandomAge()
+        public static uint RandomAge()
         {
             return (uint)random.Next(16, 100);
         }
@@ -237,7 +237,7 @@ namespace Manage.Characters
             }
         }
 
-        private static EGender RandomGender()
+        public static EGender RandomGender()
         {
             var _random = random.Next(0,100);
             if (_random < 48)

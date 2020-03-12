@@ -9,6 +9,7 @@ namespace Manage.Units
 {
     public class UnitCreator: MonoBehaviour
     {
+        public bool CreateOnStart = true;
         public Player.Player Player;
         public Canvas MainCanvas;
         public WeaponTypes.EWeaponType WeaponType;
@@ -35,6 +36,10 @@ namespace Manage.Units
 
         public void Start()
         {
+            if (!CreateOnStart)
+            {
+                return;
+            }
             var unit =Create();
             if (Dialog != null)
             {
