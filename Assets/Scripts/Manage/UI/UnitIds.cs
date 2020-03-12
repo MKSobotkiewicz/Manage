@@ -38,5 +38,16 @@ namespace Manage.UI
                 i += 110;
             }
         }
+
+        public void Reset()
+        {
+            Units.Clear();
+            var unitIds = GetComponentsInChildren<UnitId>();
+            foreach (var unitId in unitIds)
+            {
+                Destroy(unitId.gameObject);
+            }
+            Start();
+        }
     }
 }

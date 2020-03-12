@@ -40,7 +40,12 @@ namespace Manage.Units
             {
                 return;
             }
-            var unit =Create();
+            CreateAndDestroy();
+        }
+
+        public void CreateAndDestroy()
+        {
+            var unit = Create();
             if (Dialog != null)
             {
                 var dialogManager = DialogManager.Create(Dialog, unit, MainCanvas);

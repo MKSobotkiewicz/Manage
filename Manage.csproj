@@ -112,6 +112,7 @@
      <Compile Include="Assets\Scripts\Manage\UI\Armor.cs" />
      <Compile Include="Assets\Scripts\Manage\UI\BasicUI.cs" />
      <Compile Include="Assets\Scripts\Manage\UI\CharacterId.cs" />
+     <Compile Include="Assets\Scripts\Manage\UI\CharacterPortrait.cs" />
      <Compile Include="Assets\Scripts\Manage\UI\CreateCharacter.cs" />
      <Compile Include="Assets\Scripts\Manage\UI\Dialog.cs" />
      <Compile Include="Assets\Scripts\Manage\UI\DialogDebug.cs" />

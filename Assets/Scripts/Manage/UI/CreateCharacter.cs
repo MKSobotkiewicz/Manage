@@ -13,6 +13,7 @@ namespace Manage.UI
     public class CreateCharacter : MonoBehaviour
     {
         public UnitCreator UnitCreator;
+        public UnitIds UnitIds;
 
         public InputField FirstNameInputField;
         public InputField SurnameInputField;
@@ -47,13 +48,14 @@ namespace Manage.UI
             RandomizeNickname();
             RandomizeAge();
             RandomizePortrait();
-            SetImage();
+            SetImage(portrait);
         }
 
         public void Create()
         {
             FillUnitCreatorFields();
-            UnitCreator.Create();
+            UnitCreator.CreateAndDestroy();
+            UnitIds.Reset();
             BasicUI basicUI;
             if ((basicUI = GetComponent<BasicUI>()) != null)
             {
@@ -92,8 +94,9 @@ namespace Manage.UI
             FillImagesCanvas();
         }
 
-        public void SetImage()
+        public void SetImage(Texture2D _portrait)
         {
+            portrait = _portrait;
             CharacterImage.texture = portrait;
         }
 
