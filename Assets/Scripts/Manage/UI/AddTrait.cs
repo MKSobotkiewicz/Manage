@@ -56,6 +56,19 @@ namespace Manage.UI
 
         public void Delete()
         {
+            BasicUI basicUI;
+            if ((basicUI = GetComponent<BasicUI>()) != null)
+            {
+                basicUI.Delete();
+            }
+            else
+            {
+                LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.1f).setOnComplete(Destroy).setEase(LeanTweenType.easeInCubic);
+            }
+        }
+
+        public void Destroy()
+        {
             Destroy(gameObject);
         }
 

@@ -8,13 +8,13 @@ namespace Manage.Characters
 {
     public class CharacterStats
     {
-        public uint Points { get; set; }
+        public uint Points = 0;
         
-        private uint stamina;
-        private uint endurance;
-        private uint marksmanship;
-        private uint cunning;
-        private uint charisma;
+        private uint stamina=1;
+        private uint endurance=1;
+        private uint marksmanship=1;
+        private uint cunning=1;
+        private uint charisma=1;
 
         private static Random random = new Random();
 
@@ -102,11 +102,6 @@ namespace Manage.Characters
 
         private static CharacterStats RandomStats(CharacterStats characterStats, uint level)
         {
-            characterStats.stamina = 1;
-            characterStats.endurance = 1;
-            characterStats.marksmanship = 1;
-            characterStats.cunning = 1;
-            characterStats.charisma = 1;
             for (int i=0;i<4+level; i++)
             {
                 var randValue = (uint)random.Next(5);

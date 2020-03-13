@@ -48,7 +48,7 @@ namespace Manage.UI
             RandomizeNickname();
             RandomizeAge();
             RandomizePortrait();
-            SetImage(portrait);
+            CharacterImage.texture = portrait;
         }
 
         public void Create()
@@ -96,6 +96,11 @@ namespace Manage.UI
 
         public void SetImage(Texture2D _portrait)
         {
+            var aus = GetComponent<AudioSource>();
+            if (aus != null)
+            {
+                aus.Play();
+            }
             portrait = _portrait;
             CharacterImage.texture = portrait;
         }

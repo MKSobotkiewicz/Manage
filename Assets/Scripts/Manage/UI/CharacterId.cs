@@ -245,7 +245,7 @@ namespace Manage.UI
             {
                 foreach (var button in AddStatButtons)
                 {
-                    button.SetActive( false);
+                    button.SetActive(false);
                 }
             }
             else
