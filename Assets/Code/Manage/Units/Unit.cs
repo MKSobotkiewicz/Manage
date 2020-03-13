@@ -35,6 +35,7 @@ namespace Manage.Units
         private float ThrowingGrenadeTime = 0;
         private float HealTime = 0;
         private NavMeshAgent navMeshAgent;
+        private Audio.UnitsScreamsManager unitsScreamsManager;
 
         private Unit target;
         private Unit grenadeTarget;
@@ -91,6 +92,7 @@ namespace Manage.Units
 
         public void Start()
         {
+            unitsScreamsManager = GetComponentInChildren<Audio.UnitsScreamsManager>();
             AttackedBy = new Dictionary<Unit, float>();
             hitPoints = GetMaxHitPoints();
             grenadeTime = (float)random.NextDouble() * 25 + 5 - 10 * Character.CharacterTraits.Contains(CharacterTraitsList.Grenadier);
@@ -555,6 +557,10 @@ namespace Manage.Units
         {
             if (Inventory.VehicleType == null)
             {
+                if (unitsScreamsManager != null)
+                {
+                    unitsScreamsManager.Play();
+                }
                 Attacking = false;
                 StartShot();
                 shotTime = (float)((random.NextDouble() + 0.5) * (3 - Character.CharacterTraits.Contains(CharacterTraitsList.Unyielding) * 2));

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8718811739589381476}
   - component: {fileID: 4313626656431595782}
   - component: {fileID: -4542473938748056126}
+  - component: {fileID: 691090711497465466}
   m_Layer: 0
   m_Name: 8mm_MuzzleFlash
   m_TagString: Untagged
@@ -4765,10 +4766,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a0a4e123b51b25f408b76e7a2e84c74a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.05
-  m_Pitch: 1.2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4864,3 +4865,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
+--- !u!114 &691090711497465466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780746296450358636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c04495358233f4d8dee1f197f99f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 44649707da74fd845b1d93afcaf65da0, type: 3}
+  - {fileID: 8300000, guid: ab7d269e61ae8ed43a2527c7aad3ecc8, type: 3}
+  - {fileID: 8300000, guid: 7b585c2af93bd354d8482276cffd558c, type: 3}
+  - {fileID: 8300000, guid: 49ef74d18a17e3646a22f9cfc389798c, type: 3}
+  - {fileID: 8300000, guid: 94c3c1c81762ba4478e39ecb81d3f1f4, type: 3}
+  - {fileID: 8300000, guid: 28caa4f2d5bf0dc45b303d8f91968317, type: 3}
+  PlayOnAwake: 1

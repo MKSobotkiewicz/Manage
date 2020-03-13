@@ -2377,6 +2377,11 @@ PrefabInstance:
       propertyPath: UnitIds
       value: 
       objectReference: {fileID: 2117929026}
+    - target: {fileID: 2971093724912855959, guid: d8addabcab692ba47a9275355321db93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8addabcab692ba47a9275355321db93, type: 3}
 --- !u!1 &1201745988
@@ -3575,7 +3580,7 @@ PrefabInstance:
     - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}
       propertyPath: VehicleType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1193830703164065356, guid: c82dfa82f17219645b89728fe6a845f7,
         type: 3}

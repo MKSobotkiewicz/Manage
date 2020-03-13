@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8718811739589381476}
   - component: {fileID: 8185107326262483703}
   - component: {fileID: -6054105204759837915}
+  - component: {fileID: 6875714539198673670}
   m_Layer: 0
   m_Name: 5p5mm_MuzzleFlash
   m_TagString: Untagged
@@ -4765,10 +4766,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a0a4e123b51b25f408b76e7a2e84c74a, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.05
-  m_Pitch: 1.5
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4864,3 +4865,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
+--- !u!114 &6875714539198673670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780746296450358636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c04495358233f4d8dee1f197f99f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 52eee3472cd0d7744a172523797ea3ea, type: 3}
+  - {fileID: 8300000, guid: 9d3e45f5c63735545851c0f2a9f64e02, type: 3}
+  - {fileID: 8300000, guid: 3a2bf69b11d822b428312c6ed90bc636, type: 3}
+  - {fileID: 8300000, guid: d22c5d7d5974cb74eba98d0719fa2d67, type: 3}
+  - {fileID: 8300000, guid: ca1828437bdc5c44bb894ea7016e8e46, type: 3}
+  - {fileID: 8300000, guid: c823a406af2d68c42b4a118def348076, type: 3}
+  PlayOnAwake: 1

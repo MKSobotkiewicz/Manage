@@ -9518,6 +9518,7 @@ GameObject:
   - component: {fileID: 5837744271080411371}
   - component: {fileID: 8718811739589381476}
   - component: {fileID: 8185107326262483703}
+  - component: {fileID: 3841846801443549356}
   m_Layer: 0
   m_Name: GrenadeExplosion
   m_TagString: Untagged
@@ -14272,10 +14273,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 285d6d210e6202a419a12c4c2313f526, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 0.1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -14358,3 +14359,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3841846801443549356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780746296450358636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c04495358233f4d8dee1f197f99f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 16ff64f4371c87a47a79f3b4481d2aa8, type: 3}
+  - {fileID: 8300000, guid: 17b8d7eb5f890f24e99e9aca3bee2587, type: 3}
+  - {fileID: 8300000, guid: e4b9da47652c87e4395f7129b45c1cf3, type: 3}
+  PlayOnAwake: 1

@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8522753266320562217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6855638036339720925}
+  - component: {fileID: 7574914241229556292}
+  - component: {fileID: 1666629777220231072}
+  m_Layer: 0
+  m_Name: Screams
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6855638036339720925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522753266320562217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &7574914241229556292
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522753266320562217}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1666629777220231072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522753266320562217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f60935d61feb149885f8bcc0f82dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaleScreamsClips:
+  - {fileID: 8300000, guid: e0e4ee6f3e5ab804f900b4eb9438bb16, type: 3}
+  - {fileID: 8300000, guid: a4e803a901dee444c82fbd45bba758a0, type: 3}
+  - {fileID: 8300000, guid: 0cd1f22ca145bf343a56187c1f9ac087, type: 3}
+  - {fileID: 8300000, guid: d03cb854194d8b948a9eff6065ea9728, type: 3}
+  - {fileID: 8300000, guid: f5557dc027b811c45a3021123e0591b4, type: 3}
+  - {fileID: 8300000, guid: e32ceafbe67c43646b3474d50a888d81, type: 3}
+  - {fileID: 8300000, guid: b1fc381d5d876f046b26c9df42b7e3fe, type: 3}
+  - {fileID: 8300000, guid: 541dbe29cb83c7946956d52732c7701f, type: 3}
+  - {fileID: 8300000, guid: 883133fffbfc825499eb9c4b2ed56a0d, type: 3}
+  - {fileID: 8300000, guid: 9e44953b7c3080d478b9e242a67ab9c0, type: 3}
+  - {fileID: 8300000, guid: 365a9af404d6b914294286970243326f, type: 3}
+  - {fileID: 8300000, guid: afce792d0e1e3a841ab2f4ae603db0a1, type: 3}
+  - {fileID: 8300000, guid: 525183db070611541a7369a24af6cdfb, type: 3}
+  - {fileID: 8300000, guid: b566d6dc1afa2e14da7b89e98a50ddf0, type: 3}
+  - {fileID: 8300000, guid: 5a89688bc38f69e469fe0ed4b38e1b48, type: 3}
+  - {fileID: 8300000, guid: acc2591a39cedb04494f08bd57b9febb, type: 3}
+  FemaleScreamsClips:
+  - {fileID: 8300000, guid: afcebb82f6d3e174aa15e1f48d49ca97, type: 3}
+  - {fileID: 8300000, guid: bf18a9a35a67c174a90c7327f1b7ffa9, type: 3}
+  - {fileID: 8300000, guid: 97c633a475666f04a8e0789af6e52447, type: 3}
+  - {fileID: 8300000, guid: 2c31301e07220c644920a5a6eed7144a, type: 3}
+  - {fileID: 8300000, guid: 91b4a31a05fd1f843837b32fc15e9a25, type: 3}
+  - {fileID: 8300000, guid: 5dbc0046e00400f42800584befc638a1, type: 3}
+  - {fileID: 8300000, guid: 901b5d0e00e76354a8a1fa9619613f69, type: 3}
+  - {fileID: 8300000, guid: 069c98417391483438eafbc4f317d3ae, type: 3}
+  - {fileID: 8300000, guid: b7de5b8f9ce56d84a959382dec84aefc, type: 3}
+  - {fileID: 8300000, guid: 37ee3741fb83a5b46bc5642d5194a114, type: 3}
+  - {fileID: 8300000, guid: 00fc7dcf67edd8945b052e3813d0e6cc, type: 3}
+  - {fileID: 8300000, guid: becd5f58e9b30ec4eb2cd91eee813d37, type: 3}
+  PlayOnAwake: 1

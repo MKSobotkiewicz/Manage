@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5239322060538563267}
   - component: {fileID: 5239322060538563266}
   - component: {fileID: 5239322060538563269}
+  - component: {fileID: 4153760734731987941}
   m_Layer: 0
   m_Name: BulletHitBlood
   m_TagString: Untagged
@@ -4765,9 +4766,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 285d6d210e6202a419a12c4c2313f526, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.05
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4851,6 +4852,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4153760734731987941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239322060538563268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c04495358233f4d8dee1f197f99f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 0260006e09adeee41b189134a1673138, type: 3}
+  - {fileID: 8300000, guid: ef5ff571a5ca2134a96079b18d44d31c, type: 3}
+  - {fileID: 8300000, guid: 6a03f314feff76d4599c13f302b6f61e, type: 3}
+  - {fileID: 8300000, guid: 3151badcea109164c93b8e818d47bab3, type: 3}
+  - {fileID: 8300000, guid: 59c2a5726de72dd4d84bfdab02857263, type: 3}
+  - {fileID: 8300000, guid: 687d59ea61da4284ca6e0ce630203ded, type: 3}
+  - {fileID: 8300000, guid: 90e9be51ce7d6f5489565096fd381c3e, type: 3}
+  - {fileID: 8300000, guid: f1bb4b500f4fece438f722bef7ab6299, type: 3}
+  - {fileID: 8300000, guid: df5d36a3bed52044aa562bc74bad5043, type: 3}
+  - {fileID: 8300000, guid: 2c9ec015b03ff3b4190cf5b60ab2b1ed, type: 3}
+  - {fileID: 8300000, guid: aa8e351f6dc0ee047a7016d0864bd9d0, type: 3}
+  - {fileID: 8300000, guid: 5624ebbb9e0ee1444b6ced508af447a6, type: 3}
+  PlayOnAwake: 1
 --- !u!1 &6438244360882975798
 GameObject:
   m_ObjectHideFlags: 0

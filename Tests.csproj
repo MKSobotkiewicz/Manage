@@ -55,20 +55,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Manage\Tests\Characters\CharacterCultureTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Characters\CharacterTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Map\VectorTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Organizations\FlagLoaderTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\InfoParserTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceDepotTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceModifierListTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceModifierSpeedListTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourcePlantTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceTypesParserTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceTypeTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceValueListTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Resources\ResourceValueTests.cs" />
-     <Compile Include="Assets\Scripts\Manage\Tests\Units\WeaponTypeTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Characters\CharacterCultureTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Characters\CharacterTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Map\VectorTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Organizations\FlagLoaderTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\InfoParserTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceDepotTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceModifierListTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceModifierSpeedListTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourcePlantTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceTypesParserTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceTypeTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceValueListTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Resources\ResourceValueTests.cs" />
+     <Compile Include="Assets\Code\Manage\Tests\Units\WeaponTypeTests.cs" />
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>C:/Users/Monisia/Documents/Manage/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
