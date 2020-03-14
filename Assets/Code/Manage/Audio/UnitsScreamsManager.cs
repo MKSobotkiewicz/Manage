@@ -31,6 +31,14 @@ namespace Manage.Audio
             {
                 if (unit.Character != null)
                 {
+                    if (audioSource.isPlaying)
+                    {
+                        return;
+                    }
+                    if (random.Next(0, 1) >= 1)
+                    {
+                        return;
+                    }
                     switch (unit.Character.Gender)
                     {
                         case Characters.EGender.Other:
