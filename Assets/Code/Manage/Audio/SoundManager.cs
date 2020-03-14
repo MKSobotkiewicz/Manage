@@ -11,7 +11,7 @@ namespace Manage.Audio
 
         private AudioSource audioSource;
 
-        private static System.Random random = new System.Random();
+        protected static System.Random random = new System.Random();
 
         void Awake()
         {

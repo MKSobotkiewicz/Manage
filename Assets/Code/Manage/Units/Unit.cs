@@ -36,6 +36,7 @@ namespace Manage.Units
         private float HealTime = 0;
         private NavMeshAgent navMeshAgent;
         private Audio.UnitsScreamsManager unitsScreamsManager;
+        private Audio.Footsteps footsteps;
 
         private Unit target;
         private Unit grenadeTarget;
@@ -93,6 +94,7 @@ namespace Manage.Units
         public void Start()
         {
             unitsScreamsManager = GetComponentInChildren<Audio.UnitsScreamsManager>();
+            footsteps= GetComponentInChildren<Audio.Footsteps>();
             AttackedBy = new Dictionary<Unit, float>();
             hitPoints = GetMaxHitPoints();
             grenadeTime = (float)random.NextDouble() * 25 + 5 - 10 * Character.CharacterTraits.Contains(CharacterTraitsList.Grenadier);
@@ -510,7 +512,12 @@ namespace Manage.Units
 
         public bool IsMoving()
         {
-            if (navMeshAgent.velocity.magnitude > 0.1)
+            var speed = navMeshAgent.velocity.magnitude;
+            if (footsteps != null)
+            {
+                footsteps.SetSpeed(speed);
+            }
+            if (speed > 0.1)
             {
                 return true;
             }
