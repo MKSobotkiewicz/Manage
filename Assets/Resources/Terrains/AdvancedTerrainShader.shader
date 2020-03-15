@@ -39,8 +39,8 @@ Shader "Terrain/AdvancedTerrainShader"
 		_TilingRock("Tiling Rock", Range(0,100)) = 0.5
 		_RockNormal("Rock Normal", Range(-1,1)) = 0
 
-		_EdgeLength("Edge length", Range(0.1,5)) = 5
-		_Phong("Phong Strengh", Range(0,1)) = 0.5
+		//_EdgeLength("Edge length", Range(0.1,5)) = 5
+		//_Phong("Phong Strengh", Range(0,1)) = 0.5
     }
     SubShader
     {
@@ -48,10 +48,10 @@ Shader "Terrain/AdvancedTerrainShader"
 		LOD 300
 
 		CGPROGRAM
-		#pragma surface surf Standard fullforwardshadows nolightmap tessellate:tess tessphong:_Phong addshadow
+		#pragma surface surf Standard fullforwardshadows nolightmap /*tessellate:tess tessphong:_Phong*/ addshadow
 		#pragma target 5.0
 
-		#include "Tessellation.cginc"
+		//#include "Tessellation.cginc"
 		#include "UnityCG.cginc"
 
 		sampler2D _Control;
@@ -109,10 +109,10 @@ Shader "Terrain/AdvancedTerrainShader"
 			float4 color: COLOR;
 		};
 
-		float4 tess(appdata_full v0, appdata_full v1, appdata_full v2)
+		/*float4 tess(appdata_full v0, appdata_full v1, appdata_full v2)
 		{
 			return UnityEdgeLengthBasedTess(v0.vertex, v1.vertex, v2.vertex, _EdgeLength);
-		}
+		}*/
 
 		fixed3 projectNormal(sampler2D tex, half3 worldPos, float3 projnorm, half scale)
 		{
