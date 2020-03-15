@@ -12,7 +12,7 @@ namespace Manage.Audio
         void Update()
         {
             time += Time.deltaTime;
-            if (speed <= 0.01)
+            if (speed <= 0.1)
             {
                 return;
             }

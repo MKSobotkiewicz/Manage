@@ -95,7 +95,7 @@ namespace Manage.Control
                 var maxY = Mathf.Max((int)corners[0].y, (int)corners[1].y);
                 for (int i = minX; i <= maxX; i += 5)
                 {
-                    for (int j = minY; j <= maxY; j += 5)
+                    for (int j = minY; j <= maxY; j += 3)
                     {
                         var ray = UnityEngine.Camera.main.ScreenPointToRay(new Vector3(i, j, 0));
                         if (Physics.Raycast(ray, out hit, 200))
