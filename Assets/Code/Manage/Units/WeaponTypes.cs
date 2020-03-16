@@ -35,20 +35,20 @@ namespace Manage.Units
 
         public static readonly WeaponType AC1_Assault_Rifle = new WeaponType(
             "AR1 rifle",
-            "Old but reliable construction, packs powerful 8x50mm bullets. Before the collapse was used mostly by second line units. Good at medium to long range.",
-            "Weapons/AR1_Assault_Rifle/AR1_Assault",
+            "Old but reliable construction, packs powerful 7.62x39mm bullets. Before the collapse was used mostly by second line units. Good at medium to long range.",
+            "Weapons/AR1_Assault_Rifle/AK_103_Carbine",
             "Weapons/AR1_Assault_Rifle/textures/AR1_ItemIcon",
             "Weapons/AR1_Assault_Rifle/textures/AR1_Icon",
             80,
             100,
             0.5,
             5,
-            20,
+            30,
             BulletTypes.BulletType_8x50mm);
         public static readonly WeaponType C15_Carbine = new WeaponType(
             "C15 carbine",
-            "Standard carbine of the Imperial Army, now widespread among its ruins. Uses 7.62x39mm caliber bullets, better at medium range.",
-            "Weapons/C15_Carbine/AK_103_Carbine",
+            "Standard carbine of the Imperial Army, now widespread among its ruins. Uses 5.56x45mm caliber bullets, better at medium range.",
+            "Weapons/C15_Carbine/AUG_Carbine",
             "Weapons/C15_Carbine/textures/C15_ItemIcon",
             "Weapons/C15_Carbine/textures/C15_Icon",
             140,

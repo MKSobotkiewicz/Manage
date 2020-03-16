@@ -167,6 +167,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
      <None Include="Assets\Universal Sound FX\#Game Genre References\8bit and Retro.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+     <None Include="Assets\Resources\Weapons\C15_Carbine\Materials\AUGShader.shader" />
      <None Include="Assets\EasyRoads3D\shaders\EasyRoads3D-Surface-Offset.shader" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
