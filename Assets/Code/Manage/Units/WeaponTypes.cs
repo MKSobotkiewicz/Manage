@@ -47,8 +47,8 @@ namespace Manage.Units
             BulletTypes.BulletType_8x50mm);
         public static readonly WeaponType C15_Carbine = new WeaponType(
             "C15 carbine",
-            "Standard carbine of the Imperial Army, now widespread among its ruins. Uses 5.5x45mm caliber bullets, better at medium range.",
-            "Weapons/C15_Carbine/C15_Carbine",
+            "Standard carbine of the Imperial Army, now widespread among its ruins. Uses 7.62x39mm caliber bullets, better at medium range.",
+            "Weapons/C15_Carbine/AK_103_Carbine",
             "Weapons/C15_Carbine/textures/C15_ItemIcon",
             "Weapons/C15_Carbine/textures/C15_Icon",
             140,
