@@ -215,7 +215,7 @@ namespace Manage.UI
 
         public void ChangeArmor(ArmorType armorType)
         {
-            unit= unit.ChangeArmor(unit, armorType);
+            unit = unit.ChangeArmor(unit, armorType);
             unitId.Unit = unit;
         }
 
@@ -276,28 +276,28 @@ namespace Manage.UI
                 var go = Instantiate(WeaponCanvasPrefab, inventoryCanvas.transform);
                 var weapon = go.GetComponent<Weapon>();
                 weapon.Setup(unit.Inventory.Weapon.WeaponType, inventoryCanvas);
-                WeaponSlot.PutItem(weapon);
+                weapon.PutInItemSlot(WeaponSlot);
             }
             if (unit.Inventory.ArmorType != null)
             {
                 var go = Instantiate(ArmorCanvasPrefab, inventoryCanvas.transform);
                 var armor = go.GetComponent<Armor>();
                 armor.Setup(unit.Inventory.ArmorType, inventoryCanvas);
-                ArmorSlot.PutItem(armor);
+                armor.PutInItemSlot(ArmorSlot);
             }
             if (unit.Inventory.Helmet != null)
             {
                 var go = Instantiate(HelmetCanvasPrefab, inventoryCanvas.transform);
                 var helmet = go.GetComponent<Helmet>();
                 helmet.Setup(unit.Inventory.Helmet.HelmetType, inventoryCanvas);
-                HelmetSlot.PutItem(helmet);
+                helmet.PutInItemSlot(HelmetSlot);
             }
             if (unit.Inventory.Vest != null)
             {
                 var go = Instantiate(VestCanvasPrefab, inventoryCanvas.transform);
                 var vest = go.GetComponent<Vest>();
                 vest.Setup(unit.Inventory.Vest.VestType, inventoryCanvas);
-                VestSlot.PutItem(vest);
+                vest.PutInItemSlot(VestSlot);
             }
         }
 

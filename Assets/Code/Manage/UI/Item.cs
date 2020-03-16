@@ -64,6 +64,15 @@ namespace Manage.UI
             LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)inventoryCanvas.transform);
         }
 
+        public void PutInItemSlot(ItemSlot _itemSlot)
+        {
+            if (_itemSlot != null)
+            {
+                itemSlot = _itemSlot;
+                itemSlot.PutItem(this);
+            }
+        }
+
         private void CheckForItemSlot()
         {
             var grl = transform.parent.parent.parent.parent.GetComponentsInChildren<GraphicRaycaster>();
@@ -80,15 +89,10 @@ namespace Manage.UI
                 }
                 results.AddRange(localResults);
             }
-            UnityEngine.Debug.Log("hitting");
             foreach (var item in results)
             {
                 var _itemSlot = item.gameObject.GetComponent<ItemSlot>();
-                if (_itemSlot != null)
-                {
-                    itemSlot = _itemSlot;
-                    itemSlot.PutItem(this);
-                }
+                PutInItemSlot(_itemSlot);
             }
             GetComponentInParent<CharacterId>().UpdateInventory();
         }

@@ -18,6 +18,22 @@ namespace Manage.UI
 
         public void RemoveItem()
         {
+            if (item is Weapon)
+            {
+                GetComponentInParent<CharacterId>().Rearm(null);
+            }
+            else if (item is Armor)
+            {
+                GetComponentInParent<CharacterId>().ChangeArmor(null);
+            }
+            else if (item is Helmet)
+            {
+                GetComponentInParent<CharacterId>().ChangeHelmet(null);
+            }
+            else if (item is Vest)
+            {
+                GetComponentInParent<CharacterId>().ChangeVest(null);
+            }
             item = null;
         }
 

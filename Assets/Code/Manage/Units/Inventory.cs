@@ -130,7 +130,10 @@ namespace Manage.Units
             {
                 ThrowAway(Weapon);
             }
-            Weapon = Weapon.Create(weaponType, transform);
+            if (weaponType != null)
+            {
+                Weapon = Weapon.Create(weaponType, transform);
+            }
             return true;
         }
 
@@ -143,7 +146,10 @@ namespace Manage.Units
                 returnedWeaponType=Weapon.WeaponType;
                 Weapon.Destroy();
             }
-            Weapon = Weapon.Create(weaponType, transform);
+            if (weaponType != null)
+            {
+                Weapon = Weapon.Create(weaponType, transform);
+            }
             return returnedWeaponType;
         }
 
@@ -182,7 +188,10 @@ namespace Manage.Units
                 returnedVestType = Vest.VestType;
                 Vest.Destroy();
             }
-            Vest = Vest.Create(vestType, transform, gender);
+            if (vestType != null)
+            {
+                Vest = Vest.Create(vestType, transform, gender);
+            }
             return returnedVestType;
         }
 
@@ -195,7 +204,6 @@ namespace Manage.Units
                 returnedHelmetType = Helmet.HelmetType;
                 Helmet.Destroy();
             }
-            Helmet = helmet;
             return returnedHelmetType;
         }
 
@@ -207,8 +215,11 @@ namespace Manage.Units
             {
                 returnedHelmetType = Helmet.HelmetType;
                 Helmet.Destroy();
-            }
+        }
+        if (helmetType != null)
+        {
             Helmet = Helmet.Create(helmetType, transform);
+        }
             return returnedHelmetType;
         }
 

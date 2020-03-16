@@ -48,11 +48,26 @@ namespace Manage.Units
         private Unit CopyArmor(ArmorType armorType)
         {
             var factory = new UnitFactory();
+            WeaponType weaponType = null;
+            if (Inventory.Weapon != null)
+            {
+                weaponType=Inventory.Weapon.WeaponType;
+            }
+            HelmetType helmetType = null;
+            if (Inventory.Helmet != null)
+            {
+                helmetType = Inventory.Helmet.HelmetType;
+            }
+            VestType vestType = null;
+            if (Inventory.Vest != null)
+            {
+                vestType = Inventory.Vest.VestType;
+            }
             var unit = factory.Create(null,
-                                      Inventory.Weapon.WeaponType,
+                                      weaponType,
                                       armorType,
-                                      Inventory.Helmet.HelmetType,
-                                      Inventory.Vest.VestType,
+                                      helmetType,
+                                      vestType,
                                       Inventory.VehicleType,
                                       Character,
                                       transform);
@@ -267,20 +282,19 @@ namespace Manage.Units
 
         public bool PutOnVest(VestType vestType)
         {
-            if (vestType == null)
-            {
-                return false;
-            }
             Inventory.PutOnVest(vestType, transform, Character.Gender);
-            Animators.AddRange(Inventory.Vest.GetComponents<Animator>());
-            var locRandom = (float)random.NextDouble() * 5;
-            foreach (var animator in Animators)
+            if (Inventory.Vest != null)
             {
-                if (animator != null)
+                Animators.AddRange(Inventory.Vest.GetComponents<Animator>());
+                var locRandom = (float)random.NextDouble() * 5;
+                foreach (var animator in Animators)
                 {
-                    animator.SetFloat("Random", locRandom);
-                    gameObject.SetActive(false);
-                    gameObject.SetActive(true);
+                    if (animator != null)
+                    {
+                        animator.SetFloat("Random", locRandom);
+                        gameObject.SetActive(false);
+                        gameObject.SetActive(true);
+                    }
                 }
             }
             return true;
