@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AUG_Material
-  m_Shader: {fileID: 4800000, guid: f7723dcaf31627143a53616c9ae553d9, type: 3}
+  m_Name: AUGSigths_Material 1
+  m_Shader: {fileID: 4800000, guid: 4af02896e40f2f34dba2ec7d7b451518, type: 3}
   m_ShaderKeywords: _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 54f4e24d20ffee340baa6a89e043b5e7, type: 3}
+        m_Texture: {fileID: 2800000, guid: b6c3d2d875c271b4aa4675d4ee3ac2cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4ada4041ed22340419de01640645d171, type: 3}
+        m_Texture: {fileID: 2800000, guid: e4a72a50a1f0537489db40c98160e490, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: b9982c5efdcf9cc40be07843d8776dd3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 81b0c511063d3cb41a95b0ad92e4d41a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -64,7 +64,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0.5
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0

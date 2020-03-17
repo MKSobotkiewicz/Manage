@@ -78,14 +78,14 @@ namespace Manage.Units
                     var transformCopy = new GameObject().transform;
                     transformCopy.position = transform.position;
                     transformCopy.rotation = transform.rotation;
-                    var unit = unitFactory.Create(Player, weaponType, armor,HelmetTypes.CamouflagedCombatHelmet,VestTypes.CamouflagedCombatVest, null, character, transformCopy);
+                    var unit = unitFactory.Create(Player, weaponType, armor,null,null,null, null, character, transformCopy);
                     transform.position += new Vector3(random.Next(-10, 10), 0, random.Next(-10, 10));
                     //AllUnitsList.AllUnits.Add(unit);
                 }
                 return;
             }
             var character2 = new Characters.Character(Characters.CharacterCultureTypes.BasicCulture, organization,Level);
-            var unit2 = unitFactory.Create(Player, C15Carbine, InfantryArmor, HelmetTypes.CamouflagedCombatHelmet, VestTypes.CamouflagedCombatVest, Jeep, character2, transform);
+            var unit2 = unitFactory.Create(Player, C15Carbine, InfantryArmor, null, null, null, Jeep, character2, transform);
             //AllUnitsList.AllUnits.Add(unit2);
         }
 

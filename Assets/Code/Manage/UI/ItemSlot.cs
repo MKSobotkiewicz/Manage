@@ -34,6 +34,10 @@ namespace Manage.UI
             {
                 GetComponentInParent<CharacterId>().ChangeVest(null);
             }
+            if (item is Grenade)
+            {
+                GetComponentInParent<CharacterId>().ChangeGrenade(null);
+            }
             item = null;
         }
 
@@ -42,7 +46,8 @@ namespace Manage.UI
             if (!(_item is Weapon && ItemType is EItemType.Weapon) &&
                 !(_item is Armor && ItemType is EItemType.Armor) &&
                 !(_item is Helmet && ItemType is EItemType.Helmet) &&
-                !(_item is Vest && ItemType is EItemType.Vest))
+                !(_item is Vest && ItemType is EItemType.Vest)&&
+                !(_item is Grenade && ItemType is EItemType.Grenade))
             {
                 return false;
             }
@@ -69,6 +74,11 @@ namespace Manage.UI
             {
                 GetComponentInParent<CharacterId>().ChangeVest(item.ItemType as VestType);
             }
+
+            else if (item is Grenade)
+            {
+                GetComponentInParent<CharacterId>().ChangeGrenade(item.ItemType as GrenadeType);
+            }
             return true;
         }
 
@@ -77,7 +87,8 @@ namespace Manage.UI
             Weapon,
             Armor,
             Helmet,
-            Vest
+            Vest,
+            Grenade
         }
     }
 }

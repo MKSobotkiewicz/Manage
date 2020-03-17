@@ -63,11 +63,13 @@ namespace Manage.Units
             {
                 vestType = Inventory.Vest.VestType;
             }
+            var grenadeType= Inventory.GrenadeType;
             var unit = factory.Create(null,
                                       weaponType,
                                       armorType,
                                       helmetType,
                                       vestType,
+                                      grenadeType,
                                       Inventory.VehicleType,
                                       Character,
                                       transform);
@@ -300,6 +302,11 @@ namespace Manage.Units
             return true;
         }
 
+        public bool ChangeGrenade(GrenadeType grenadeType)
+        {
+            return Inventory.ArmGrenade(grenadeType);
+        }
+
         public WeaponType Rearm(WeaponType weaponType)
         {
             foreach (var child in GetComponentsInChildren<Transform>())
@@ -474,28 +481,31 @@ namespace Manage.Units
             {
                 return;
             }
-            if (Vector3.Distance(transform.position, grenadeTarget.transform.position) > 30)
+            var distance = Vector3.Distance(transform.position, grenadeTarget.transform.position);
+            if (Inventory.GrenadeType != null)
             {
-                foreach (var animator in Animators)
+                if (distance > 30 && distance < Inventory.GrenadeType.Range)
                 {
-                    if (animator != null)
+                    foreach (var animator in Animators)
                     {
-                        animator.SetBool("Shooting", false);
+                        if (animator != null)
+                        {
+                            animator.SetBool("Shooting", false);
+                        }
                     }
-                }
-                ThrowingGrenade = true;
-                Attacking = false;
-                ThrowingGrenadeTime = 2;
-                foreach (var animator in Animators)
-                {
-                    if (animator != null)
+                    ThrowingGrenade = true;
+                    Attacking = false;
+                    ThrowingGrenadeTime = 2;
+                    foreach (var animator in Animators)
                     {
-                        animator.SetBool("Toss Grenade", true);
+                        if (animator != null)
+                        {
+                            animator.SetBool("Toss Grenade", true);
+                        }
                     }
+                    return;
                 }
-                return;
             }
-            //Move(Vector3.LerpUnclamped(grenadeTarget.Position(), Position(), 3f));
         }
 
         private void EndTossGrenade()
@@ -508,7 +518,7 @@ namespace Manage.Units
                     weaponPoint = child;
                 }
             }
-            var grenade = Inventory.Grenade.Instantiate(transform.parent, weaponPoint.position, transform.rotation);
+            var grenade = Inventory.GrenadeType.Instantiate(transform.parent, weaponPoint.position, transform.rotation);
             var distance = Vector3.Distance(transform.position, grenadeTarget.transform.position);
             grenade.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0,
                                                                            distance / 10 + 10,

@@ -229,6 +229,11 @@ namespace Manage.UI
             unit.PutOnVest(vestType);
         }
 
+        public void ChangeGrenade(GrenadeType grenadeType)
+        {
+            unit.ChangeGrenade(grenadeType);
+        }
+
         public void UpdateInventory()
         {
             player.PlayerInventory.Clear();

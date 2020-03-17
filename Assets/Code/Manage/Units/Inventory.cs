@@ -9,7 +9,7 @@ namespace Manage.Units
     public class Inventory
     {
         public Weapon Weapon { get; private set; }
-        public Grenade Grenade { get; private set; }
+        public GrenadeType GrenadeType { get; private set; }
         public VehicleType VehicleType { get; set; }
         public ArmorType ArmorType { get; set; }
         public Vest Vest { get; private set; }
@@ -18,7 +18,7 @@ namespace Manage.Units
         public Inventory()
         {
             Weapon = null;
-            Grenade = null;
+            GrenadeType = null;
             ArmorType = null;
             Vest = null;
             Helmet = null;
@@ -115,10 +115,6 @@ namespace Manage.Units
         public bool Arm(Weapon weapon)
         {
             UnityEngine.Debug.Log("Arming handgun");
-            if (Weapon != null)
-            {
-                ThrowAway(Weapon);
-            }
             Weapon = weapon;
             return true;
         }
@@ -126,10 +122,6 @@ namespace Manage.Units
         public bool Arm(WeaponType weaponType,Transform transform)
         {
             UnityEngine.Debug.Log("Arming handgun");
-            if (Weapon != null)
-            {
-                ThrowAway(Weapon);
-            }
             if (weaponType != null)
             {
                 Weapon = Weapon.Create(weaponType, transform);
@@ -223,25 +215,11 @@ namespace Manage.Units
             return returnedHelmetType;
         }
 
-        public bool ArmGrenade(Grenade grenade)
+        public bool ArmGrenade(GrenadeType grenade)
         {
             UnityEngine.Debug.Log("Arming grenade");
-            if (Grenade != null)
-            {
-                ThrowAway(Grenade);
-            }
-            Grenade = grenade;
+            GrenadeType = grenade;
             return true;
-        }
-
-        public Inventory ThrowAway(Weapon weapon)
-        {
-            return this;
-        }
-
-        public Inventory ThrowAway(Grenade grenade)
-        {
-            return this;
         }
     }
 }

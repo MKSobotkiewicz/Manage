@@ -16,6 +16,7 @@ namespace Manage.Units
         public ArmorTypes.EArmorType ArmorType;
         public HelmetTypes.EHelmetType HelmetType;
         public VestTypes.EVestType VestType;
+        public GrenadeTypes.EGrenadeType GrenadeType;
         public VehicleTypes.EVehicleType VehicleType;
         public OrganizationTypes.EOrganization Organization;
         public CharacterCultureTypes.ECharacterCulture CharacterCulture;
@@ -71,6 +72,7 @@ namespace Manage.Units
                                       ArmorTypes.ToArmorType(ArmorType),
                                       HelmetTypes.ToHelmetType(HelmetType),
                                       VestTypes.ToVestType(VestType),
+                                      GrenadeTypes.ToGrenadeType(GrenadeType),
                                       VehicleTypes.ToVehicleType(VehicleType),
                                       Character,
                                       transform);

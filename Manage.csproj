@@ -119,6 +119,7 @@
      <Compile Include="Assets\Code\Manage\UI\CreateCharacter.cs" />
      <Compile Include="Assets\Code\Manage\UI\Dialog.cs" />
      <Compile Include="Assets\Code\Manage\UI\DialogDebug.cs" />
+     <Compile Include="Assets\Code\Manage\UI\Grenade.cs" />
      <Compile Include="Assets\Code\Manage\UI\Helmet.cs" />
      <Compile Include="Assets\Code\Manage\UI\Item.cs" />
      <Compile Include="Assets\Code\Manage\UI\ItemSlot.cs" />
@@ -134,8 +135,8 @@
      <Compile Include="Assets\Code\Manage\Units\BulletType.cs" />
      <Compile Include="Assets\Code\Manage\Units\BulletTypes.cs" />
      <Compile Include="Assets\Code\Manage\Units\ClothesType.cs" />
-     <Compile Include="Assets\Code\Manage\Units\Grenade.cs" />
      <Compile Include="Assets\Code\Manage\Units\GrenadeBehaviour.cs" />
+     <Compile Include="Assets\Code\Manage\Units\GrenadeType.cs" />
      <Compile Include="Assets\Code\Manage\Units\GrenadeTypes.cs" />
      <Compile Include="Assets\Code\Manage\Units\Helmet.cs" />
      <Compile Include="Assets\Code\Manage\Units\HelmetType.cs" />

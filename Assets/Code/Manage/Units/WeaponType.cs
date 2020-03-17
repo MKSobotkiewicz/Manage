@@ -97,18 +97,19 @@ namespace Manage.Units
 
         private void RotateBullet(Bullet bullet, Unit attacking)
         {
+            var spreadNormalized = Spread*(BulletType.Velocity/1000);
+            double marksmanship;
             if (attacking.Inventory.ArmorType != null)
             {
-                bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * Spread * Math.Pow(0.9, attacking.Character.CharacterStats.GetMarksmanship() + attacking.Inventory.ArmorType.Marksmanship)),
-                                                      (float)(((random.NextDouble() * 2) - 1) * Spread * Math.Pow(0.9, attacking.Character.CharacterStats.GetMarksmanship() + attacking.Inventory.ArmorType.Marksmanship)),
-                                                      (float)(((random.NextDouble() * 2) - 1) * Spread * Math.Pow(0.9, attacking.Character.CharacterStats.GetMarksmanship() + attacking.Inventory.ArmorType.Marksmanship))), ForceMode.VelocityChange);
+                marksmanship = attacking.Character.CharacterStats.GetMarksmanship() + attacking.Inventory.ArmorType.Marksmanship;
             }
             else
             {
-                bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * Spread * Math.Pow(0.9, attacking.Character.CharacterStats.GetMarksmanship())),
-                                                      (float)(((random.NextDouble() * 2) - 1) * Spread * Math.Pow(0.9, attacking.Character.CharacterStats.GetMarksmanship())),
-                                                      (float)(((random.NextDouble() * 2) - 1) * Spread * Math.Pow(0.9, attacking.Character.CharacterStats.GetMarksmanship()))), ForceMode.VelocityChange);
+                marksmanship = attacking.Character.CharacterStats.GetMarksmanship();
             }
+            bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship)),
+                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship)),
+                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship))), ForceMode.VelocityChange);
         }
 
     }

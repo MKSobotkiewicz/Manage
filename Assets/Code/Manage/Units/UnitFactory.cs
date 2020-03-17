@@ -18,6 +18,7 @@ namespace Manage.Units
                            ArmorType armorType,
                            HelmetType helmetType,
                            VestType vestType,
+                           GrenadeType grenadeType,
                            VehicleType vehicleType,
                            Character character,
                            Transform transform)
@@ -36,7 +37,7 @@ namespace Manage.Units
             var unit = go.GetComponent<Unit>();
             unit.Character = character;
             var children = unit.GetComponentsInChildren<Transform>();
-            unit.Inventory.ArmGrenade(GrenadeTypes.FragGrenade);
+            unit.Inventory.ArmGrenade(grenadeType);
             if (vehicleType == null)
             {
                 unit.Arm(weaponType);
