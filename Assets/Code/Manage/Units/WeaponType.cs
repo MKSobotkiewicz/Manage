@@ -16,6 +16,7 @@ namespace Manage.Units
         public double AimingTime { get; private set; }
         public double ReloadTime { get; private set; }
         public uint Ammo { get; private set; }
+        public bool IsPistol { get; private set; }
         public string CombatIconPath { get; private set; }
         public BulletType BulletType { get; private set; }
 
@@ -33,8 +34,10 @@ namespace Manage.Units
                           double aimingTime,
                           double reloadTime,
                           uint ammo,
+                          bool isPistol,
                           BulletType bulletType):base(name,info, iconPath)
         {
+            IsPistol  = isPistol;
             CombatIconPath = combatIconPath;
             PrefabPath = prefabPath;
             MaxRange = maxRange;

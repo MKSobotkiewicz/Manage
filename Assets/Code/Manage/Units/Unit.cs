@@ -129,17 +129,12 @@ namespace Manage.Units
             {
                 Animators.AddRange(GetComponents<Animator>());
                 var locRandom = (float)random.NextDouble() * 5;
-                foreach (var animator in Animators)
-                {
-                    if (animator != null)
-                    {
-                        animator.SetFloat("Random", locRandom);
-                    }
-                }
+                SetAnimatorsFloat("Random", locRandom);
             }
 
             SetSpeed();
 
+            SetAnimatorsBool("Pistol", Inventory.Weapon.WeaponType.IsPistol);
             var transform = GetComponent<Transform>().position;
         }
 
@@ -155,13 +150,7 @@ namespace Manage.Units
                 {
                     randomTime = (float)random.NextDouble() * 30 + 5;
                     var locRandom = (float)random.NextDouble() * 5;
-                    foreach (var animator in Animators)
-                    {
-                        if (animator != null)
-                        {
-                            animator.SetFloat("Random", locRandom);
-                        }
-                    }
+                    SetAnimatorsFloat("Random", locRandom);
                 }
                 if (HealTime >= 0)
                 {
@@ -175,13 +164,7 @@ namespace Manage.Units
                         Heal(1 + Character.CharacterTraits.Contains(CharacterTraitsList.Healthy));
                     }
                 }
-                foreach (var animator in Animators)
-                {
-                    if (animator != null)
-                    {
-                        animator.SetFloat("Speed", navMeshAgent.velocity.magnitude);
-                    }
-                }
+                SetAnimatorsFloat("Speed", navMeshAgent.velocity.magnitude);
                 if (IsMoving())
                 {
                     Attacking = false;
@@ -207,13 +190,7 @@ namespace Manage.Units
                     }
                     return;
                 }
-                foreach (var animator in Animators)
-                {
-                    if (animator != null)
-                    {
-                        animator.SetBool("Shooting", Attacking);
-                    }
-                }
+                SetAnimatorsBool("Shooting", Attacking);
                 if (Attacking)
                 {
                     Attack(target);
@@ -249,13 +226,9 @@ namespace Manage.Units
             return (int)Inventory.VehicleType.HitPoints;
         }
 
-        public void Arm(Weapon weapon)
-        {
-            Inventory.Arm(weapon);
-        }
-
         public bool Arm(WeaponType weaponType)
         {
+            SetAnimatorsBool("Pistol", weaponType.IsPistol);
             foreach (var child in GetComponentsInChildren<Transform>())
             {
                 if (child.name == "WeaponPoint")
@@ -309,6 +282,7 @@ namespace Manage.Units
 
         public WeaponType Rearm(WeaponType weaponType)
         {
+            SetAnimatorsBool("Pistol", weaponType.IsPistol);
             foreach (var child in GetComponentsInChildren<Transform>())
             {
                 if (child.name == "WeaponPoint")
@@ -371,6 +345,28 @@ namespace Manage.Units
             grenadeTarget = _target;
         }
 
+        private void SetAnimatorsBool(string parameter,bool value)
+        {
+            foreach (var animator in Animators)
+            {
+                if (animator != null)
+                {
+                    animator.SetBool(parameter, value);
+                }
+            }
+        }
+
+        private void SetAnimatorsFloat(string parameter, float value)
+        {
+            foreach (var animator in Animators)
+            {
+                if (animator != null)
+                {
+                    animator.SetFloat(parameter, value);
+                }
+            }
+        }
+
         private bool MoveTo(Vector3 position)
         {
             if (Dead /*|| Shot*/)
@@ -383,13 +379,7 @@ namespace Manage.Units
             }
             if (ThrowingGrenade)
             {
-                foreach (var animator in Animators)
-                {
-                    if (animator != null)
-                    {
-                        animator.SetBool("Toss Grenade", false);
-                    }
-                }
+                SetAnimatorsBool("Toss Grenade", false);
                 ThrowingGrenade = false;
                 ThrowingGrenadeTime = 2;
             }
@@ -414,49 +404,25 @@ namespace Manage.Units
         {
             Stop();
             Reloading = true;
-            foreach (var animator in Animators)
-            {
-                if (animator != null)
-                {
-                    animator.SetBool("Reloading", Reloading);
-                }
-            }
+            SetAnimatorsBool("Reloading", Reloading);
         }
 
         public void EndReload()
         {
             Reloading = false;
-            foreach (var animator in Animators)
-            {
-                if (animator != null)
-                {
-                    animator.SetBool("Reloading", Reloading);
-                }
-            }
+            SetAnimatorsBool("Reloading", Reloading);
         }
 
         private void StartShot()
         {
             Shot = true;
-            foreach (var animator in Animators)
-            {
-                if (animator != null)
-                {
-                    animator.SetBool("Crouching", Shot);
-                }
-            }
+            SetAnimatorsBool("Crouching", Shot);
         }
 
         private void EndShot()
         {
             Shot = false;
-            foreach (var animator in Animators)
-            {
-                if (animator != null)
-                {
-                    animator.SetBool("Crouching", Shot);
-                }
-            }
+            SetAnimatorsBool("Crouching", Shot);
         }
 
         private void StartTossGrenade()
@@ -486,23 +452,11 @@ namespace Manage.Units
             {
                 if (distance > 30 && distance < Inventory.GrenadeType.Range)
                 {
-                    foreach (var animator in Animators)
-                    {
-                        if (animator != null)
-                        {
-                            animator.SetBool("Shooting", false);
-                        }
-                    }
+                    SetAnimatorsBool("Shooting", false);
+                    SetAnimatorsBool("Toss Grenade", true);
                     ThrowingGrenade = true;
                     Attacking = false;
                     ThrowingGrenadeTime = 2;
-                    foreach (var animator in Animators)
-                    {
-                        if (animator != null)
-                        {
-                            animator.SetBool("Toss Grenade", true);
-                        }
-                    }
                     return;
                 }
             }
@@ -525,13 +479,7 @@ namespace Manage.Units
                                                                            distance / 4 + 1), ForceMode.VelocityChange);
             grenade.GetComponent<Rigidbody>().AddTorque(new Vector3((float)random.NextDouble(), (float)random.NextDouble(), (float)random.NextDouble()));
             ThrowingGrenade = false;
-            foreach (var animator in Animators)
-            {
-                if (animator != null)
-                {
-                    animator.SetBool("Toss Grenade", false);
-                }
-            }
+            SetAnimatorsBool("Toss Grenade", false);
         }
 
         public bool IsMoving()

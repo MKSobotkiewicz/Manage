@@ -10,6 +10,7 @@ namespace Manage.Units
     {
         public enum EWeaponType
         {
+            Block_Pistol,
             AC1_Assault_Rifle,
             C15_Carbine,
             Cannon_85mm,
@@ -20,6 +21,8 @@ namespace Manage.Units
         {
             switch (weaponType)
             {
+                case EWeaponType.Block_Pistol:
+                    return Block_Pistol;
                 case EWeaponType.AC1_Assault_Rifle:
                     return AC1_Assault_Rifle;
                 case EWeaponType.C15_Carbine:
@@ -33,6 +36,20 @@ namespace Manage.Units
             }
         }
 
+        public static readonly WeaponType Block_Pistol = new WeaponType(
+            "Block pistol",
+            "Average pistol, good for self defense. Before collapse used by many law enforcement agencies.",
+            "Weapons/Block_Pistol/Block_Pistol",
+            "Weapons/C15_Carbine/textures/C15_ItemIcon",
+            "Weapons/C15_Carbine/textures/C15_Icon",
+            140,
+            60,
+            0.5,
+            4,
+            17,
+            true,
+            BulletTypes.BulletType_9x19mm);
+
         public static readonly WeaponType AC1_Assault_Rifle = new WeaponType(
             "AR1 rifle",
             "Old but reliable construction, packs powerful 7.62x39mm bullets. Before the collapse was used mostly by second line units. Good at medium to long range.",
@@ -44,7 +61,9 @@ namespace Manage.Units
             0.5,
             5,
             30,
-            BulletTypes.BulletType_8x50mm);
+            false,
+            BulletTypes.BulletType_7p62x39mm);
+
         public static readonly WeaponType C15_Carbine = new WeaponType(
             "C15 carbine",
             "Standard carbine of the Imperial Army, now widespread among its ruins. Uses 5.56x45mm caliber bullets, better at medium range.",
@@ -56,7 +75,9 @@ namespace Manage.Units
             0.2,
             5,
             30,
-            BulletTypes.BulletType_5p5x45mm);
+            false,
+            BulletTypes.BulletType_5p56x45mm);
+
         public static readonly WeaponType Cannon_85mm = new WeaponType(
             "85mm Cannon",
             "Light tank gun.",
@@ -68,6 +89,7 @@ namespace Manage.Units
             1,
             5,
             1,
+            false,
             BulletTypes.ShellType_85mm);
 
         public static readonly WeaponType Gun_13mm = new WeaponType(
@@ -81,6 +103,7 @@ namespace Manage.Units
             0.5,
             10,
             100,
+            false,
             BulletTypes.BulletType_13mm);
     }
 }

@@ -40,9 +40,9 @@ namespace Manage.Units
             unit.Inventory.ArmGrenade(grenadeType);
             if (vehicleType == null)
             {
-                unit.Arm(weaponType);
                 unit.PutOnHelmet(helmetType);
                 unit.PutOnVest(vestType);
+                unit.Rearm(weaponType);
             }
             else
             {
