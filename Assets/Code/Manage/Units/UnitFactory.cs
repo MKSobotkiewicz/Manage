@@ -37,12 +37,12 @@ namespace Manage.Units
             var unit = go.GetComponent<Unit>();
             unit.Character = character;
             var children = unit.GetComponentsInChildren<Transform>();
-            unit.Inventory.ArmGrenade(grenadeType);
             if (vehicleType == null)
             {
                 unit.PutOnHelmet(helmetType);
                 unit.PutOnVest(vestType);
                 unit.Rearm(weaponType);
+                unit.ChangeGrenade(grenadeType);
             }
             else
             {

@@ -20,11 +20,13 @@ namespace Manage.UI
         public GameObject ArmorCanvasPrefab;
         public GameObject HelmetCanvasPrefab;
         public GameObject VestCanvasPrefab;
+        public GameObject GrenadeCanvasPrefab;
 
         public ItemSlot WeaponSlot;
         public ItemSlot ArmorSlot;
         public ItemSlot HelmetSlot;
         public ItemSlot VestSlot;
+        public ItemSlot GrenadeSlot;
 
         private Unit unit;
         private Player.Player player;
@@ -282,6 +284,13 @@ namespace Manage.UI
                 var weapon = go.GetComponent<Weapon>();
                 weapon.Setup(unit.Inventory.Weapon.WeaponType, inventoryCanvas);
                 weapon.PutInItemSlot(WeaponSlot);
+            }
+            if (unit.Inventory.GrenadeType != null)
+            {
+                var go = Instantiate(GrenadeCanvasPrefab, inventoryCanvas.transform);
+                var grenade = go.GetComponent<Grenade>();
+                grenade.Setup(unit.Inventory.GrenadeType, inventoryCanvas);
+                grenade.PutInItemSlot(GrenadeSlot);
             }
             if (unit.Inventory.ArmorType != null)
             {

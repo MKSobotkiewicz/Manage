@@ -28,7 +28,7 @@ namespace Manage.Units
             "Frag Grenade",
             "Basic grenade type, have decent throw range, damage and damage radius.",
             "Grenades/Grenade",
-            "Weapons/AR1_Assault_Rifle/textures/AR1_Icon",
+            "Weapons/Pistol/Textures/Pistol_Icon",
             100,
             100,
             20);

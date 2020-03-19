@@ -17,7 +17,6 @@ namespace Manage.Units
         public double ReloadTime { get; private set; }
         public uint Ammo { get; private set; }
         public bool IsPistol { get; private set; }
-        public string CombatIconPath { get; private set; }
         public BulletType BulletType { get; private set; }
 
         private GameObject muzzleFlash;
@@ -28,7 +27,6 @@ namespace Manage.Units
                           string info,
                           string prefabPath,
                           string iconPath,
-                          string combatIconPath,
                           double spread,
                           double maxRange,
                           double aimingTime,
@@ -38,7 +36,6 @@ namespace Manage.Units
                           BulletType bulletType):base(name,info, iconPath)
         {
             IsPistol  = isPistol;
-            CombatIconPath = combatIconPath;
             PrefabPath = prefabPath;
             MaxRange = maxRange;
             Spread = spread;
@@ -95,7 +92,7 @@ namespace Manage.Units
 
         public Texture2D CombatIcon()
         {
-            return GameObject.Instantiate(UnityEngine.Resources.Load<Texture2D>(CombatIconPath)) as Texture2D;
+            return GameObject.Instantiate(UnityEngine.Resources.Load<Texture2D>(IconPath)) as Texture2D;
         }
 
         private void RotateBullet(Bullet bullet, Unit attacking)

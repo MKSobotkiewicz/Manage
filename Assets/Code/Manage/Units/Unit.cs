@@ -536,10 +536,6 @@ namespace Manage.Units
         {
             if (Inventory.VehicleType == null)
             {
-                if (unitsScreamsManager != null)
-                {
-                    unitsScreamsManager.Play();
-                }
                 Attacking = false;
                 StartShot();
                 shotTime = (float)((random.NextDouble() + 0.5) * (3 - Character.CharacterTraits.Contains(CharacterTraitsList.Unyielding) * 2));
@@ -559,6 +555,10 @@ namespace Manage.Units
 
         public void Dispose()
         {
+            if (unitsScreamsManager != null&& Inventory.VehicleType == null)
+            {
+                unitsScreamsManager.Play();
+            }
             EndShot();
             var locRandom = (float)random.NextDouble() * 5;
             foreach (var animator in Animators)
