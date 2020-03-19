@@ -20,8 +20,8 @@ namespace Manage.Player
         {
             Organization = OrganizationTypes.Empire;
             PlayerInventory = new PlayerInventory();
-            PlayerInventory.Add(WeaponTypes.AC1_Assault_Rifle);
-            PlayerInventory.Add(WeaponTypes.C15_Carbine);
+            PlayerInventory.Add(WeaponTypes.Assault_Rifle);
+            PlayerInventory.Add(WeaponTypes.Carbine);
             PlayerInventory.Add(ArmorTypes.MercenaryBlackArmor);
             PlayerInventory.Add(ArmorTypes.MercenaryOrangeArmor);
             PlayerInventory.Add(ArmorTypes.SoldierBlueArmor);

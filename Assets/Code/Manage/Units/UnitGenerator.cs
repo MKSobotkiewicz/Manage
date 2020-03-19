@@ -17,8 +17,8 @@ namespace Manage.Units
         public int Count;
         public uint Level;
 
-        private WeaponType AC1AssaultRifle = WeaponTypes.Block_Pistol;
-        private WeaponType C15Carbine = WeaponTypes.Block_Pistol;
+        private WeaponType AC1AssaultRifle = WeaponTypes.Machine_Pistol;
+        private WeaponType C15Carbine = WeaponTypes.Pistol;
         private ArmorType InfantryArmor = ArmorTypes.SoldierCamoArmor;
         private ArmorType MercenaryArmor = ArmorTypes.MercenaryOrangeArmor;
         private VehicleType ScoutTank = VehicleTypes.ScoutTank;

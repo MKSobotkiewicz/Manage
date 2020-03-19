@@ -10,9 +10,10 @@ namespace Manage.Units
     {
         public enum EWeaponType
         {
-            Block_Pistol,
-            AC1_Assault_Rifle,
-            C15_Carbine,
+            Pistol,
+            Machine_Pistol,
+            Assault_Rifle,
+            Carbine,
             Cannon_85mm,
             Gun_13mm
         }
@@ -21,12 +22,14 @@ namespace Manage.Units
         {
             switch (weaponType)
             {
-                case EWeaponType.Block_Pistol:
-                    return Block_Pistol;
-                case EWeaponType.AC1_Assault_Rifle:
-                    return AC1_Assault_Rifle;
-                case EWeaponType.C15_Carbine:
-                    return C15_Carbine;
+                case EWeaponType.Pistol:
+                    return Pistol;
+                case EWeaponType.Machine_Pistol:
+                    return Machine_Pistol;
+                case EWeaponType.Assault_Rifle:
+                    return Assault_Rifle;
+                case EWeaponType.Carbine:
+                    return Carbine;
                 case EWeaponType.Cannon_85mm:
                     return Cannon_85mm;
                 case EWeaponType.Gun_13mm:
@@ -36,10 +39,10 @@ namespace Manage.Units
             }
         }
 
-        public static readonly WeaponType Block_Pistol = new WeaponType(
-            "Block pistol",
-            "Average pistol, good for self defense. Before collapse used by many law enforcement agencies.",
-            "Weapons/Block_Pistol/Block_Pistol",
+        public static readonly WeaponType Pistol= new WeaponType(
+            "Pistol",
+            "Average 9x19mm pistol, good for self defense. Before collapse used by many law enforcement agencies.",
+            "Weapons/Pistol/Block_Pistol",
             "Weapons/C15_Carbine/textures/C15_ItemIcon",
             "Weapons/C15_Carbine/textures/C15_Icon",
             140,
@@ -50,8 +53,22 @@ namespace Manage.Units
             true,
             BulletTypes.BulletType_9x19mm);
 
-        public static readonly WeaponType AC1_Assault_Rifle = new WeaponType(
-            "AR1 rifle",
+        public static readonly WeaponType Machine_Pistol = new WeaponType(
+            "Machine pistol",
+            "Old straight blowback 9x19mm machine pistol, fitted with high capacity drum mag.",
+            "Weapons/Machine_Pistol/Machine_Pistol",
+            "Weapons/C15_Carbine/textures/C15_ItemIcon",
+            "Weapons/C15_Carbine/textures/C15_Icon",
+            180,
+            60,
+            0.2,
+            6,
+            71,
+            false,
+            BulletTypes.BulletType_9x19mm);
+
+        public static readonly WeaponType Assault_Rifle = new WeaponType(
+            "Assault rifle",
             "Old but reliable construction, packs powerful 7.62x39mm bullets. Before the collapse was used mostly by second line units. Good at medium to long range.",
             "Weapons/AR1_Assault_Rifle/AK_103_Carbine",
             "Weapons/AR1_Assault_Rifle/textures/AR1_ItemIcon",
@@ -64,8 +81,8 @@ namespace Manage.Units
             false,
             BulletTypes.BulletType_7p62x39mm);
 
-        public static readonly WeaponType C15_Carbine = new WeaponType(
-            "C15 carbine",
+        public static readonly WeaponType Carbine = new WeaponType(
+            "Carbine",
             "Standard carbine of the Imperial Army, now widespread among its ruins. Uses 5.56x45mm caliber bullets, better at medium range.",
             "Weapons/C15_Carbine/AUG_Carbine",
             "Weapons/C15_Carbine/textures/C15_ItemIcon",
