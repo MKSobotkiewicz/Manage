@@ -1205,7 +1205,7 @@ GameObject:
   - component: {fileID: -1385218149571347039}
   m_Layer: 0
   m_Name: soldier_blue_male
-  m_TagString: Untagged
+  m_TagString: Flesh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

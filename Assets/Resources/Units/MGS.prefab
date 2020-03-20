@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 219918030447294936}
   m_Layer: 0
   m_Name: MGS
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: turret
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8a970b3d7fbe03f41ab3c723f61ab80a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8a970b3d7fbe03f41ab3c723f61ab80a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -304,6 +309,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: body
+      objectReference: {fileID: 0}
+    - target: {fileID: 563639994755307656, guid: a1ca6e307ed1fc047aa4135b9d4bf100,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 3534872935435743233, guid: a1ca6e307ed1fc047aa4135b9d4bf100,
         type: 3}

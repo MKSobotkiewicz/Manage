@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 6639109488772972189}
   m_Layer: 0
   m_Name: Jeep
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 1617927926013301295}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,6 +420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheel
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -511,6 +516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wheel
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -601,6 +611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
         type: 3}
@@ -798,6 +813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheel
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
+        type: 3}
+      propertyPath: m_TagString
+      value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3fb8f71733c40ee46bd6e5e50c5175b9,
         type: 3}

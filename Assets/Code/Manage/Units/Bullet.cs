@@ -67,24 +67,6 @@ namespace Manage.Units
             }
         }
 
-        /*private void OnTriggerEnter(Collider collider)
-        {
-            UnityEngine.Debug.Log("HIT");
-            var unit = collider.gameObject.GetComponent<Unit>();
-            if (unit != null)
-            {
-                UnityEngine.Debug.Log(unit.Character.Organization.Name);
-                UnityEngine.Debug.Log(organization.Name);
-                if (Equals(unit.Character.Organization, organization))
-                {
-                    return;
-                }
-                unit.Damage(BulletType.Damage);
-                var go = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHitBlood") as GameObject);
-                go.transform.position = Vector3.Lerp(lastPosition,transform.position,0.5f);
-            }
-        }*/
-
         private void OnCollisionEnter(Collision collision)
         {
             var unit = collision.transform.GetComponentInParent<Unit>();
@@ -97,31 +79,41 @@ namespace Manage.Units
                 dying = true;
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 unit.Damage(BulletType.Damage);
-                if (unit.Inventory.VehicleType == null)
-                {
-                    var go = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHitBlood") as GameObject);
-                    go.transform.position = collision.GetContact(0).point;
-                }
-                else
-                {
-                    var go = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHit") as GameObject);
-                    go.transform.position = collision.GetContact(0).point;
-                }
             }
-            else
-            {
-                var go = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHit") as GameObject);
-                go.transform.position = collision.GetContact(0).point;
-            }
+            Hit(collision);
             if (random.NextDouble() > 0.5)
             {
                 dying = true;
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+                return;
             }
-            else
+            rigidbody.velocity /= 2;
+        }
+
+        private void Hit(Collision collision)
+        {
+            switch (collision.gameObject.tag)
             {
-                rigidbody.velocity /= 2;
+                case "Metal":
+                    InstantiateBulletHit("Bullets/BulletHitMetal", collision);
+                    break;
+                case "Flesh":
+                    InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
+                    break;
+                case "Concrete":
+                    InstantiateBulletHit("Bullets/BulletHitConcrete", collision);
+                    break;
+                default:
+                    InstantiateBulletHit("Bullets/BulletHit", collision);
+                    break;
             }
+        }
+
+        private void InstantiateBulletHit(string name, Collision collision)
+        {
+            var go = Instantiate(UnityEngine.Resources.Load(name) as GameObject);
+            go.transform.position = collision.GetContact(0).point;
+            go.transform.rotation = Quaternion.LookRotation(collision.GetContact(0).normal);
         }
 
         public void Rotate(Vector3 rotation)
