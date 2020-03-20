@@ -78,7 +78,7 @@ namespace Manage.Units
                     var transformCopy = new GameObject().transform;
                     transformCopy.position = transform.position;
                     transformCopy.rotation = transform.rotation;
-                    var unit = unitFactory.Create(Player, weaponType, armor,null,null,null, null, character, transformCopy);
+                    var unit = unitFactory.Create(Player, weaponType, armor,null,null, GrenadeTypes.FragGrenade, null, character, transformCopy);
                     transform.position += new Vector3(random.Next(-10, 10), 0, random.Next(-10, 10));
                     //AllUnitsList.AllUnits.Add(unit);
                 }

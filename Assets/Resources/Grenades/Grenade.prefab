@@ -4848,8 +4848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f41cfc912f61644b92518635e991ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 4780746296450358636, guid: 758cf876bcd8d1e4d99f55855bb30b9a,
-    type: 3}
+  Explosion: {fileID: 112618, guid: 755ae91ec6f226343aa7d1d6696b309e, type: 3}
   Damage: 0
 --- !u!135 &1180489536473699772
 SphereCollider:
