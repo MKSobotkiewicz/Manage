@@ -14,6 +14,7 @@ namespace Manage.Dialog
     {
         public string Text;
         public Sentence NextSentence;
+        public Action Action;
 
         public new string ToString()
         {

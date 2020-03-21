@@ -34,6 +34,7 @@ namespace Manage.Units
         [ContextMenuItem("Randomize portrait", "RandomizePortrait")]
         public Texture2D Portrait;
         public Dialog.Dialog Dialog;
+        public AddUnitsToPlayer AddUnitsToPlayer;
 
         public void Start()
         {
@@ -67,15 +68,20 @@ namespace Manage.Units
                                           Portrait);
 
             var unitFactory = new UnitFactory();
-            return unitFactory.Create(Player,
-                                      WeaponTypes.ToWeaponType(WeaponType),
-                                      ArmorTypes.ToArmorType(ArmorType),
-                                      HelmetTypes.ToHelmetType(HelmetType),
-                                      VestTypes.ToVestType(VestType),
-                                      GrenadeTypes.ToGrenadeType(GrenadeType),
-                                      VehicleTypes.ToVehicleType(VehicleType),
-                                      Character,
-                                      transform);
+            var unit= unitFactory.Create(Player,
+                                         WeaponTypes.ToWeaponType(WeaponType),
+                                         ArmorTypes.ToArmorType(ArmorType),
+                                         HelmetTypes.ToHelmetType(HelmetType),
+                                         VestTypes.ToVestType(VestType),
+                                         GrenadeTypes.ToGrenadeType(GrenadeType),
+                                         VehicleTypes.ToVehicleType(VehicleType),
+                                         Character,
+                                         transform);
+            if (AddUnitsToPlayer != null)
+            {
+                AddUnitsToPlayer.Units.Add(unit);
+            }
+            return unit;
         }
 
         private void RandomizeFirstName()

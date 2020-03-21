@@ -159,6 +159,11 @@ namespace Manage.UI
             {
                 dialogOptionsSelectPanel.enabled = false;
             }
+            UnityEngine.Debug.Log(ThisDialog.NextDialogOptions[i].ToString(MainCharacter.Character));
+            if (ThisDialog.NextDialogOptions[i].Action != null)
+            {
+                ThisDialog.NextDialogOptions[i].Action.Do();
+            }
             AddTextToDialogTextbox(ThisDialog.NextDialogOptions[i].ToString(MainCharacter.Character));
             if (!ThisDialog.SetNextSentence(ThisDialog.NextDialogOptions[i]))
             {

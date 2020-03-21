@@ -10,7 +10,7 @@ namespace Manage.Characters
     public class CharacterInfo
     {
         public CharacterCulture CharacterCulture { get; private set; }
-        public Organization Organization { get; private set; }
+        public Organization Organization { get; set; }
         public string FirstName { get; private set; }
         public string Surname { get; private set; }
         public string Nickname { get; private set; }

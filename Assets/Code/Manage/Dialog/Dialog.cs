@@ -16,7 +16,6 @@ namespace Manage.Dialog
         public List<DialogOption> NextDialogOptions { get; private set; }
         public bool Endable = false;
         private Sentence CurrentSentence;
-        private bool Unit = false;
 
         public DialogManager DialogManager;
 

@@ -9,6 +9,7 @@ namespace Manage.Control
 {
     public class MouseRaycasting : MonoBehaviour
     {
+        public Player.Player Player;
         public RectTransform SelectionSquare;
         public ParticleSystem UnitSelection;
         public ParticleSystem MoveOrder;
@@ -103,7 +104,7 @@ namespace Manage.Control
                             var unit = hit.transform.gameObject.GetComponentInParent<Unit>();
                             if (unit != null)
                             {
-                                if (unit.Player == true)
+                                if (Equals(unit.Character.Organization, Player.Organization))
                                 {
                                     SelectedUnits.Add(unit);
                                 }

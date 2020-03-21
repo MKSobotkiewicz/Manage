@@ -10,6 +10,7 @@ namespace Manage.Units
     {
         public enum EGrenadeType
         {
+            None,
             FragGrenade
         }
 

@@ -27,6 +27,8 @@ namespace Manage.Camera
 
         void Start()
         {
+            XAxisValue = anchor.position.x;
+            YAxisValue = anchor.position.z;
         }
 
         void Update()
