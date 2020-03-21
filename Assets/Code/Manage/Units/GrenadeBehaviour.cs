@@ -70,7 +70,7 @@ namespace Manage.Units
                     damagedUnitList.Add(unit);
                     if (unit.Inventory.VehicleType == null)
                     {
-                        var bh = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHitBlood") as GameObject);
+                        var bh = Instantiate(UnityEngine.Resources.Load("Bullets/BulletHitFlesh") as GameObject);
                         bh.transform.position = trigger.transform.position;
                     }
                 }

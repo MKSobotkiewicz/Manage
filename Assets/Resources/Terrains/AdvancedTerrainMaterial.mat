@@ -124,7 +124,7 @@ Material:
     - _Glossiness3: 0.1
     - _GlossinessRock: 0.1
     - _Phong: 0
-    - _RockNormal: -0.05
+    - _RockNormal: -0.165
     - _Tiling0: 0.0095
     - _Tiling1: 0.0109
     - _Tiling2: 0.0108
