@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoRock:
-        m_Texture: {fileID: 2800000, guid: 9d9b23c2fbf55b440b93b50a8fe783f4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7bf0f3566beb89f4fb8785f70c000c82, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Bump0:
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpRock:
-        m_Texture: {fileID: 2800000, guid: 152902c882f6b0a41a892803d338ef48, type: 3}
+        m_Texture: {fileID: 2800000, guid: bc51ce897c3829c408ba9c4bf9390954, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control:
@@ -130,7 +130,7 @@ Material:
     - _Tiling2: 0.0108
     - _Tiling3: 0.0093
     - _TilingRandom: 415
-    - _TilingRock: 52.7
+    - _TilingRock: 10.8
     - _Triplanar0: 0.5
     - _Triplanar1: 54
     - _Triplanar2: 50.6
