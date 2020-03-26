@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5239322060538563269}
   - component: {fileID: 4153760734731987941}
   m_Layer: 0
-  m_Name: BulletHitBlood
+  m_Name: BulletHitFlesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4765,7 +4765,8 @@ AudioSource:
   m_GameObject: {fileID: 5239322060538563268}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5861837375521579303, guid: bc9bd3497ffcc734f8b72cd95ecfe714,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.1
