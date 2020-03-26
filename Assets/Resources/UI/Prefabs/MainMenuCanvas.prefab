@@ -433,6 +433,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadingPrefab: {fileID: 5265203565546357880, guid: 996ca04c685cc364ba29820d951af288,
     type: 3}
+  SettingsPrefab: {fileID: 5015245913046270994, guid: eab3e64949477bf4cbd89396456da0db,
+    type: 3}
+  Audio: {fileID: 0}
 --- !u!1 &2896033357989272726
 GameObject:
   m_ObjectHideFlags: 0

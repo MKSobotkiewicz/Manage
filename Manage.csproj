@@ -123,12 +123,14 @@
      <Compile Include="Assets\Code\Manage\UI\CreateCharacter.cs" />
      <Compile Include="Assets\Code\Manage\UI\Dialog.cs" />
      <Compile Include="Assets\Code\Manage\UI\DialogDebug.cs" />
+     <Compile Include="Assets\Code\Manage\UI\GraphicSettings.cs" />
      <Compile Include="Assets\Code\Manage\UI\Grenade.cs" />
      <Compile Include="Assets\Code\Manage\UI\Helmet.cs" />
      <Compile Include="Assets\Code\Manage\UI\Item.cs" />
      <Compile Include="Assets\Code\Manage\UI\ItemSlot.cs" />
      <Compile Include="Assets\Code\Manage\UI\Loading.cs" />
      <Compile Include="Assets\Code\Manage\UI\MainMenu.cs" />
+     <Compile Include="Assets\Code\Manage\UI\Settings.cs" />
      <Compile Include="Assets\Code\Manage\UI\UnitId.cs" />
      <Compile Include="Assets\Code\Manage\UI\UnitIds.cs" />
      <Compile Include="Assets\Code\Manage\UI\Vest.cs" />

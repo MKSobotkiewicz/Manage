@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 namespace Manage.UI
 {
     public class AudioSettings : MonoBehaviour
     {
-        public Settings.Audio Audio;
+        public Manage.Settings.Audio Audio;
         public Slider MasterVolumeSlider;
         public Slider MusicVolumeSlider;
         public Slider EffectsVolumeSlider;

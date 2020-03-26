@@ -13,6 +13,8 @@ namespace Manage.UI
     public class MainMenu : MonoBehaviour
     {
         public Loading LoadingPrefab;
+        public Settings SettingsPrefab;
+        public Manage.Settings.Audio Audio;
 
         public void StartNewCampaign()
         {
@@ -25,6 +27,8 @@ namespace Manage.UI
 
         public void Settings()
         {
+            var settings = Instantiate(SettingsPrefab, transform.parent);
+            SettingsPrefab.Audio = Audio;
         }
 
         public void Credits()
