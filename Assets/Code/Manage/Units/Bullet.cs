@@ -107,6 +107,7 @@ namespace Manage.Units
                     InstantiateBulletHit("Bullets/BulletHit", collision);
                     break;
             }
+            Destroy(gameObject);
         }
 
         private void InstantiateBulletHit(string name, Collision collision)

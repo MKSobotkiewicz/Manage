@@ -3,7 +3,7 @@
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
-		_Color("Color", Color) = (1,1,1,1)
+		[HDR]_Color("Color", Color) = (1,1,1,1)
 		_Overlay("Overlay", 2D) = "white" {}
 		_Stripes("Stripes", 2D) = "white" {}
 		_Mask("Mask", 2D) = "white" {}
