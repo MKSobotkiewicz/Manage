@@ -12,8 +12,10 @@ namespace Manage.UI
         public Slider MusicVolumeSlider;
         public Slider EffectsVolumeSlider;
 
-        public void Start()
+        public void Begin(Manage.Settings.Audio audio)
         {
+            Audio = audio;
+
             MasterVolumeSlider.value = Audio.MasterVolume;
             MusicVolumeSlider.value = Audio.MusicVolume;
             EffectsVolumeSlider.value = Audio.SoundEffectsVolume;

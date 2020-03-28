@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -9,9 +10,9 @@ namespace Manage.Settings
     {
         public AudioMixer MasterAudioMixer;
 
-        public float MasterVolume { get; private set; }
-        public float SoundEffectsVolume { get; private set; }
-        public float MusicVolume { get; private set; }
+        public float MasterVolume = 1;
+        public float SoundEffectsVolume = 1;
+        public float MusicVolume = 1;
 
         void OnLevelWasLoaded(int level)
         {
@@ -29,7 +30,7 @@ namespace Manage.Settings
             MasterVolume = masterVolume;
             PlayerPrefs.SetFloat("MasterVolume", MasterVolume);
             PlayerPrefs.Save();
-            MasterAudioMixer.SetFloat("Master", MasterVolume);
+            MasterAudioMixer.SetFloat("MasterVolume", CalculateVolume(MasterVolume));
         }
 
         public void SetSoundEffectsVolume(float soundEffectsVolume)
@@ -37,7 +38,7 @@ namespace Manage.Settings
             SoundEffectsVolume = soundEffectsVolume;
             PlayerPrefs.SetFloat("SoundEffectsVolume", SoundEffectsVolume);
             PlayerPrefs.Save();
-            MasterAudioMixer.SetFloat("GameEffects", SoundEffectsVolume);
+            MasterAudioMixer.SetFloat("GameEffectsVolume", CalculateVolume(SoundEffectsVolume));
         }
 
         public void SetMusicVolume(float musicVolume)
@@ -45,7 +46,12 @@ namespace Manage.Settings
             MusicVolume = musicVolume;
             PlayerPrefs.SetFloat("MusicVolume", MusicVolume);
             PlayerPrefs.Save();
-            MasterAudioMixer.SetFloat("Music", MusicVolume);
+            MasterAudioMixer.SetFloat("MusicVolume", CalculateVolume(MusicVolume));
         }
+
+        private float CalculateVolume(float volume)
+        {
+            return (float)Math.Pow(volume,0.25) * 80 - 80;
+        } 
     }
 }

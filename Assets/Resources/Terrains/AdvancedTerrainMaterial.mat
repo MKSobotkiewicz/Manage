@@ -123,13 +123,13 @@ Material:
     - _Glossiness2: 0.1
     - _Glossiness3: 0.1
     - _GlossinessRock: 0.1
-    - _Phong: 0
+    - _Phong: 1
     - _RockNormal: -0.165
     - _Tiling0: 0.0095
     - _Tiling1: 0.0109
     - _Tiling2: 0.0108
     - _Tiling3: 0.0093
-    - _TilingRandom: 415
+    - _TilingRandom: 95
     - _TilingRock: 10.8
     - _Triplanar0: 0.5
     - _Triplanar1: 54

@@ -9,16 +9,12 @@ namespace Manage.UI
     {
         public Manage.Settings.Audio Audio;
         public Canvas GameSettingsCanvas;
-        public Canvas GraphicSettingsCanvas;
-        public Canvas AudioSettingsCanvas;
+        public GraphicSettings GraphicSettingsCanvas;
+        public AudioSettings AudioSettingsCanvas;
 
         public void ShowAudioSettings()
         {
-            var audioSettings = AudioSettingsCanvas.GetComponent<AudioSettings>();
-            if (audioSettings != null)
-            {
-                audioSettings.Audio = Audio;
-            }
+            AudioSettingsCanvas.Begin(Audio);
 
             GameSettingsCanvas.gameObject.SetActive(false);
             GraphicSettingsCanvas.gameObject.SetActive(false);

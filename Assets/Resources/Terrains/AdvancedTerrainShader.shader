@@ -4,7 +4,6 @@ Shader "Terrain/AdvancedTerrainShader"
     {
 		[HideInInspector] _Control("Control (RGBA)", 2D) = "red" {}
 
-		_Random("Random", 2D) = "grey" {}
 		_TilingRandom("Tiling Random", Range(0,1000)) = 0.5
 		
 		_Height("Height", 2D) = "grey" {}
@@ -56,7 +55,6 @@ Shader "Terrain/AdvancedTerrainShader"
 
 		sampler2D _Control;
 
-		sampler2D _Random;
 		sampler2D _Height;
 
 		sampler2D _Albedo3;
@@ -90,8 +88,8 @@ Shader "Terrain/AdvancedTerrainShader"
 
 		half _RockNormal;
 
-		float _Phong;
-		float _EdgeLength;
+		//float _Phong;
+		//float _EdgeLength;
 
 		struct appdata
 		{
@@ -152,10 +150,11 @@ Shader "Terrain/AdvancedTerrainShader"
 			float3 projnorm = saturate(pow(WorldNormalVector(IN, o.Normal) * 2, 4));
 			fixed4 control = tex2D(_Control, IN.uv_Control);
 			
-			fixed3 random=projectVector(_Random, IN.worldPos, projnorm, _TilingRandom);
+			half random= projectSingle(_Height, IN.worldPos, projnorm, _TilingRandom);
+
 			half2 uv1 = IN.uv_Control;
 			half2 uv2 = IN.uv_Control + half2(0.3, 0.3);
-			half uvRandom = saturate(pow(random.g + 0.5, 10));
+			half uvRandom = saturate(pow(random + 0.35, 50));
 
 			half heightR = projectSingle(_Height, IN.worldPos, projnorm, _TilingRock);
 			half heightG = lerp(tex2D(_Height, uv1 / _Tiling1).g, tex2D(_Height, uv2 / _Tiling1).g, uvRandom);

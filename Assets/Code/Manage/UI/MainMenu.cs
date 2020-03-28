@@ -28,7 +28,7 @@ namespace Manage.UI
         public void Settings()
         {
             var settings = Instantiate(SettingsPrefab, transform.parent);
-            SettingsPrefab.Audio = Audio;
+            settings.Audio = Audio;
         }
 
         public void Credits()
