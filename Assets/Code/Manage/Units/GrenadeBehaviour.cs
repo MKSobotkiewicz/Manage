@@ -76,6 +76,7 @@ namespace Manage.Units
                 }
             }
             var go = Instantiate(Explosion, transform);
+            go.transform.position += new Vector3(0,1,0);
             go.transform.parent = null;
             Destroy(gameObject);
         }

@@ -51,7 +51,7 @@ namespace Manage.Units
             WeaponType weaponType = null;
             if (Inventory.Weapon != null)
             {
-                weaponType=Inventory.Weapon.WeaponType;
+                weaponType = Inventory.Weapon.WeaponType;
             }
             HelmetType helmetType = null;
             if (Inventory.Helmet != null)
@@ -63,7 +63,7 @@ namespace Manage.Units
             {
                 vestType = Inventory.Vest.VestType;
             }
-            var grenadeType= Inventory.GrenadeType;
+            var grenadeType = Inventory.GrenadeType;
             var unit = factory.Create(null,
                                       weaponType,
                                       armorType,
@@ -111,7 +111,7 @@ namespace Manage.Units
         public void Start()
         {
             unitsScreamsManager = GetComponentInChildren<Audio.UnitsScreamsManager>();
-            footsteps= GetComponentInChildren<Audio.Footsteps>();
+            footsteps = GetComponentInChildren<Audio.Footsteps>();
             AttackedBy = new Dictionary<Unit, float>();
             hitPoints = GetMaxHitPoints();
             grenadeTime = (float)random.NextDouble() * 25 + 5 - 10 * Character.CharacterTraits.Contains(CharacterTraitsList.Grenadier);
@@ -221,7 +221,7 @@ namespace Manage.Units
             }
             if (Inventory.VehicleType == null)
             {
-                return (int)(100 * (1 + Mathf.Log(Character.CharacterStats.GetEndurance() + Inventory.GetEndurance())));
+                return (int)(100 * (1 + Mathf.Log(Endurance())));
             }
             return (int)Inventory.VehicleType.HitPoints;
         }
@@ -306,7 +306,7 @@ namespace Manage.Units
                 Attacking = false;
                 return;
             }
-            if (Shot|| IsMoving())
+            if (Shot || IsMoving())
             {
                 return;
             }
@@ -332,7 +332,7 @@ namespace Manage.Units
                     MoveTo(Vector3.Lerp(target.Position(), Position(), 0.8f));
                     return;
                 }
-                target.AttackedBy[this]=Vector3.Distance(Position(),target.Position());
+                target.AttackedBy[this] = Vector3.Distance(Position(), target.Position());
             }
         }
 
@@ -345,7 +345,7 @@ namespace Manage.Units
             grenadeTarget = _target;
         }
 
-        private void SetAnimatorsBool(string parameter,bool value)
+        private void SetAnimatorsBool(string parameter, bool value)
         {
             foreach (var animator in Animators)
             {
@@ -532,6 +532,31 @@ namespace Manage.Units
             return hitPoints;
         }
 
+        public uint Endurance()
+        {
+            return Character.CharacterStats.GetEndurance() + Inventory.GetEndurance();
+        }
+
+        public uint Marksmanship()
+        {
+            return Character.CharacterStats.GetMarksmanship() + Inventory.GetMarksmanship();
+        }
+
+        public uint Cunning()
+        {
+            return Character.CharacterStats.GetCunning() + Inventory.GetCunning();
+        }
+
+        public uint Charisma()
+        {
+            return Character.CharacterStats.GetCharisma() + Inventory.GetCharisma();
+        }
+
+        public uint Stamina()
+        {
+            return Character.CharacterStats.GetStamina() + Inventory.GetStamina();
+        }
+
         public bool Damage(int value)
         {
             if (Inventory.VehicleType == null)
@@ -609,13 +634,13 @@ namespace Manage.Units
         {
             if (Inventory.VehicleType == null)
             {
-                navMeshAgent.speed = (16 * (1 + Mathf.Log(Character.CharacterStats.GetStamina() + Inventory.GetStamina()))) / 4;
+                navMeshAgent.speed = (16 * (1 + Mathf.Log(Stamina()))) / 4;
                 return;
             }
             navMeshAgent.speed = Inventory.VehicleType.Speed;
         }
 
-        private void Heal(int value)
+        public void Heal(int value)
         {
             hitPoints += value;
             if (hitPoints >= GetMaxHitPoints())

@@ -113,6 +113,10 @@
     <Compile Include="Assets\Code\Manage\Space\IPositioned.cs" />
     <Compile Include="Assets\Code\Manage\Space\ISizeable.cs" />
     <Compile Include="Assets\Code\Manage\Space\Map.cs" />
+    <Compile Include="Assets\Code\Manage\Skills\ArtilleryStrike.cs" />
+    <Compile Include="Assets\Code\Manage\Skills\HealingAura.cs" />
+    <Compile Include="Assets\Code\Manage\Skills\Skill.cs" />
+    <Compile Include="Assets\Code\Manage\Skills\SkillFactory.cs" />
     <Compile Include="Assets\Code\Manage\UI\AddTrait.cs" />
     <Compile Include="Assets\Code\Manage\UI\Armor.cs" />
     <Compile Include="Assets\Code\Manage\UI\AudioSettings.cs" />

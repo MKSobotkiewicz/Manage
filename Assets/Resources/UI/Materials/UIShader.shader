@@ -6,7 +6,6 @@
 		[HDR]_Color("Color", Color) = (1,1,1,1)
 		_Overlay("Overlay", 2D) = "white" {}
 		_Stripes("Stripes", 2D) = "white" {}
-		_Mask("Mask", 2D) = "white" {}
 		_ScaleStripes("Stripes Scale", Range(0,100)) = 0.01
 		_SpeedStripes("Stripes Speed", Range(0,1000)) = 1000
 		_Random("Random", 2D) = "white" {}
@@ -65,7 +64,6 @@
 			sampler2D _Overlay;
 			sampler2D _Stripes;
 			sampler2D _Random;
-			sampler2D _Mask;
 			float4 _MainTex_ST;
 			half _ScaleStripes;
 			half _SpeedStripes;
@@ -90,7 +88,7 @@
 				fixed3 stripes = (tex2D(_Stripes, i.screenPos *_ScaleStripes + cos(_Time.r * _SpeedStripes*1.3) + sin(_Time.r * _SpeedStripes))).r*0.5 + 0.5;
 				fixed3 col = (tex2D(_MainTex, i.uv)).r*stripes*_Color.rgb - ((1 - (tex2D(_Overlay, i.uv)).r)*0.3)*random;
 				col *= 2;
-				return fixed4(col.r,col.g,col.b, (tex2D(_Mask, i.uv)).a*_Transparency);
+				return fixed4(col.r,col.g,col.b, (tex2D(_MainTex, i.uv)).a*_Transparency*_Color.a);
 			}
 			ENDCG
 		}

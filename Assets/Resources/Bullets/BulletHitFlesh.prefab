@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5239322060538563266}
   - component: {fileID: 5239322060538563269}
   - component: {fileID: 4153760734731987941}
+  - component: {fileID: 7710298516811179951}
   m_Layer: 0
   m_Name: BulletHitFlesh
   m_TagString: Untagged
@@ -4708,6 +4709,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4879,6 +4881,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: aa8e351f6dc0ee047a7016d0864bd9d0, type: 3}
   - {fileID: 8300000, guid: 5624ebbb9e0ee1444b6ced508af447a6, type: 3}
   PlayOnAwake: 1
+--- !u!114 &7710298516811179951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239322060538563268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9f1cb5f66ed414ba4defe1d7606ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 3
 --- !u!1 &6438244360882975798
 GameObject:
   m_ObjectHideFlags: 0
@@ -9584,6 +9599,7 @@ ParticleSystemRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

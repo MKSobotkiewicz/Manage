@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8346897484999858384}
   - component: {fileID: 8185107326262483703}
   - component: {fileID: 7801600794957117288}
+  - component: {fileID: -3226990836010939990}
   m_Layer: 0
   m_Name: BulletHit
   m_TagString: Untagged
@@ -166,6 +167,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4e2fd1c09f6e13f44b10686d667a7876, type: 3}
   - {fileID: 8300000, guid: 145dd300e164a7d4585bf554422921b5, type: 3}
   PlayOnAwake: 1
+--- !u!114 &-3226990836010939990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4780746296450358636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9f1cb5f66ed414ba4defe1d7606ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 3
 --- !u!1001 &3466330576202574709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -220,6 +234,31 @@ PrefabInstance:
     - target: {fileID: 486004, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486014, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}
+      propertyPath: TimeMultiplier
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19802086, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}
+      propertyPath: UVModule.flipV
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19859912, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}
+      propertyPath: UVModule.flipV
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19902086, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}
+      propertyPath: m_Flip.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19959912, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}
+      propertyPath: m_Flip.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 198305562339192752, guid: df6885b13dec8be4582be8c2c2219da2,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df6885b13dec8be4582be8c2c2219da2, type: 3}

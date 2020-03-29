@@ -99,14 +99,7 @@ namespace Manage.Units
         {
             var spreadNormalized = Spread*(BulletType.Velocity/1000);
             double marksmanship;
-            if (attacking.Inventory.ArmorType != null)
-            {
-                marksmanship = attacking.Character.CharacterStats.GetMarksmanship() + attacking.Inventory.ArmorType.Marksmanship;
-            }
-            else
-            {
-                marksmanship = attacking.Character.CharacterStats.GetMarksmanship();
-            }
+            marksmanship = attacking.Marksmanship();
             bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship)),
                                                   (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship)),
                                                   (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship))), ForceMode.VelocityChange);
