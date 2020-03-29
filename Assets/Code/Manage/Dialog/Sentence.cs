@@ -22,7 +22,7 @@ namespace Manage.Dialog
             var speakerName = Speaker.Character.Nickname == "" ? 
                 Speaker.Character.FirstName + " " + Speaker.Character.Surname : 
                 Speaker.Character.Nickname;
-            return "<color=#00ff00ff>[" + speakerName + "]:</color> " + Text;
+            return "<color=#88ff88ff>[" + speakerName + "]:</color> " + Text;
         }
 
         public bool IsLast()

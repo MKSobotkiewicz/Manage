@@ -20,7 +20,7 @@ namespace Manage.Dialog
         {
             if (!(NextSentence is null))
             {
-                return "<color=#00ff00ff>" + Text + "</color>";
+                return "<color=#ccffccff>" + Text + "</color>";
             }
             return "<color=#88ff88ff>" + Text + "[END CONVERSATION]</color>";
         }
@@ -34,7 +34,7 @@ namespace Manage.Dialog
             var speakerName = character.Nickname == "" ?
                 character.FirstName + " " + character.Surname :
                 character.Nickname;
-            return "<color=#88ff88ff>[" + speakerName + "]:</color> " + Text ;
+            return "<color=#ccffccff>[" + speakerName + "]:</color> " + Text ;
         }
     }
 }
