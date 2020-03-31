@@ -11,8 +11,10 @@ namespace Manage.Skills
     public class Skill : MonoBehaviour
     {
         public bool IsReady = true;
+        public Texture2D Icon { get; protected set; }
 
         protected int reloadTime = 0;
+
         private float timer = 0;
 
         public void Update()

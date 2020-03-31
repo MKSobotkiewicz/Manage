@@ -15,6 +15,7 @@ namespace Manage.Skills
 
         public void Start()
         {
+            Icon = Instantiate(UnityEngine.Resources.Load("UI/SkillsIcons/HealingAura") as Texture2D);
             reloadTime = 30;
         }
 
