@@ -13,7 +13,7 @@ namespace Manage.Skills
         private readonly float radius=30;
         private readonly string particlePath = "UI/Particles/HealingParticleSystem";
 
-        public void Start()
+        public void Awake()
         {
             Icon = Instantiate(UnityEngine.Resources.Load("UI/SkillsIcons/HealingAura") as Texture2D);
             reloadTime = 30;

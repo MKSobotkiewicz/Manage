@@ -12,11 +12,12 @@ namespace Manage.UI
     {
         public RawImage Icon;
 
-        private Skills.Skill skill;
+        private Manage.Skills.Skill skill;
 
-        public void Load(Skills.Skill _skill)
+        public void Load(Manage.Skills.Skill _skill)
         {
             skill = _skill;
+            UnityEngine.Debug.Log(skill.Icon);
             Icon.texture = skill.Icon;
         }
     }

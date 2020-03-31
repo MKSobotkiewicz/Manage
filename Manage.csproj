@@ -134,6 +134,7 @@
      <Compile Include="Assets\Code\Manage\UI\MainMenu.cs" />
      <Compile Include="Assets\Code\Manage\UI\Settings.cs" />
      <Compile Include="Assets\Code\Manage\UI\Skill.cs" />
+     <Compile Include="Assets\Code\Manage\UI\Skills.cs" />
      <Compile Include="Assets\Code\Manage\UI\UnitId.cs" />
      <Compile Include="Assets\Code\Manage\UI\UnitIds.cs" />
      <Compile Include="Assets\Code\Manage\UI\Vest.cs" />

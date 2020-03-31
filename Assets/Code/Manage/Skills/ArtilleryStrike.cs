@@ -9,7 +9,7 @@ namespace Manage.Skills
 {
     class ArtilleryStrike: Skill
     {
-        public void Start()
+        public void Awake()
         {
             Icon = Instantiate(UnityEngine.Resources.Load("UI/SkillsIcons/ArtilleryStrike") as Texture2D);
             reloadTime = 60;
