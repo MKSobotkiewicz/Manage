@@ -10,12 +10,13 @@ namespace Manage.Skills
 {
     class HealingAura: Skill
     {
-        private readonly float radius=30;
+        private readonly float radius=5;
         private readonly string particlePath = "UI/Particles/HealingParticleSystem";
 
         public void Awake()
         {
-            Icon = Instantiate(UnityEngine.Resources.Load("UI/SkillsIcons/HealingAura") as Texture2D);
+            Icon = UnityEngine.Resources.Load("UI/SkillsIcons/HealingAura") as Texture2D;
+            ProjectorPrefab = UnityEngine.Resources.Load("UI/AreaEffects/HealingAreaEffect") as GameObject;
             reloadTime = 30;
         }
 

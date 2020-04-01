@@ -191,6 +191,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\KriptoFX\Explosions\Shaders\ExplosionsBlendInterpolated.shader" />
      <None Include="Assets\KriptoFX\MuzzleFlashes\Shaders\Rocks.shader" />
+     <None Include="Assets\Resources\UI\Materials\ProjectorShader.shader" />
      <None Include="Assets\KriptoFX\Explosions\Shaders\ExplosionsBlend.shader" />
      <None Include="Assets\LeanTween\License.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />

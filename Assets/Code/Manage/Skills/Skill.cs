@@ -12,10 +12,13 @@ namespace Manage.Skills
     {
         public bool IsReady = true;
         public Texture2D Icon { get; protected set; }
+        public GameObject ProjectorPrefab { get; protected set; }
 
         protected int reloadTime = 0;
 
         private float timer = 0;
+        private bool isAiming=false;
+        private GameObject aimingProjector;
 
         public void Update()
         {
@@ -27,6 +30,35 @@ namespace Manage.Skills
             {
                 IsReady = true;
             }
+            if (isAiming)
+            {
+                var ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 200))
+                {
+                    aimingProjector.transform.position = hit.point;
+                }
+            }
+        }
+
+        public void StartAiming()
+        {
+            if (isAiming is true)
+            {
+                return;
+            }
+            isAiming = true;
+            aimingProjector = Instantiate(ProjectorPrefab, transform);
+        }
+
+        public void EndAiming()
+        {
+            if (isAiming is false)
+            {
+                return;
+            }
+            isAiming = false;
+            Destroy(aimingProjector);
         }
 
         public void Use(List<Unit> playerUnits)

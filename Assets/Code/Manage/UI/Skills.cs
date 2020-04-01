@@ -15,12 +15,15 @@ namespace Manage.UI
         public Canvas SkillsCanvas;
         public Skill SkillPrefab;
 
+        public List<Skill> SkillsList;
+
         public void Start()
         {
             foreach (var skill in Player.PlayerSkills)
             {
                 var go = Instantiate(SkillPrefab, SkillsCanvas.transform);
                 go.Load(skill);
+                SkillsList.Add(go);
             }
             Resize();
         }

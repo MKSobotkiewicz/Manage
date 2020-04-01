@@ -11,7 +11,8 @@ namespace Manage.Skills
     {
         public void Awake()
         {
-            Icon = Instantiate(UnityEngine.Resources.Load("UI/SkillsIcons/ArtilleryStrike") as Texture2D);
+            Icon = UnityEngine.Resources.Load("UI/SkillsIcons/ArtilleryStrike") as Texture2D;
+            ProjectorPrefab = UnityEngine.Resources.Load("UI/AreaEffects/ArtilleryStrikeAreaEffect") as GameObject;
             reloadTime = 60;
         }
     }
