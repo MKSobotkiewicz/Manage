@@ -22,14 +22,20 @@ namespace Manage.Skills
 
         public void Use(Vector3 position, List<Unit> affectedPlayerUnits)
         {
+            int i = 0;
             foreach (var unit in affectedPlayerUnits)
             {
                 if (Vector3.Distance(position, unit.Position()) <= radius)
                 {
+                    i++;
                     var go = Instantiate(UnityEngine.Resources.Load(particlePath) as GameObject, unit.transform);
                     go.transform.localPosition += new Vector3(0,1,0);
                     unit.Heal(unit.GetMaxHitPoints()/2);
                 }
+            }
+            if (i <= 0)
+            {
+                Timer = 0.1f;
             }
         }
     }

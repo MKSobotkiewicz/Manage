@@ -59,18 +59,14 @@ namespace Manage.Units
             {
                 if (character.Organization == player.Organization)
                 {
-                    unit.Player = true;
+                    unit.Player = player;
+                    player.Units.Add(unit);
                 }
                 else
                 {
-                    unit.Player = false;
+                    unit.Player = null;
                 }
             }
-            else
-            {
-                unit.Player = false;
-            }
-
             AllUnitsList.Units.Add(unit);
             return unit;
         }

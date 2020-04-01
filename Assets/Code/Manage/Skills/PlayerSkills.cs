@@ -9,6 +9,10 @@ namespace Manage.Skills
 {
     public class PlayerSkills:List<Skill>
     {
-
+        public void Add(Skill skill,Player.Player player)
+        {
+            Add(skill);
+            skill.Player = player;
+        }
     }
 }

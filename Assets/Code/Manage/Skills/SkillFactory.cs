@@ -17,7 +17,7 @@ namespace Manage.Skills
 
         private List<Skill> skillsList = new List<Skill>();
 
-        public Skill Create(ESkillType skillType)
+        public Skill Create(ESkillType skillType,Player.Player player)
         {
             var go = new GameObject();
             Skill skill;
@@ -32,6 +32,7 @@ namespace Manage.Skills
                 default:
                     return null;
             }
+            skill.Player = player;
             skillsList.Add(skill);
             return skill;
         }

@@ -26,7 +26,7 @@ namespace Manage.UI
 
         public void UpdatePercentage(float value)
         {
-            PercentageText.text = (value*100).ToString()+"%";
+            PercentageText.text = ((int)(value*100)).ToString()+"%";
         }
     }
 }

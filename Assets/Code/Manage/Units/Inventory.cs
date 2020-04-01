@@ -86,7 +86,11 @@ namespace Manage.Units
 
         public uint GetCunning()
         {
-            var cunning = ArmorType.Cunning;
+            uint cunning = 0;
+            if (ArmorType != null)
+            {
+                cunning += ArmorType.Cunning;
+            }
             if (Vest != null)
             {
                 cunning += Vest.VestType.Cunning;

@@ -22,7 +22,7 @@ namespace Manage.Units
         public bool Reloading { get; private set; } = false;
         public bool ThrowingGrenade { get; private set; } = false;
         public bool Shot { get; private set; } = false;
-        public bool Player { get; set; } = false;
+        public Player.Player Player { get; set; }
         public List<Animator> Animators = new List<Animator>();
         public Dictionary<Unit, float> AttackedBy;
         public Dialog.DialogManager DialogManager;
@@ -603,6 +603,10 @@ namespace Manage.Units
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             }
             Destroy(this.GetComponent<CapsuleCollider>());
+            if (Player != null)
+            {
+                Player.Units.Remove(this);
+            }
             AllUnitsList.Units.Remove(this);
         }
 

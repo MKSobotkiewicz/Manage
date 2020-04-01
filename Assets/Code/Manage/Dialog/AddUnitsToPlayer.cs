@@ -18,10 +18,10 @@ namespace Manage.Dialog
 
         public override void Do()
         {
-            UnityEngine.Debug.Log("ALL RIGHT");
             foreach (var unit in Units)
             {
                 unit.Character.Organization = Player.Organization;
+                Player.Units.Add(unit);
             }
             UnitIds.Reset();
         }

@@ -20,6 +20,7 @@ namespace Manage.Player
 
         public void Awake()
         {
+            Units = new List<Unit>();
             PlayerSkills = new PlayerSkills();
             PlayerInventory = new PlayerInventory();
 
@@ -40,8 +41,8 @@ namespace Manage.Player
             PlayerInventory.Add(VestTypes.SteelVest);
 
             var skillFactory = new SkillFactory();
-            PlayerSkills.Add(skillFactory.Create(SkillFactory.ESkillType.ArtilleryStrike));
-            PlayerSkills.Add(skillFactory.Create(SkillFactory.ESkillType.HealingAura));
+            PlayerSkills.Add(skillFactory.Create(SkillFactory.ESkillType.ArtilleryStrike,this));
+            PlayerSkills.Add(skillFactory.Create(SkillFactory.ESkillType.HealingAura, this));
         }
     }
 }
