@@ -84,7 +84,10 @@ namespace Manage.Skills
             IsReady = false;
             if (this is HealingAura)
             {
-                ((HealingAura)this).Use(position,playerUnits);
+                ((HealingAura)this).Use(position, playerUnits);
+            } else if (this is ArtilleryStrike)
+            {
+                ((ArtilleryStrike)this).Use(position);
             }
         }
     }

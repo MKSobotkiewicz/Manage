@@ -69,9 +69,9 @@ namespace Manage.Units
             AreaSize = areaSize;
         }
 
-        public Bullet CreateBullet(Unit unit,Transform transform,Vector3 target)
+        public Bullet CreateBullet(Unit unit, Vector3 position,Vector3 target)
         {
-            return Bullet.Create(this, unit, transform, target);
+            return Bullet.Create(this, unit, position, target);
         }
     }
 }

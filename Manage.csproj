@@ -117,6 +117,7 @@
      <Compile Include="Assets\Code\Manage\Space\IPositioned.cs" />
      <Compile Include="Assets\Code\Manage\Space\ISizeable.cs" />
      <Compile Include="Assets\Code\Manage\Space\Map.cs" />
+     <Compile Include="Assets\Code\Manage\Space\Random.cs" />
      <Compile Include="Assets\Code\Manage\UI\AddTrait.cs" />
      <Compile Include="Assets\Code\Manage\UI\Armor.cs" />
      <Compile Include="Assets\Code\Manage\UI\AudioSettings.cs" />
@@ -148,6 +149,8 @@
      <Compile Include="Assets\Code\Manage\Units\BulletType.cs" />
      <Compile Include="Assets\Code\Manage\Units\BulletTypes.cs" />
      <Compile Include="Assets\Code\Manage\Units\ClothesType.cs" />
+     <Compile Include="Assets\Code\Manage\Units\ExplosiveShell.cs" />
+     <Compile Include="Assets\Code\Manage\Units\ExplosiveShellType.cs" />
      <Compile Include="Assets\Code\Manage\Units\GrenadeBehaviour.cs" />
      <Compile Include="Assets\Code\Manage\Units\GrenadeType.cs" />
      <Compile Include="Assets\Code\Manage\Units\GrenadeTypes.cs" />

@@ -64,7 +64,7 @@ namespace Manage.Units
             var transforms = weapon.gameObject.GetComponentsInChildren<Transform>();
             foreach (var transform in transforms)
             {
-                if (transform.gameObject.name == "Muzzle")
+                if (transform.gameObject.name is "Muzzle")
                 {
                     if (!(muzzleFlash is null))
                     {
@@ -74,7 +74,7 @@ namespace Manage.Units
                     muzzleFlash.transform.position = transform.position;
                     muzzleFlash.transform.rotation = transform.rotation;
                     muzzleFlash.transform.Rotate(0, 180, 0);
-                    var bullet = BulletType.CreateBullet(attacking, transform, target.Position());
+                    var bullet = BulletType.CreateBullet(attacking, transform.position, target.Position());
                     RotateBullet(bullet, attacking);
                 }
             }

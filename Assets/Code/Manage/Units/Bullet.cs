@@ -8,36 +8,25 @@ namespace Manage.Units
 {
     public class Bullet : MonoBehaviour
     {
-        public BulletType BulletType { get; private set; }
+        public BulletType BulletType { get; protected set; }
         public new Rigidbody rigidbody;
 
-        private Vector3 lastPosition;
-        private Organizations.Organization organization;
-        private bool dying = false;
-        private float lifetime;
+        protected Vector3 lastPosition;
+        protected Organizations.Organization organization;
+        protected bool dying = false;
+        protected float lifetime;
 
         private static System.Random random = new System.Random();
 
-        public Bullet(BulletType bulletType, Vector3 position, Quaternion rotation)
+        public static Bullet Create(BulletType bulletType, Unit unit, Vector3 position, Vector3 target)
         {
-            BulletType = bulletType;
-            rigidbody = gameObject.AddComponent<Rigidbody>();
-
-            transform.position = position;
-            transform.rotation = rotation;
-
-            rigidbody.mass = (float)BulletType.Mass;
-            rigidbody.AddForce(rotation.eulerAngles.normalized * (float)BulletType.Velocity);
-        }
-
-        public static Bullet Create(BulletType bulletType, Unit unit, Transform transform, Vector3 target)
-        {
-            var go = Instantiate(UnityEngine.Resources.Load(bulletType.PrefabPath) as GameObject, transform,false);
+            var go = Instantiate(UnityEngine.Resources.Load(bulletType.PrefabPath) as GameObject);
             if (Equals(go, null))
             {
                 UnityEngine.Debug.Log("Failed to load bullet prefab " + bulletType.PrefabPath);
             }
             go.transform.parent = null;
+            go.transform.position = position;
             go.transform.localScale=new Vector3(0.2f, 0.2f, 0.2f);
             go.transform.LookAt(target + new Vector3(0, 1.5f, 0), new Vector3(0, 1, 0));
             go.transform.Rotate(new Vector3(0, 1, 0), 90);
@@ -49,7 +38,10 @@ namespace Manage.Units
             bullet.rigidbody.mass = (float)bulletType.Mass;
             bullet.rigidbody.AddRelativeForce(new Vector3(-(float)bulletType.Velocity, 0, 0), ForceMode.VelocityChange);
             bullet.lifetime = 2;
-            bullet.organization = unit.Character.Organization;
+            if (unit != null)
+            {
+                bullet.organization = unit.Character.Organization;
+            }
             
             return bullet;
         }
@@ -80,7 +72,15 @@ namespace Manage.Units
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 unit.Damage(BulletType.Damage);
             }
-            Hit(collision);
+            if (this is ExplosiveShell)
+            {
+                UnityEngine.Debug.Log("Brain aunerysm");
+                ((ExplosiveShell)this).Hit(collision);
+            }
+            else
+            {
+                Hit(collision);
+            }
             if (random.NextDouble() > 0.5)
             {
                 dying = true;
@@ -90,24 +90,28 @@ namespace Manage.Units
             rigidbody.velocity /= 2;
         }
 
-        private void Hit(Collision collision)
+        protected void Hit(Collision collision)
         {
-            switch (collision.gameObject.tag)
+            if (dying is false)
             {
-                case "Metal":
-                    InstantiateBulletHit("Bullets/BulletHitMetal", collision);
-                    break;
-                case "Flesh":
-                    InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
-                    break;
-                case "Concrete":
-                    InstantiateBulletHit("Bullets/BulletHitConcrete", collision);
-                    break;
-                default:
-                    InstantiateBulletHit("Bullets/BulletHit", collision);
-                    break;
+                switch (collision.gameObject.tag)
+                {
+                    case "Metal":
+                        InstantiateBulletHit("Bullets/BulletHitMetal", collision);
+                        break;
+                    case "Flesh":
+                        InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
+                        break;
+                    case "Concrete":
+                        InstantiateBulletHit("Bullets/BulletHitConcrete", collision);
+                        break;
+                    default:
+                        InstantiateBulletHit("Bullets/BulletHit", collision);
+                        break;
+                }
             }
-            Destroy(gameObject);
+            rigidbody.velocity /= 2;
+            dying = true;
         }
 
         private void InstantiateBulletHit(string name, Collision collision)

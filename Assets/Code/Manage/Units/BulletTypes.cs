@@ -12,7 +12,7 @@ namespace Manage.Units
         public static readonly BulletType BulletType_7p62x39mm = new BulletType("Bullets/7p62x39mm_Bullet", "Bullets/7p62x39mm_MuzzleFlash", 850,0.004,50,10);
         public static readonly BulletType BulletType_5p56x45mm = new BulletType("Bullets/5p56x45mm_Bullet", "Bullets/5p56x45mm_MuzzleFlash", 950, 0.004, 40, 0);
         public static readonly BulletType ShellType_85mm = new BulletType("Bullets/85mm_Shell", "Bullets/85mm_MuzzleFlash", 800, 9.2, 500, 100);
-        public static readonly BulletType ShellType_155mm = new BulletType("Bullets/155mm_Shell", "Bullets/85mm_MuzzleFlash", 560, 43.2, 1000, 50);
+        public static readonly ExplosiveShellType ShellType_155mm = new ExplosiveShellType("Bullets/155mm_Shell", "Bullets/85mm_MuzzleFlash", 560, 43.2, 1000, 50,5, "Bullets/155mm_Explosion");
         public static readonly BulletType BulletType_13mm = new BulletType("Bullets/8mm_Bullet", "Bullets/8mm_MuzzleFlash", 850, 0.012, 60, 10);
     }
 }
