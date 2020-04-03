@@ -9,6 +9,8 @@ namespace Manage.Units
 {
     public class ExplosiveShell:Bullet
     {
+        private static System.Random random = new System.Random();
+
         public new void Hit(Collision collision)
         {
             if (dying is true)
@@ -41,6 +43,7 @@ namespace Manage.Units
             go.transform.position += new Vector3(0, 0.5f, 0);
             go.transform.parent = null;
             go.transform.rotation = new Quaternion();
+            go.transform.Rotate(0, (float)random.NextDouble()*360, 0);
             rigidbody.velocity =new Vector3(0,0,0);
             lifetime = 10;
             dying = true;
