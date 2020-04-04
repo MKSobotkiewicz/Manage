@@ -123,7 +123,7 @@ namespace Manage.UI
         public void Destroy()
         {
             Destroy(FloatingLifePanel.gameObject);
-            Destroy(this);
+            Destroy(gameObject);
         }
 
         private void SetAmmo()
