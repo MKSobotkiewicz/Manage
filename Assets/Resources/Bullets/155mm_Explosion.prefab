@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulletDecal
       objectReference: {fileID: 0}
+    - target: {fileID: 8635776862716197637, guid: aff38fa5dcbeec8479e9e2d69196c206,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d25d9081fc621e74a8bba7acee859b27, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aff38fa5dcbeec8479e9e2d69196c206, type: 3}
 --- !u!4 &4382806924625338445 stripped

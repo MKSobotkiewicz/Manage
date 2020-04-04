@@ -45,7 +45,7 @@ namespace Manage.UI
             var unitIds = GetComponentsInChildren<UnitId>();
             foreach (var unitId in unitIds)
             {
-                Destroy(unitId.gameObject);
+                unitId.Destroy();
             }
             Start();
         }

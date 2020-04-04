@@ -120,6 +120,12 @@ namespace Manage.UI
             characterId.transform.SetParent( transform.parent);
         }
 
+        public void Destroy()
+        {
+            Destroy(FloatingLifePanel.gameObject);
+            Destroy(this);
+        }
+
         private void SetAmmo()
         {
             if (Unit.Inventory.VehicleType == null)

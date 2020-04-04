@@ -43,8 +43,9 @@ namespace Manage.UI
         private void LoadFirstScene()
         {
             var loading=Instantiate(LoadingPrefab,transform.parent);
-            var loadingScene =SceneManager.LoadSceneAsync("Resources/Scenes/Mission1", LoadSceneMode.Single);
-            loading.LoadingScene = loadingScene;
+            var loadingSceneOperation =SceneManager.LoadSceneAsync("Resources/Scenes/Mission1", LoadSceneMode.Single);
+            loadingSceneOperation.allowSceneActivation = false;
+            loading.LoadingSceneOperation = loadingSceneOperation;
         }
     }
 }
