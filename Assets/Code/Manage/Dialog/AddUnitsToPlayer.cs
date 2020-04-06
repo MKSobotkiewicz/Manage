@@ -20,6 +20,7 @@ namespace Manage.Dialog
         {
             foreach (var unit in Units)
             {
+                unit.Player = Player;
                 unit.Character.Organization = Player.Organization;
                 Player.Units.Add(unit);
             }

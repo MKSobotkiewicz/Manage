@@ -28,6 +28,11 @@ namespace Manage.UI
         public ItemSlot VestSlot;
         public ItemSlot GrenadeSlot;
 
+        public Text HitPoints;
+        public Text Speed;
+        public Text WeaponSpread;
+        public Text AbilitiesLoadTime;
+
         private Unit unit;
         private Player.Player player;
 
@@ -141,7 +146,12 @@ namespace Manage.UI
             {
                 charisma.text += "+" + unit.Inventory.GetCharisma();
             }
-        }
+
+            HitPoints.text=unit.GetHitPointsNoVehicle().ToString();
+            Speed.text=unit.GetSpeed().ToString("0.00");
+            WeaponSpread.text=((int)(unit.GetWeaponSpread()*100)).ToString()+"%";
+            AbilitiesLoadTime.text=((int)(unit.AbilitiesLoadTime() * 100)).ToString() + "%";
+    }
 
         public void AddStamina()
         {

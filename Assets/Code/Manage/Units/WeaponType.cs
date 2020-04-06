@@ -99,10 +99,9 @@ namespace Manage.Units
         {
             var spreadNormalized = Spread*(BulletType.Velocity/1000);
             double marksmanship;
-            marksmanship = attacking.Marksmanship();
-            bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship)),
-                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship)),
-                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Math.Pow(0.9, marksmanship))), ForceMode.VelocityChange);
+            bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * spreadNormalized * attacking.GetWeaponSpread()),
+                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * attacking.GetWeaponSpread()),
+                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * attacking.GetWeaponSpread())), ForceMode.VelocityChange);
         }
 
     }

@@ -75,12 +75,7 @@ namespace Manage.Skills
             {
                 StopAiming();
             }
-            uint cunning = 0;
-            foreach(var unit in playerUnits)
-            {
-                cunning += unit.Cunning();
-            }
-            Timer = reloadTime* (float)Math.Pow(0.95, cunning);
+            Timer = reloadTime * playerUnits[0].AbilitiesLoadTime();
             IsReady = false;
             if (this is HealingAura)
             {
