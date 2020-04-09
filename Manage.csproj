@@ -123,6 +123,7 @@
      <Compile Include="Assets\Code\Manage\UI\Armor.cs" />
      <Compile Include="Assets\Code\Manage\UI\AudioSettings.cs" />
      <Compile Include="Assets\Code\Manage\UI\BasicUI.cs" />
+     <Compile Include="Assets\Code\Manage\UI\BlackScreen.cs" />
      <Compile Include="Assets\Code\Manage\UI\CharacterId.cs" />
      <Compile Include="Assets\Code\Manage\UI\CharacterPortrait.cs" />
      <Compile Include="Assets\Code\Manage\UI\CreateCharacter.cs" />

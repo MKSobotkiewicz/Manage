@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -120,18 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &363654524
+--- !u!1001 &968699265
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5663299181887132829, guid: 56f8a786cb1ff974e8870b5930cfa004,
+    - target: {fileID: 4184171502214219811, guid: 56f8a786cb1ff974e8870b5930cfa004,
         type: 3}
-      propertyPath: m_Name
-      value: MainMenuCameraAnchor
-      objectReference: {fileID: 0}
+      propertyPath: Audio
+      value: 
+      objectReference: {fileID: 2132517077}
     - target: {fileID: 5663299181887132818, guid: 56f8a786cb1ff974e8870b5930cfa004,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,11 +188,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4184171502214219811, guid: 56f8a786cb1ff974e8870b5930cfa004,
+    - target: {fileID: 5663299181887132829, guid: 56f8a786cb1ff974e8870b5930cfa004,
         type: 3}
-      propertyPath: Audio
-      value: 
-      objectReference: {fileID: 2132517077}
+      propertyPath: m_Name
+      value: MainMenuCameraAnchor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56f8a786cb1ff974e8870b5930cfa004, type: 3}
 --- !u!1001 &1073741102
@@ -201,11 +202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 734431845547787272, guid: 7aeb34b0e5974124b8dbc58397734506,
-        type: 3}
-      propertyPath: m_Name
-      value: EventSystem
-      objectReference: {fileID: 0}
     - target: {fileID: 734431845547787271, guid: 7aeb34b0e5974124b8dbc58397734506,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -261,6 +257,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 734431845547787272, guid: 7aeb34b0e5974124b8dbc58397734506,
+        type: 3}
+      propertyPath: m_Name
+      value: EventSystem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aeb34b0e5974124b8dbc58397734506, type: 3}
 --- !u!1 &2132517076
@@ -293,6 +294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MasterAudioMixer: {fileID: 24100000, guid: bc9bd3497ffcc734f8b72cd95ecfe714, type: 2}
+  MasterVolume: 1
+  SoundEffectsVolume: 1
+  MusicVolume: 1
 --- !u!4 &2132517078
 Transform:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HealingMaterial
+  m_Name: LevelUpMaterial
   m_Shader: {fileID: 4800000, guid: f960b8208e4f16340bf3e3a58593651c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,11 +44,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8ced4146d00ba7a4db7a9b1278b6a2ff, type: 3}
+        m_Texture: {fileID: 2800000, guid: bf871a9cc0d17944a9e76fff6e35728d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 2800000, guid: 8ced4146d00ba7a4db7a9b1278b6a2ff, type: 3}
+        m_Texture: {fileID: 2800000, guid: bf871a9cc0d17944a9e76fff6e35728d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -109,7 +109,7 @@ Material:
     - _UseUIAlphaClip: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 1.4142135, b: 0, a: 1}
+    - _Color: {r: 3.9999995, g: 3.9999995, b: 0.48167533, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

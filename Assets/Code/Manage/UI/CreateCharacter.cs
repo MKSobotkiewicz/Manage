@@ -14,6 +14,7 @@ namespace Manage.UI
     {
         public UnitCreator UnitCreator;
         public UnitIds UnitIds;
+        public BlackScreen BlackScreen;
 
         public InputField FirstNameInputField;
         public InputField SurnameInputField;
@@ -85,6 +86,7 @@ namespace Manage.UI
             FillUnitCreatorFields();
             UnitCreator.CreateAndDestroy();
             UnitIds.Reset();
+            BlackScreen.Close();
             BasicUI basicUI;
             if ((basicUI = GetComponent<BasicUI>()) != null)
             {
