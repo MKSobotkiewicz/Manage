@@ -75,7 +75,7 @@ namespace Manage.Skills
             {
                 StopAiming();
             }
-            Timer = reloadTime * playerUnits[0].AbilitiesLoadTime();
+            Timer = reloadTime * Unit.AbilitiesLoadTime(playerUnits[0].Player);
             IsReady = false;
             if (this is HealingAura)
             {

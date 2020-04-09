@@ -20,6 +20,37 @@ namespace Manage.Characters
 
         private static readonly System.Random random=new System.Random();
 
+        public Character(uint stamina,
+                         uint endurance,
+                         uint marksmanship,
+                         uint cunning,
+                         uint charisma,
+                         EGender gender,
+                         Organization organization,
+                         CharacterCulture characterCulture,
+                         string firstName,
+                         string surname,
+                         string nickname,
+                         uint age,
+                         Texture2D portrait) : base(organization,
+                                                    characterCulture,
+                                                    firstName,
+                                                    surname,
+                                                    nickname,
+                                                    age,
+                                                    gender,
+                                                    portrait)
+        {
+            Level = (stamina+ endurance+ marksmanship+ cunning+ charisma)/5-1;
+            CharacterStats = new CharacterStats(stamina, endurance, marksmanship, cunning, charisma);
+            CharacterTraits = new CharacterTraits(Level);
+            Parents = new HashSet<Character>();
+            Siblings = new HashSet<Character>();
+            Children = new HashSet<Character>();
+            Debug.Logger.Log(Debug.Logger.InfoLevel.InfoLevel2, "Object of type Character named: " + firstName + " "
+                                                                + surname + " age: " + age + " gender: " + gender + " created.");
+        }
+
         public Character(uint level,
                          EGender gender,
                          Organization organization,

@@ -20,8 +20,18 @@ namespace Manage.Units
         public VehicleTypes.EVehicleType VehicleType;
         public OrganizationTypes.EOrganization Organization;
         public CharacterCultureTypes.ECharacterCulture CharacterCulture;
-        [Range(1, 50)]
+        [Range(0, 50)]
         public uint Level=1;
+        [Range(1, 50)]
+        public uint Stamina = 1;
+        [Range(1, 50)]
+        public uint Endurance = 1;
+        [Range(1, 50)]
+        public uint Marksmanship = 1;
+        [Range(1, 50)]
+        public uint Cunning = 1;
+        [Range(1, 50)]
+        public uint Charisma = 1;
         public EGender Gender= EGender.Male;
         [ContextMenuItem("Randomize first name", "RandomizeFirstName")]
         public string FirstName="John";
@@ -57,7 +67,14 @@ namespace Manage.Units
 
         public Unit Create()
         {
-            var Character = new Character(Level,
+            Character Character;
+            if (Level == 0)
+            {
+                Character = new Character(Stamina,
+                                          Endurance,
+                                          Marksmanship,
+                                          Cunning,
+                                          Charisma,
                                           Gender,
                                           OrganizationTypes.ToOrganization(Organization),
                                           CharacterCultureTypes.ToCharacterCulture(CharacterCulture),
@@ -66,6 +83,19 @@ namespace Manage.Units
                                           Nickname,
                                           Age,
                                           Portrait);
+            }
+            else
+            {
+                Character = new Character(Level,
+                                          Gender,
+                                          OrganizationTypes.ToOrganization(Organization),
+                                          CharacterCultureTypes.ToCharacterCulture(CharacterCulture),
+                                          FirstName,
+                                          Surname,
+                                          Nickname,
+                                          Age,
+                                          Portrait);
+            }
 
             var unitFactory = new UnitFactory();
             var unit= unitFactory.Create(Player,

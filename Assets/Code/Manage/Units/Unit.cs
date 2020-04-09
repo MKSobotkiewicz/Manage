@@ -226,34 +226,39 @@ namespace Manage.Units
             }
             if (Inventory.VehicleType == null)
             {
-                return GetHitPointsNoVehicle();
+                return GetHitPoints(Endurance());
             }
             return (int)Inventory.VehicleType.HitPoints;
         }
 
-        public int GetHitPointsNoVehicle()
+        public static int GetHitPoints(uint endurance)
         {
-            return (int)(100 * (1 + Mathf.Log10(Endurance())));
+            return (int)(100 * (1+Mathf.Log10(endurance)));
         }
 
-        public float GetSpeed()
+        public static float GetSpeed(uint stamina)
         {
-            return 4 * (1 + Mathf.Log10(Stamina()));
+            return 4 * (1+Mathf.Log10(stamina));
         }
 
-        public double GetWeaponSpread()
+        public static double GetWeaponSpread(uint marksmanship)
         {
-            return Math.Pow(0.92, Marksmanship());
+            return Math.Pow(0.92, marksmanship-1);
         }
 
-        public float AbilitiesLoadTime()
+        public static float AbilitiesLoadTime(Player.Player player)
         {
             uint cunning = 0;
-            foreach (var _unit in Player.Units)
+            foreach (var _unit in player.Units)
             {
                 cunning += _unit.Cunning();
             }
-            return (float)Math.Pow(0.98, cunning);
+            return (float)Math.Pow(0.98, cunning - 1);
+        }
+
+        public static float AbilitiesLoadTimeSingle(uint cunning)
+        {
+            return (float)Math.Pow(0.98, cunning - 1);
         }
 
         public bool Arm(WeaponType weaponType)
@@ -668,7 +673,7 @@ namespace Manage.Units
         {
             if (Inventory.VehicleType == null)
             {
-                navMeshAgent.speed = GetSpeed();
+                navMeshAgent.speed = GetSpeed(Stamina());
                 return;
             }
             navMeshAgent.speed = Inventory.VehicleType.Speed;

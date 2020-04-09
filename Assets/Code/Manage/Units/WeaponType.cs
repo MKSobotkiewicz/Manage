@@ -98,10 +98,9 @@ namespace Manage.Units
         private void RotateBullet(Bullet bullet, Unit attacking)
         {
             var spreadNormalized = Spread*(BulletType.Velocity/1000);
-            double marksmanship;
-            bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * spreadNormalized * attacking.GetWeaponSpread()),
-                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * attacking.GetWeaponSpread()),
-                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * attacking.GetWeaponSpread())), ForceMode.VelocityChange);
+            bullet.rigidbody.AddForce(new Vector3((float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Unit.GetWeaponSpread(attacking.Marksmanship())),
+                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Unit.GetWeaponSpread(attacking.Marksmanship())),
+                                                  (float)(((random.NextDouble() * 2) - 1) * spreadNormalized * Unit.GetWeaponSpread(attacking.Marksmanship()))), ForceMode.VelocityChange);
         }
 
     }

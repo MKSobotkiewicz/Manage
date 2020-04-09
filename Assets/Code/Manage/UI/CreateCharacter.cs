@@ -26,6 +26,27 @@ namespace Manage.UI
         public Button FemaleButton;
         public Button MaleButton;
         public Button OtherButton;
+        public Text PointsText;
+        public Text StaminaText;
+        public Text EnduranceText;
+        public Text MarksmanshipText;
+        public Text CunningText;
+        public Text CharismaText;
+        public Button AddStaminaButton;
+        public Button AddEnduranceButton;
+        public Button AddMarksmanshipButton;
+        public Button AddCunningButton;
+        public Button AddCharismaButton;
+        public Button RemoveStaminaButton;
+        public Button RemoveEnduranceButton;
+        public Button RemoveMarksmanshipButton;
+        public Button RemoveCunningButton;
+        public Button RemoveCharismaButton;
+        public Button CreateButton;
+        public Text HitPointsText;
+        public Text SpeedText;
+        public Text WeaponSpreadText;
+        public Text AbilitiesLoadTimeText;
         public Image FemaleSelectPanel;
         public Image MaleSelectPanel;
         public Image OtherSelectPanel;
@@ -37,6 +58,12 @@ namespace Manage.UI
 
         private Texture2D portrait;
         private EGender gender = EGender.Female;
+        private uint points = 5;
+        private uint stamina = 1;
+        private uint endurance = 1;
+        private uint marksmanship = 1;
+        private uint cunning = 1;
+        private uint charisma = 1;
 
         private static readonly System.Random random = new System.Random();
 
@@ -49,6 +76,8 @@ namespace Manage.UI
             RandomizeAge();
             RandomizePortrait();
             CharacterImage.texture = portrait;
+            UpdatePoints();
+            UnitCreator.Level = 0;
         }
 
         public void Create()
@@ -130,6 +159,76 @@ namespace Manage.UI
             portrait = CharacterCultureTypes.ToCharacterCulture(CharacterCulture).RandomIcon(gender);
         }
 
+        public void AddStamina()
+        {
+            points--;
+            stamina++;
+            UpdatePoints();
+        }
+
+        public void RemoveStamina()
+        {
+            points++;
+            stamina--;
+            UpdatePoints();
+        }
+
+        public void AddEndurance()
+        {
+            points--;
+            endurance++;
+            UpdatePoints();
+        }
+
+        public void RemoveEndurance()
+        {
+            points++;
+            endurance--;
+            UpdatePoints();
+        }
+
+        public void AddMarksmanship()
+        {
+            points--;
+            marksmanship++;
+            UpdatePoints();
+        }
+
+        public void RemoveMarksmanship()
+        {
+            points++;
+            marksmanship--;
+            UpdatePoints();
+        }
+
+        public void AddCunning()
+        {
+            points--;
+            cunning++;
+            UpdatePoints();
+        }
+
+        public void RemoveCunning()
+        {
+            points++;
+            cunning--;
+            UpdatePoints();
+        }
+
+        public void AddCharisma()
+        {
+            points--;
+            charisma++;
+            UpdatePoints();
+        }
+
+        public void RemoveCharisma()
+        {
+            points++;
+            charisma--;
+            UpdatePoints();
+        }
+
         private void FillUnitCreatorFields()
         {
             UnitCreator.FirstName = FirstNameInputField.text;
@@ -139,6 +238,91 @@ namespace Manage.UI
             UnitCreator.Gender = gender;
             UnitCreator.Portrait = portrait;
             UnitCreator.CharacterCulture = CharacterCulture;
+        }
+
+        private void UpdatePoints()
+        {
+            UnitCreator.Stamina = stamina;
+            UnitCreator.Endurance = endurance;
+            UnitCreator.Marksmanship = marksmanship;
+            UnitCreator.Cunning = cunning;
+            UnitCreator.Charisma = charisma;
+
+            PointsText.text = "POINTS: " + points.ToString();
+            StaminaText.text= stamina.ToString();
+            EnduranceText.text=endurance.ToString();
+            MarksmanshipText.text=marksmanship.ToString();
+            CunningText.text=cunning.ToString();
+            CharismaText.text=charisma.ToString();
+
+            HitPointsText.text = Unit.GetHitPoints(endurance).ToString();
+            SpeedText.text = Unit.GetSpeed(stamina).ToString("0.00");
+            WeaponSpreadText.text = ((int)(Unit.GetWeaponSpread(marksmanship) * 100)).ToString() + "%";
+            AbilitiesLoadTimeText.text = ((int)(Unit.AbilitiesLoadTimeSingle(cunning) * 100)).ToString() + "%";
+
+            if (points <= 0)
+            {
+                CreateButton.gameObject.SetActive(true);
+                AddStaminaButton.gameObject.SetActive(false);
+                AddEnduranceButton.gameObject.SetActive(false);
+                AddMarksmanshipButton.gameObject.SetActive(false);
+                AddCunningButton.gameObject.SetActive(false);
+                AddCharismaButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                CreateButton.gameObject.SetActive(false);
+                AddStaminaButton.gameObject.SetActive(true);
+                AddEnduranceButton.gameObject.SetActive(true);
+                AddMarksmanshipButton.gameObject.SetActive(true);
+                AddCunningButton.gameObject.SetActive(true);
+                AddCharismaButton.gameObject.SetActive(true);
+            }
+
+            if (stamina <= 1)
+            {
+                RemoveStaminaButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                RemoveStaminaButton.gameObject.SetActive(true);
+            }
+
+            if (endurance <= 1)
+            {
+                RemoveEnduranceButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                RemoveEnduranceButton.gameObject.SetActive(true);
+            }
+
+            if (marksmanship <= 1)
+            {
+                RemoveMarksmanshipButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                RemoveMarksmanshipButton.gameObject.SetActive(true);
+            }
+
+            if (cunning <= 1)
+            {
+                RemoveCunningButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                RemoveCunningButton.gameObject.SetActive(true);
+            }
+
+            if (charisma <= 1)
+            {
+                RemoveCharismaButton.gameObject.SetActive(false);
+            }
+            else
+            {
+                RemoveCharismaButton.gameObject.SetActive(true);
+            }
         }
 
         private void Destroy()

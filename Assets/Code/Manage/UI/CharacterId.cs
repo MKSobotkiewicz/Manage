@@ -147,10 +147,10 @@ namespace Manage.UI
                 charisma.text += "+" + unit.Inventory.GetCharisma();
             }
 
-            HitPoints.text=unit.GetHitPointsNoVehicle().ToString();
-            Speed.text=unit.GetSpeed().ToString("0.00");
-            WeaponSpread.text=((int)(unit.GetWeaponSpread()*100)).ToString()+"%";
-            AbilitiesLoadTime.text=((int)(unit.AbilitiesLoadTime() * 100)).ToString() + "%";
+            HitPoints.text=Unit.GetHitPoints(unit.Endurance()).ToString();
+            Speed.text=Unit.GetSpeed(unit.Stamina()).ToString("0.00");
+            WeaponSpread.text=((int)(Unit.GetWeaponSpread(unit.Marksmanship()) *100)).ToString()+"%";
+            AbilitiesLoadTime.text=((int)(Unit.AbilitiesLoadTime(unit.Player) * 100)).ToString() + "%";
     }
 
         public void AddStamina()
