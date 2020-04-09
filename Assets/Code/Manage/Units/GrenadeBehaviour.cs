@@ -11,6 +11,7 @@ namespace Manage.Units
     {
         public GameObject Explosion;
         public int Damage;
+        public Player.Player Player;
 
         private float timer=4f;
 
@@ -19,6 +20,7 @@ namespace Manage.Units
         public void Start()
         {
         }
+
         public void Update()
         {
             timer -= Time.fixedDeltaTime;
@@ -66,7 +68,7 @@ namespace Manage.Units
                     {
                         continue;
                     }
-                    unit.Damage(Damage);
+                    unit.Damage(Damage, Player);
                     damagedUnitList.Add(unit);
                     if (unit.Inventory.VehicleType == null)
                     {

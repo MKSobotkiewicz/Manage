@@ -17,12 +17,14 @@ namespace Manage.Player
         public List<Unit> Units { get; private set; }
         public PlayerInventory PlayerInventory { get;private set;}
         public PlayerSkills PlayerSkills { get; private set; }
+        public ExperienceManager ExperienceManager { get; private set; }
 
         public void Awake()
         {
             Units = new List<Unit>();
             PlayerSkills = new PlayerSkills();
             PlayerInventory = new PlayerInventory();
+            ExperienceManager = new ExperienceManager(this);
 
             Organization = OrganizationTypes.Empire;
 

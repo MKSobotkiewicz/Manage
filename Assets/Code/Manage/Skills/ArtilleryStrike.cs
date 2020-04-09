@@ -82,6 +82,7 @@ namespace Manage.Skills
         {
             var point = Space.Random.PointInSphere(firePosition, attackRadius);
             var bullet = shell.CreateBullet(null, point + new Vector3(300, 900, -300), point);
+            bullet.Player = Player;
         }
     }
 }

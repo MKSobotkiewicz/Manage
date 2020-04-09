@@ -33,6 +33,8 @@ namespace Manage.UI
         public Text WeaponSpread;
         public Text AbilitiesLoadTime;
 
+        public Text Experience;
+
         private Unit unit;
         private Player.Player player;
 
@@ -100,6 +102,7 @@ namespace Manage.UI
             portrait.texture = unit.Character.Portrait;
 
             level.text = "LEVEL "+unit.Character.Level.ToString();
+            Experience.text = unit.Character.Experience+ "/"+unit.Character.ExperienceForNextLevel();
 
             SetStats();
             UpdateTraits();
@@ -146,12 +149,8 @@ namespace Manage.UI
             {
                 charisma.text += "+" + unit.Inventory.GetCharisma();
             }
-
-            HitPoints.text=Unit.GetHitPoints(unit.Endurance()).ToString();
-            Speed.text=Unit.GetSpeed(unit.Stamina()).ToString("0.00");
-            WeaponSpread.text=((int)(Unit.GetWeaponSpread(unit.Marksmanship()) *100)).ToString()+"%";
-            AbilitiesLoadTime.text=((int)(Unit.AbilitiesLoadTime(unit.Player) * 100)).ToString() + "%";
-    }
+            UpdateStats();
+        }
 
         public void AddStamina()
         {
@@ -161,6 +160,7 @@ namespace Manage.UI
                 stamina.text += "+" + unit.Inventory.GetStamina();
             }
             CheckStatPoints();
+            UpdateStats();
         }
 
         public void AddMarksmanship()
@@ -171,6 +171,7 @@ namespace Manage.UI
                 marksmanship.text += "+" + unit.Inventory.GetMarksmanship();
             }
             CheckStatPoints();
+            UpdateStats();
         }
 
         public void AddEndurance()
@@ -181,6 +182,7 @@ namespace Manage.UI
                 endurance.text += "+" + unit.Inventory.GetEndurance();
             }
             CheckStatPoints();
+            UpdateStats();
         }
 
         public void AddCunning()
@@ -191,6 +193,7 @@ namespace Manage.UI
                 cunning.text += "+" + unit.Inventory.GetCunning();
             }
             CheckStatPoints();
+            UpdateStats();
         }
 
         public void AddCharisma()
@@ -201,6 +204,7 @@ namespace Manage.UI
                 charisma.text += "+" + unit.Inventory.GetCharisma();
             }
             CheckStatPoints();
+            UpdateStats();
         }
 
         public void AddTrait()
@@ -254,6 +258,14 @@ namespace Manage.UI
                 player.PlayerInventory.Add(item.ItemType);
             }
             SetStats();
+        }
+
+        private void UpdateStats()
+        {
+            HitPoints.text = Unit.GetHitPoints(unit.Endurance()).ToString();
+            Speed.text = Unit.GetSpeed(unit.Stamina()).ToString("0.00");
+            WeaponSpread.text = ((int)(Unit.GetWeaponSpread(unit.Marksmanship()) * 100)).ToString() + "%";
+            AbilitiesLoadTime.text = ((int)(Unit.AbilitiesLoadTime(unit.Player) * 100)).ToString() + "%";
         }
 
         private void CheckStatPoints()

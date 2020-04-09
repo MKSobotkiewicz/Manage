@@ -13,6 +13,7 @@ namespace Manage.Units
 
         protected Vector3 lastPosition;
         protected Organizations.Organization organization;
+        public Player.Player Player;
         protected bool dying = false;
         protected float lifetime;
 
@@ -41,6 +42,7 @@ namespace Manage.Units
             if (unit != null)
             {
                 bullet.organization = unit.Character.Organization;
+                bullet.Player = unit.Player;
             }
             
             return bullet;
@@ -70,7 +72,7 @@ namespace Manage.Units
                 }
                 dying = true;
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-                unit.Damage(BulletType.Damage);
+                unit.Damage(BulletType.Damage, Player);
             }
             if (this is ExplosiveShell)
             {

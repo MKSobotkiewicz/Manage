@@ -317,7 +317,10 @@ namespace Manage.Units
 
         public WeaponType Rearm(WeaponType weaponType)
         {
-            SetAnimatorsBool("Pistol", weaponType.IsPistol);
+            if (weaponType != null)
+            {
+                SetAnimatorsBool("Pistol", weaponType.IsPistol);
+            }
             foreach (var child in GetComponentsInChildren<Transform>())
             {
                 if (child.name == "WeaponPoint")
@@ -513,6 +516,7 @@ namespace Manage.Units
                                                                            distance / 10 + 10,
                                                                            distance / 4 + 1), ForceMode.VelocityChange);
             grenade.GetComponent<Rigidbody>().AddTorque(new Vector3((float)random.NextDouble(), (float)random.NextDouble(), (float)random.NextDouble()));
+            grenade.GetComponent<GrenadeBehaviour>().Player = Player;
             ThrowingGrenade = false;
             SetAnimatorsBool("Toss Grenade", false);
         }
@@ -594,6 +598,11 @@ namespace Manage.Units
 
         public bool Damage(int value)
         {
+            return Damage(value,null);
+        }
+
+        public bool Damage(int value,Player.Player damagingPlayer)
+        {
             if (Inventory.VehicleType == null)
             {
                 Attacking = false;
@@ -607,6 +616,10 @@ namespace Manage.Units
             }
             if (hitPoints <= 0)
             {
+                if (damagingPlayer != null)
+                {
+                    damagingPlayer.ExperienceManager.AddExperienceToUnits(Character.ExperienceFromCharacter());
+                }
                 Dispose();
                 return true;
             }

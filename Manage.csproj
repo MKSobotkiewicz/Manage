@@ -90,6 +90,7 @@
      <Compile Include="Assets\Code\Manage\Organizations\OrganizationTypes.cs" />
      <Compile Include="Assets\Code\Manage\Particles\AutoDestroyer.cs" />
      <Compile Include="Assets\Code\Manage\Particles\Rotator.cs" />
+     <Compile Include="Assets\Code\Manage\Player\ExperienceManager.cs" />
      <Compile Include="Assets\Code\Manage\Player\Player.cs" />
      <Compile Include="Assets\Code\Manage\Player\PlayerInventory.cs" />
      <Compile Include="Assets\Code\Manage\Properties\Audio.cs" />

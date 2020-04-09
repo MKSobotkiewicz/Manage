@@ -9,7 +9,8 @@ namespace Manage.Characters
 {
     public class Character : CharacterInfo
     {
-        public uint Level { get; private set; }
+        public uint Level { get; private set; } = 1;
+        public uint Experience { get; private set; } = 0;
 
         public CharacterStats CharacterStats { get; set; }
         public CharacterTraits CharacterTraits { get; set; }
@@ -219,10 +220,32 @@ namespace Manage.Characters
         {
         }
 
+        public uint ExperienceFromCharacter()
+        {
+            return (uint)(Math.Log10(Level + 1) * 100);
+        }
+
+        public uint ExperienceForNextLevel()
+        {
+            return (uint)(Math.Log(Level+1) * 100);
+        }
+
+        public bool AddExperience(uint experience)
+        {
+            Experience += experience;
+            if (Experience > ExperienceForNextLevel())
+            {
+                Experience -= ExperienceForNextLevel();
+                AddLevel();
+                return true;
+            }
+            return false;
+        }
+
         public void AddLevel()
         {
             Level++;
-            CharacterStats.Points++;
+            CharacterStats.Points+=5;
             if (Level % 5 == 0)
             {
                 CharacterTraits.Points++;
