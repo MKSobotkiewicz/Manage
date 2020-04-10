@@ -250,7 +250,16 @@ namespace Manage.UI
             UnitCreator.Cunning = cunning;
             UnitCreator.Charisma = charisma;
 
-            PointsText.text = "POINTS: " + points.ToString();
+            PointsText.text =  points.ToString();
+            if (points != 0)
+            {
+                PointsText.color = new UnityEngine.Color(1, 1, 0, 1);
+            }
+            else
+            {
+                PointsText.color = new UnityEngine.Color(0, 0, 0, 1);
+            }
+
             StaminaText.text= stamina.ToString();
             EnduranceText.text=endurance.ToString();
             MarksmanshipText.text=marksmanship.ToString();

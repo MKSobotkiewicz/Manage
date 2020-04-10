@@ -8,11 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 268530634464610797}
+  - component: {fileID: 6508483822738756153}
   - component: {fileID: 8050597890979080247}
   - component: {fileID: 1342372505366331062}
   - component: {fileID: 5775535836844033470}
   - component: {fileID: 4271465893488273622}
+  - component: {fileID: 3388028234347320073}
+  - component: {fileID: 8208468078688654201}
   m_Layer: 0
   m_Name: HealingParticleSystem
   m_TagString: Untagged
@@ -20,8 +22,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &268530634464610797
-Transform:
+--- !u!224 &6508483822738756153
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -34,6 +36,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!198 &8050597890979080247
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -662,7 +669,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 30
+    angle: 1
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -867,7 +874,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4881,3 +4888,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 01df537f033206d43a98ea8011fb0895, type: 3}
   - {fileID: 8300000, guid: 117e03325301d81408320a764b3d52fe, type: 3}
   PlayOnAwake: 1
+--- !u!222 &3388028234347320073
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573940192686756715}
+  m_CullTransparentMesh: 0
+--- !u!33 &8208468078688654201
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5573940192686756715}
+  m_Mesh: {fileID: 0}

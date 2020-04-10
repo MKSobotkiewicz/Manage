@@ -34,6 +34,7 @@ namespace Manage.UI
         public Text AbilitiesLoadTime;
 
         public Text Experience;
+        public Text StatPoints;
 
         private Unit unit;
         private Player.Player player;
@@ -266,6 +267,15 @@ namespace Manage.UI
             Speed.text = Unit.GetSpeed(unit.Stamina()).ToString("0.00");
             WeaponSpread.text = ((int)(Unit.GetWeaponSpread(unit.Marksmanship()) * 100)).ToString() + "%";
             AbilitiesLoadTime.text = ((int)(Unit.AbilitiesLoadTime(unit.Player) * 100)).ToString() + "%";
+            StatPoints.text = unit.Character.CharacterStats.Points.ToString();
+            if (unit.Character.CharacterStats.Points != 0)
+            {
+                StatPoints.color = new UnityEngine.Color(1, 1, 0, 1);
+            }
+            else
+            {
+                StatPoints.color = new UnityEngine.Color(0, 0, 0, 1);
+            }
         }
 
         private void CheckStatPoints()
