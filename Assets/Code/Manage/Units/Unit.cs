@@ -12,7 +12,7 @@ namespace Manage.Units
 {
     public class Unit : MonoBehaviour, IPositioned, IDestructable
     {
-        private static System.Random random = new System.Random();
+        private static readonly System.Random random = new System.Random();
 
         public Inventory Inventory { get; set; }
         public Character Character { get; set; }
