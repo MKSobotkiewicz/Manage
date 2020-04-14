@@ -25,6 +25,9 @@ namespace Manage.Camera
         public UnityEngine.Camera Camera;
         public Transform anchor;
 
+        private bool movingCamera = false;
+        private Vector2 cameraPosition;
+
         void Start()
         {
             XAxisValue = anchor.position.x;
@@ -33,8 +36,56 @@ namespace Manage.Camera
 
         void Update()
         {
-            XAxisValue += (Input.GetAxis("Horizontal")* Mathf.Cos(anchor.localEulerAngles.y* 0.0174532925f) + Input.GetAxis("Vertical") * Mathf.Sin(anchor.localEulerAngles.y* 0.0174532925f)) * Speed * (CameraZoomTarget+10);
-            YAxisValue += (Input.GetAxis("Vertical") * Mathf.Cos(anchor.localEulerAngles.y* 0.0174532925f) + Input.GetAxis("Horizontal") * Mathf.Sin(-anchor.localEulerAngles.y* 0.0174532925f)) * Speed * (CameraZoomTarget + 10);
+            if (Input.GetAxis("Middle Mouse Button") > 0 && !Input.GetKey(KeyCode.LeftAlt))
+            {
+                movingCamera = true;
+            }
+            else 
+            {
+                movingCamera = false;
+            }
+
+            float screenScrollY = 0;
+            float screenScrollX = 0;
+
+            if (movingCamera is false)
+            {
+                cameraPosition = Input.mousePosition;
+
+                if (!Input.GetKey(KeyCode.LeftAlt))
+                {
+                    if (cameraPosition.x < 5)
+                    {
+                        screenScrollX = -0.5f;
+                    }
+                    else if (cameraPosition.x > Screen.width - 5)
+                    {
+                        screenScrollX = 0.5f;
+                    }
+
+                    if (cameraPosition.y < 5)
+                    {
+                        screenScrollY = -0.5f;
+                    }
+                    else if (cameraPosition.y > Screen.height - 5)
+                    {
+                        screenScrollY = 0.5f;
+                    }
+                }
+            }
+
+            float mouseScrollY = (Input.mousePosition.y - cameraPosition.y) * 0.01f;
+            float mouseScrollX = (Input.mousePosition.x - cameraPosition.x) * 0.01f;
+
+            float vertical = Input.GetAxis("Vertical")+ mouseScrollY+ screenScrollY;
+            float horizontal = Input.GetAxis("Horizontal") + mouseScrollX+ screenScrollX;
+
+            float value = anchor.localEulerAngles.y * 0.0174532925f;
+
+            XAxisValue += (horizontal * Mathf.Cos(value) +
+                           vertical * Mathf.Sin(value)) * Speed * (CameraZoomTarget+10);
+            YAxisValue += (vertical * Mathf.Cos(value) +
+                           horizontal * Mathf.Sin(-value)) * Speed * (CameraZoomTarget + 10);
 
             CameraZoomTarget = CameraZoomTarget - Input.GetAxis("Mouse ScrollWheel") * CameraZoomSpeed;
             if (CameraZoomTarget < 1)
@@ -62,7 +113,7 @@ namespace Manage.Camera
                                                                 CameraZoomTarget,
                                                                 transform.localPosition.z),
                                                    Time.deltaTime * Smooth);
-            if (Input.GetAxis("Middle Mouse Button")>0)
+            if (Input.GetAxis("Middle Mouse Button")>0&& Input.GetKey(KeyCode.LeftAlt))
             {
                 YRotationValue += Input.GetAxis("Mouse X")* RotationSpeed;
                 XRotationValue += Input.GetAxis("Mouse Y")* RotationSpeed;
