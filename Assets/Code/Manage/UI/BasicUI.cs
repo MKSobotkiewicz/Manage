@@ -12,11 +12,32 @@ namespace Manage.UI
 {
     public class BasicUI : MonoBehaviour
     {
+        public float Delay = 0;
+
         private Vector3 startVector;
+        private bool began = false;
 
         public void Start()
         {
-            transform.localScale=new Vector3(0, 0, 0);
+            gameObject.transform.localScale = new Vector3(0, 0, 0);
+        }
+
+        public void Update()
+        {
+            if (Delay > 0)
+            {
+                Delay -= Time.deltaTime;
+            }
+            if (Delay <= 0&& began is false)
+            {
+                Begin();
+                began = true;
+            }
+        }
+
+        public void Begin()
+        {
+            transform.localScale = new Vector3(0, 0, 0);
             LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.1f).setEase(LeanTweenType.easeInCubic);
         }
 

@@ -2969,6 +2969,8 @@ MonoBehaviour:
   ImagesCanvas: {fileID: 9218630847825676416}
   CharacterPortraitPrefab: {fileID: 8909364752971486499, guid: 38b2d03419ab65f4da155d1eebc5dc55,
     type: 3}
+  TutorialCanvas: {fileID: 2896033357321036893, guid: 01552a0a86eb0144a9a0a8c900093734,
+    type: 3}
   CharacterCulture: 0
 --- !u!82 &2359851362257860883
 AudioSource:

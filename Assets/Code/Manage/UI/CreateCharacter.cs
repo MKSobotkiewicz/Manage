@@ -54,6 +54,7 @@ namespace Manage.UI
         public RawImage CharacterImage;
         public Canvas ImagesCanvas;
         public RawImage CharacterPortraitPrefab;
+        public Canvas TutorialCanvas;
 
         public CharacterCultureTypes.ECharacterCulture CharacterCulture;
 
@@ -83,6 +84,7 @@ namespace Manage.UI
 
         public void Create()
         {
+            Instantiate(TutorialCanvas,transform.parent);
             FillUnitCreatorFields();
             UnitCreator.CreateAndDestroy();
             UnitIds.Reset();
