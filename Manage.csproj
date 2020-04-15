@@ -130,6 +130,7 @@
      <Compile Include="Assets\Code\Manage\UI\CreateCharacter.cs" />
      <Compile Include="Assets\Code\Manage\UI\Dialog.cs" />
      <Compile Include="Assets\Code\Manage\UI\DialogDebug.cs" />
+     <Compile Include="Assets\Code\Manage\UI\FloatingLifePanel.cs" />
      <Compile Include="Assets\Code\Manage\UI\GraphicSettings.cs" />
      <Compile Include="Assets\Code\Manage\UI\Grenade.cs" />
      <Compile Include="Assets\Code\Manage\UI\Helmet.cs" />

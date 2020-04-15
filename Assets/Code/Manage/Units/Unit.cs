@@ -26,6 +26,7 @@ namespace Manage.Units
         public List<Animator> Animators = new List<Animator>();
         public Dictionary<Unit, float> AttackedBy;
         public Dialog.DialogManager DialogManager;
+        public UI.FloatingLifePanel FloatingLifePanel;
 
         private int hitPoints;
 
@@ -614,6 +615,10 @@ namespace Manage.Units
             {
                 hitPoints -= Mathf.Max(value - Inventory.GetArmor(), 0);
             }
+            if (!(FloatingLifePanel is null))
+            {
+                FloatingLifePanel.SetHitPoints();
+            }
             if (hitPoints <= 0)
             {
                 if (damagingPlayer != null)
@@ -698,6 +703,10 @@ namespace Manage.Units
             if (hitPoints >= GetMaxHitPoints())
             {
                 hitPoints = GetMaxHitPoints();
+            }
+            if (!(FloatingLifePanel is null))
+            {
+                FloatingLifePanel.SetHitPoints();
             }
         }
     }

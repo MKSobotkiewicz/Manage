@@ -9,7 +9,8 @@ namespace Manage.UI
 {
     public class UnitIds : MonoBehaviour
     {
-        public GameObject UnitIdPrefab;
+        public UnitId UnitIdPrefab;
+        public FloatingLifePanel FloatingLifePanelPrefab;
         public List<Unit> Units;
         public Player.Player Player;
         public MouseRaycasting MouseRaycasting;
@@ -24,6 +25,9 @@ namespace Manage.UI
                     Units.Add(unit);
                 }
 
+                var flp = Instantiate(FloatingLifePanelPrefab,gameObject.transform);
+                flp.Unit = unit;
+                unit.FloatingLifePanel = flp;
             }
 
             int i = 0;
@@ -46,6 +50,11 @@ namespace Manage.UI
             foreach (var unitId in unitIds)
             {
                 unitId.Destroy();
+            }
+            var flps = GetComponentsInChildren<FloatingLifePanel>();
+            foreach (var flp in flps)
+            {
+                flp.Destroy();
             }
             Start();
         }

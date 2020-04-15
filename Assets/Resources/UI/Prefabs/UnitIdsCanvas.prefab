@@ -111,7 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3372e2a637655684c99c57ee56330d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitIdPrefab: {fileID: 1141473468590284916, guid: 27adcdcc73980874ba500516c5ce087a,
+  UnitIdPrefab: {fileID: 8391688722827185546, guid: 27adcdcc73980874ba500516c5ce087a,
+    type: 3}
+  FloatingLifePanelPrefab: {fileID: 6344961277529282905, guid: d064128580a3540458803308cdf1ff61,
     type: 3}
   Units: []
   Player: {fileID: 0}

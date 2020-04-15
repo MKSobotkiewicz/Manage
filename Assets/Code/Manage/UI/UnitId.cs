@@ -20,8 +20,6 @@ namespace Manage.UI
         public GameObject CharacterIdPrefab;
         public RectTransform LifePanel;
         public RectTransform WeaponPanel;
-        public RectTransform FloatingLifePanel;
-        public RectTransform FloatingLifeBar;
 
         public MouseRaycasting MouseRaycasting;
         public CameraBehaviour CameraBehaviour;
@@ -54,7 +52,6 @@ namespace Manage.UI
                 Weapon.texture = Unit.Inventory.Weapon.WeaponType.CombatIcon();
             }
             SetHitPoints();
-            FloatingLifePanel.SetParent(transform.parent);
         }
 
         public void Start()
@@ -69,7 +66,6 @@ namespace Manage.UI
                 SetHitPoints();
                 SetAmmo();
                 SetSelected();
-                MoveFloatingLifePanel();
             }
         }
 
@@ -88,18 +84,12 @@ namespace Manage.UI
             MouseRaycasting.SelectedUnits.Add(Unit);
         }
 
-        public void MoveFloatingLifePanel()
-        {
-            FloatingLifePanel.localPosition = UnityEngine.Camera.main.WorldToScreenPoint(Unit.transform.position);
-        }
-
         public void SetHitPoints()
         {
             UnitIdLife.text = Mathf.Clamp(Unit.HitPoints(),0,float.MaxValue).ToString() + "/" + Unit.GetMaxHitPoints().ToString();
             float value = (Mathf.Clamp((float)Unit.HitPoints(), 0, float.MaxValue) / (float)Unit.GetMaxHitPoints()) * 2;
             UnitIdLife.color = new Color(2 - value, value, 0);
             LifePanel.localScale = new Vector3(value / 2, 1, 1);
-            FloatingLifeBar.localScale = new Vector3(value / 2, 1, 1);
             if (lastHitPoints> Unit.HitPoints())
             {
                 GetDamage();
@@ -122,7 +112,6 @@ namespace Manage.UI
 
         public void Destroy()
         {
-            Destroy(FloatingLifePanel.gameObject);
             Destroy(gameObject);
         }
 
@@ -152,7 +141,6 @@ namespace Manage.UI
             if (Unit.HitPoints() <= 0)
             {
                 UnitIdX.enabled=true;
-                FloatingLifePanel.gameObject.SetActive(false);
             }
             else
             {
