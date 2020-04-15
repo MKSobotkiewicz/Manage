@@ -274,3 +274,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Unit: {fileID: 0}
   FloatingLifeBar: {fileID: 1625925036960247645}
+  FloatingLifeTextPopupPrefab: {fileID: -2542411455115520748, guid: d1f1aeb4b762bc045bcbe55dd0855ffa,
+    type: 3}

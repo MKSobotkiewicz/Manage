@@ -17,6 +17,8 @@ namespace Manage.Units
 
         private List<Collider> triggerList=new List<Collider>();
 
+        private static System.Random random = new System.Random();
+
         public void Start()
         {
         }
@@ -68,7 +70,8 @@ namespace Manage.Units
                     {
                         continue;
                     }
-                    unit.Damage(Damage, Player);
+                    var damage = random.Next((int)(Damage * 0.5), (int)(Damage * 1.5));
+                    unit.Damage(damage, Player);
                     damagedUnitList.Add(unit);
                     if (unit.Inventory.VehicleType == null)
                     {

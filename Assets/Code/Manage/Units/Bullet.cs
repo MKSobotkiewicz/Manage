@@ -72,7 +72,8 @@ namespace Manage.Units
                 }
                 dying = true;
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-                unit.Damage(BulletType.Damage, Player);
+                var damage = random.Next((int)(BulletType.Damage*0.5), (int)(BulletType.Damage*1.5));
+                unit.Damage(damage, Player);
             }
             if (this is ExplosiveShell)
             {

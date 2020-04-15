@@ -37,7 +37,8 @@ namespace Manage.Units
             }
             for (int i = 0; i < damagedUnitList.Count; i++)
             {
-                damagedUnitList[i].Damage(((ExplosiveShellType)BulletType).Damage, Player);
+                var damage = random.Next((int)(((ExplosiveShellType)BulletType).Damage * 0.5), (int)(((ExplosiveShellType)BulletType).Damage * 1.5));
+                damagedUnitList[i].Damage(damage, Player);
             }
             var go = Instantiate(UnityEngine.Resources.Load(((ExplosiveShellType)BulletType).ExplosionPath) as GameObject, transform);
             go.transform.position += new Vector3(0, 0.5f, 0);
