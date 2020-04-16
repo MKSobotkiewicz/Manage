@@ -12,8 +12,6 @@ namespace Manage.Units
 {
     public class Unit : MonoBehaviour, IPositioned, IDestructable
     {
-        private static readonly System.Random random = new System.Random();
-
         public Inventory Inventory { get; set; }
         public Character Character { get; set; }
         public bool Selected { get; set; } = false;
@@ -41,6 +39,8 @@ namespace Manage.Units
 
         private Unit target;
         private Unit grenadeTarget;
+
+        private static readonly System.Random random = new System.Random();
 
         public Unit()
         {
@@ -625,18 +625,24 @@ namespace Manage.Units
                 {
                     damagingPlayer.ExperienceManager.AddExperienceToUnits(Character.ExperienceFromCharacter());
                 }
-                Dispose();
+                Kill();
                 return true;
             }
             return false;
         }
 
-        public void Dispose()
+        public void Kill()
         {
-            if (unitsScreamsManager != null&& Inventory.VehicleType == null)
+            Inventory.Drop(transform);
+            if (unitsScreamsManager != null && Inventory.VehicleType == null)
             {
                 unitsScreamsManager.Play();
             }
+            Dispose();
+        }
+
+        public void Dispose()
+        {
             EndShot();
             var locRandom = (float)random.NextDouble() * 5;
             foreach (var animator in Animators)

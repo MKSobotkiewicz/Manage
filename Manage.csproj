@@ -153,6 +153,7 @@
      <Compile Include="Assets\Code\Manage\Units\Bullet.cs" />
      <Compile Include="Assets\Code\Manage\Units\BulletType.cs" />
      <Compile Include="Assets\Code\Manage\Units\BulletTypes.cs" />
+     <Compile Include="Assets\Code\Manage\Units\Chest.cs" />
      <Compile Include="Assets\Code\Manage\Units\ClothesType.cs" />
      <Compile Include="Assets\Code\Manage\Units\ExplosiveShell.cs" />
      <Compile Include="Assets\Code\Manage\Units\ExplosiveShellType.cs" />
