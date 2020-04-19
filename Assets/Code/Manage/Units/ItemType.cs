@@ -24,5 +24,14 @@ namespace Manage.Units
         {
             return GameObject.Instantiate(UnityEngine.Resources.Load<Texture2D>(IconPath)) as Texture2D;
         }
+
+        public enum EitemType
+        {
+        Vest,
+        Helmet,
+        Armor,
+        Weapon,
+        Grenade
+    }
     }
 }

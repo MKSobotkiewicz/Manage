@@ -5,6 +5,7 @@ namespace Manage.Units
     {
         public enum EArmorType
         {
+            None,
             SoldierCamoArmor,
             SoldierBlueArmor,
             SoldierJungleArmor,
@@ -17,6 +18,8 @@ namespace Manage.Units
         {
             switch (armorType)
             {
+                case EArmorType.None:
+                    return SoldierCamoArmor;
                 case EArmorType.SoldierCamoArmor:
                     return SoldierCamoArmor;
                 case EArmorType.SoldierBlueArmor:

@@ -220,6 +220,11 @@ namespace Manage.Control
                 }
                 else
                 {
+                    var hitChest = go.GetComponentInParent<Chest>();
+                    if (hitChest != null)
+                    {
+                        hitChest.SetPlayer(Player);
+                    }
                     var currentPositionOfUnits = new List<Vector3>();
                     foreach (var unit in SelectedUnits)
                     {

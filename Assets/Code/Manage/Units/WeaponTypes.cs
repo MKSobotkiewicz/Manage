@@ -10,6 +10,7 @@ namespace Manage.Units
     {
         public enum EWeaponType
         {
+            None,
             Pistol,
             Machine_Pistol,
             Assault_Rifle,
@@ -22,6 +23,8 @@ namespace Manage.Units
         {
             switch (weaponType)
             {
+                case EWeaponType.None:
+                    return null;
                 case EWeaponType.Pistol:
                     return Pistol;
                 case EWeaponType.Machine_Pistol:

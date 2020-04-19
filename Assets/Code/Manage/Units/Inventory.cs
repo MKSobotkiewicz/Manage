@@ -15,7 +15,7 @@ namespace Manage.Units
         public Vest Vest { get; private set; }
         public Helmet Helmet { get; private set; }
 
-        private readonly string chestPrefabPath = "Chests/Chest";
+        private static readonly string chestPrefabPath = "Chests/Chest";
 
         private static readonly System.Random random = new System.Random();
 
@@ -267,12 +267,7 @@ namespace Manage.Units
                 {
                     var prefab = UnityEngine.Resources.Load(chestPrefabPath);
                     var go = GameObject.Instantiate(prefab, transform) as GameObject;
-                    go.transform.parent = null;
-                    go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y + 2, go.transform.position.z);
                     chest = go.GetComponent<Chest>();
-                    var rigidbody = go.GetComponent<Rigidbody>();
-                    rigidbody.AddRelativeForce(new Vector3(random.Next(-20, 20), random.Next(20, 40), random.Next(-20, 20)), ForceMode.Impulse);
-                    rigidbody.AddRelativeTorque(new Vector3(random.Next(-40, 40), random.Next(-40, 40), random.Next(-40, 40)), ForceMode.Impulse);
                 }
                 chest.itemTypes.AddRange(items);
             }
