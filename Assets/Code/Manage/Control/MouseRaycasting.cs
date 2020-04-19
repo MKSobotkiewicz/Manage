@@ -4,16 +4,19 @@ using System.Linq;
 using UnityEngine;
 using Manage.Units;
 using Manage.Camera;
+using Manage.UI;
 
 namespace Manage.Control
 {
     public class MouseRaycasting : MonoBehaviour
     {
         public Player.Player Player;
+        public Canvas MainCanvas;
         public RectTransform SelectionSquare;
         public ParticleSystem UnitSelection;
         public ParticleSystem MoveOrder;
         public ParticleSystem AttackOrder;
+        public ChestPopup ChestPopupPrefab;
 
         public HashSet<Unit> SelectedUnits;
         public bool beganSelecting;
@@ -21,7 +24,9 @@ namespace Manage.Control
         private List<ParticleSystem> UnitSelectionParticles;
         private CameraBehaviour cameraBehaviour;
         private bool beganOrdering;
-        private Vector3[] corners = new Vector3[2];
+        private readonly Vector3[] corners = new Vector3[2];
+
+        private ChestPopup chestPopup;
 
         void Start()
         {
@@ -49,6 +54,50 @@ namespace Manage.Control
             if (Input.GetAxis("Order") <= 0)
             {
                 OrderFalse();
+            }
+            CheckForChest();
+        }
+
+        private void CheckForChest()
+        {
+            RaycastHit hit;
+            var ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 200))
+            {
+                var go = hit.transform.gameObject;
+                if (go is null)
+                {
+                    if (!(chestPopup is null))
+                    {
+                        if (chestPopup.Deleting is false)
+                        {
+                            chestPopup.Delete();
+                            chestPopup = null;
+                        }
+                    }
+                    return;
+                }
+                var chest = go.GetComponent<Chest>();
+                if (chest is null)
+                {
+                    if (!(chestPopup is null))
+                    {
+                        if (chestPopup.Deleting is false)
+                        {
+                            chestPopup.Delete();
+                            chestPopup = null;
+                        }
+                    }
+                    return;
+                }
+                UnityEngine.Debug.Log("Chest");
+                if (chestPopup is null)
+                {
+                    chestPopup = Instantiate(ChestPopupPrefab, MainCanvas.transform);
+                    chestPopup.Info = chest.ToString();
+                    chestPopup.GetComponent<RectTransform>().anchoredPosition = Input.mousePosition;
+                    return;
+                }
             }
         }
 

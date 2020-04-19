@@ -255,15 +255,26 @@ namespace Manage.Units
             }
             if (items.Count > 0)
             {
-                var prefab = UnityEngine.Resources.Load(chestPrefabPath);
-                var go = GameObject.Instantiate(prefab, transform) as GameObject;
-                go.transform.parent = null;
-                go.transform.position=new Vector3(go.transform.position.x, go.transform.position.y+2, go.transform.position.z);
-                var chest = go.GetComponent<Chest>();
-                chest.itemTypes = items;
-                var rigidbody = go.GetComponent<Rigidbody>();
-                rigidbody.AddRelativeForce(new Vector3(random.Next(-20, 20), random.Next(20, 40), random.Next(-20, 20)),ForceMode.Impulse);
-                rigidbody.AddRelativeTorque(new Vector3(random.Next(-40,40), random.Next(-40, 40), random.Next(-40, 40)), ForceMode.Impulse);
+                Chest chest=null;
+                foreach (var otherChest in Chest.AllChests)
+                {
+                    if (Vector3.Distance(otherChest.transform.position,transform.position)<10)
+                    {
+                        chest = otherChest;
+                    }
+                }
+                if (chest is null)
+                {
+                    var prefab = UnityEngine.Resources.Load(chestPrefabPath);
+                    var go = GameObject.Instantiate(prefab, transform) as GameObject;
+                    go.transform.parent = null;
+                    go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y + 2, go.transform.position.z);
+                    chest = go.GetComponent<Chest>();
+                    var rigidbody = go.GetComponent<Rigidbody>();
+                    rigidbody.AddRelativeForce(new Vector3(random.Next(-20, 20), random.Next(20, 40), random.Next(-20, 20)), ForceMode.Impulse);
+                    rigidbody.AddRelativeTorque(new Vector3(random.Next(-40, 40), random.Next(-40, 40), random.Next(-40, 40)), ForceMode.Impulse);
+                }
+                chest.itemTypes.AddRange(items);
             }
         }
     }

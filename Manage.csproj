@@ -127,6 +127,7 @@
      <Compile Include="Assets\Code\Manage\UI\BlackScreen.cs" />
      <Compile Include="Assets\Code\Manage\UI\CharacterId.cs" />
      <Compile Include="Assets\Code\Manage\UI\CharacterPortrait.cs" />
+     <Compile Include="Assets\Code\Manage\UI\ChestPopup.cs" />
      <Compile Include="Assets\Code\Manage\UI\CreateCharacter.cs" />
      <Compile Include="Assets\Code\Manage\UI\Dialog.cs" />
      <Compile Include="Assets\Code\Manage\UI\DialogDebug.cs" />
