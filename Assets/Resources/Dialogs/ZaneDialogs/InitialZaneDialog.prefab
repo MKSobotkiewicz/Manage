@@ -31,6 +31,8 @@ RectTransform:
   - {fileID: 159782918452487941}
   - {fileID: 159782919462058557}
   - {fileID: 159782919466343367}
+  - {fileID: 3722558962578723181}
+  - {fileID: 5711982170792934903}
   - {fileID: 3776193477108401148}
   m_Father: {fileID: 159782918685818031}
   m_RootOrder: 1
@@ -60,6 +62,8 @@ MonoBehaviour:
   - {fileID: 159782918452487938}
   - {fileID: 159782919462058556}
   - {fileID: 159782919466343366}
+  - {fileID: 7397753071938205767}
+  - {fileID: 3933309412003350153}
   - {fileID: 5408848532985532814}
 --- !u!1 &159782917789286636
 GameObject:
@@ -166,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: Who are we fighting against?
   NextSentence: {fileID: 159782917789286638}
+  Action: {fileID: 0}
 --- !u!1 &159782918629188977
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: Who are you again?
   NextSentence: {fileID: 159782919088627228}
+  Action: {fileID: 0}
 --- !u!1 &159782919466343364
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +434,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: How many people do we have?
   NextSentence: {fileID: 7727840242384608452}
+  Action: {fileID: 0}
+--- !u!1 &1287610995301849023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6181749551516683406}
+  - component: {fileID: 1852481375484599833}
+  m_Layer: 0
+  m_Name: z_5_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6181749551516683406
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287610995301849023}
+  m_LocalRotation: {x: 0.00000005960463, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00006421421}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3776193477108401148}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1852481375484599833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287610995301849023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: One more thing. We have some howitzers in our town, loaded and ready to fire.
+    So if we need some help we can always order an artillery fire.
+  NextSentence: {fileID: 4399991656238906005}
+  DialogOptions: []
 --- !u!1 &1900379829210888042
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: 
   NextSentence: {fileID: 0}
+  Action: {fileID: 0}
 --- !u!1 &2364282029653251820
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,10 +693,115 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speaker: {fileID: 0}
   Text: We used to tolerate their presence, since they kept it to themselves. Until
-    what happened last week. Those assholes broke into one of the farmhouses and raped
-    a girl, her name is Anne, Let those fuckers pay for that!
+    what happened last week. Those assholes broke into one of the farmhouses and
+    raped a girl, her name is Anne, Let those fuckers pay for that!
   NextSentence: {fileID: 1263174570168375498}
   DialogOptions: []
+--- !u!1 &3368887592135107878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5709043580118629635}
+  - component: {fileID: 4886786639887012295}
+  m_Layer: 0
+  m_Name: z_6_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5709043580118629635
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3368887592135107878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3722558962578723181}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4886786639887012295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3368887592135107878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: Around five to six groups of around five people each, spread in villages
+    ahead.
+  NextSentence: {fileID: 1263174570168375498}
+  DialogOptions: []
+--- !u!1 &5509307609479231545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5711982170792934903}
+  - component: {fileID: 3933309412003350153}
+  m_Layer: 0
+  m_Name: p_1_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5711982170792934903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509307609479231545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7256042783791770406}
+  m_Father: {fileID: 159782917635743832}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3933309412003350153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5509307609479231545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa3e9b6fb72eb54d97e5a2133b487fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Why there is power in that village?
+  NextSentence: {fileID: 8257685254926419775}
+  Action: {fileID: 0}
 --- !u!1 &6800919212028040674
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +866,7 @@ GameObject:
   - component: {fileID: 3776193477108401148}
   - component: {fileID: 5408848532985532814}
   m_Layer: 0
-  m_Name: p_1_4
+  m_Name: p_1_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,9 +883,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6181749551516683406}
   - {fileID: 2259248841900954083}
   m_Father: {fileID: 159782917635743832}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -739,7 +906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: "No, I\u2019m good."
-  NextSentence: {fileID: 4399991656238906005}
+  NextSentence: {fileID: 1852481375484599833}
+  Action: {fileID: 0}
 --- !u!1 &7447347495587680178
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +919,7 @@ GameObject:
   - component: {fileID: 2259248841900954083}
   - component: {fileID: 4399991656238906005}
   m_Layer: 0
-  m_Name: z_5_1
+  m_Name: z_5_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,7 +938,7 @@ RectTransform:
   m_Children:
   - {fileID: 1629996833942131402}
   m_Father: {fileID: 3776193477108401148}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -790,10 +958,115 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speaker: {fileID: 0}
-  Text: "Then let\u2019s get this shit done!"
+  Text: "Ok, then let\u2019s get this shit done!"
   NextSentence: {fileID: 0}
   DialogOptions:
   - {fileID: 5402480587347037332}
+--- !u!1 &8198571023707021986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7256042783791770406}
+  - component: {fileID: 8257685254926419775}
+  m_Layer: 0
+  m_Name: z_7_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7256042783791770406
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8198571023707021986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5711982170792934903}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8257685254926419775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8198571023707021986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0b0ebf98d00ad4d81e31ced2a4c417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speaker: {fileID: 0}
+  Text: It was originally inhabited by other people that put up some resources and
+    repaired power lines. Now it propably runs on some generator in one of the villages.
+  NextSentence: {fileID: 1263174570168375498}
+  DialogOptions: []
+--- !u!1 &9014532857421077424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3722558962578723181}
+  - component: {fileID: 7397753071938205767}
+  m_Layer: 0
+  m_Name: p_1_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3722558962578723181
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014532857421077424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5709043580118629635}
+  m_Father: {fileID: 159782917635743832}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7397753071938205767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9014532857421077424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa3e9b6fb72eb54d97e5a2133b487fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: How many enemies are there?
+  NextSentence: {fileID: 4886786639887012295}
+  Action: {fileID: 0}
 --- !u!1 &9073879904938078089
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,4 +1122,6 @@ MonoBehaviour:
   - {fileID: 159782918452487938}
   - {fileID: 159782919462058556}
   - {fileID: 159782919466343366}
+  - {fileID: 7397753071938205767}
+  - {fileID: 3933309412003350153}
   - {fileID: 5408848532985532814}
