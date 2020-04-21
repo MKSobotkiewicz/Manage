@@ -18,8 +18,6 @@ namespace Manage.Units
         {
             switch (armorType)
             {
-                case EArmorType.None:
-                    return SoldierCamoArmor;
                 case EArmorType.SoldierCamoArmor:
                     return SoldierCamoArmor;
                 case EArmorType.SoldierBlueArmor:
@@ -32,11 +30,24 @@ namespace Manage.Units
                     return MercenaryBlackArmor;
                 case EArmorType.MercenaryOrangeArmor:
                     return MercenaryOrangeArmor;
+                case EArmorType.None:
                 default:
-                    return null;
+                    return BasicArmor;
             }
         }
 
+        public static readonly ArmorType BasicArmor = new ArmorType(
+            "[HIDDEN]Basic armor",
+            "",
+            "Units/Textures/Clothes_ItemIcon",
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "Units/basic_female",
+            "Units/basic_male");
         public static readonly ArmorType SoldierCamoArmor = new ArmorType(
             "Camouflaged battle dress uniform", 
             "Standard battle dress uniform of the imperial armed forces. As there were many produced before the collapse, they still are abundant today.",

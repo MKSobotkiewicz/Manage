@@ -308,6 +308,10 @@ namespace Manage.Units
                     }
                 }
             }
+            if (Inventory.Weapon != null)
+            {
+                SetAnimatorsBool("Pistol", Inventory.Weapon.WeaponType.IsPistol);
+            }
             return true;
         }
 

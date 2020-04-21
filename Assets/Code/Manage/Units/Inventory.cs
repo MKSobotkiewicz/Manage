@@ -241,7 +241,7 @@ namespace Manage.Units
             {
                 items.Add(GrenadeType);
             }
-            if (ArmorType != null)
+            if (ArmorType != null && ArmorType != ArmorTypes.BasicArmor)
             {
                 items.Add(ArmorType);
             }

@@ -24,6 +24,7 @@ namespace Manage.Player
             Units = new List<Unit>();
             PlayerSkills = new PlayerSkills();
             PlayerInventory = new PlayerInventory();
+            PlayerInventory.Add(ArmorTypes.MercenaryBlackArmor);
             ExperienceManager = new ExperienceManager(this);
 
             Organization = OrganizationTypes.Empire;

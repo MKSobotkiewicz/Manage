@@ -324,7 +324,7 @@ namespace Manage.UI
                 grenade.Setup(unit.Inventory.GrenadeType, inventoryCanvas);
                 grenade.PutInItemSlot(GrenadeSlot);
             }
-            if (unit.Inventory.ArmorType != null)
+            if (unit.Inventory.ArmorType != null&& unit.Inventory.ArmorType != ArmorTypes.BasicArmor)
             {
                 var go = Instantiate(ArmorCanvasPrefab, inventoryCanvas.transform);
                 var armor = go.GetComponent<Armor>();

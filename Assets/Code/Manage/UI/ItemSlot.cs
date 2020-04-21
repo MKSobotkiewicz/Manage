@@ -24,7 +24,7 @@ namespace Manage.UI
             }
             else if (item is Armor)
             {
-                GetComponentInParent<CharacterId>().ChangeArmor(null);
+                GetComponentInParent<CharacterId>().ChangeArmor(ArmorTypes.BasicArmor);
             }
             else if (item is Helmet)
             {
