@@ -13,6 +13,7 @@ namespace Manage.Dialog
     public class Sentence : MonoBehaviour
     {
         public Unit Speaker;
+        [TextArea(15, 20)]
         public string Text;
         public Sentence NextSentence;
         public List<DialogOption> DialogOptions;

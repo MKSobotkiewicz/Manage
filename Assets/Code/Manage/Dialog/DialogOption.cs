@@ -12,6 +12,7 @@ namespace Manage.Dialog
 {
     public class DialogOption : MonoBehaviour
     {
+        [TextArea(15, 20)]
         public string Text;
         public Sentence NextSentence;
         public Action Action;

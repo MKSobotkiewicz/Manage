@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa3e9b6fb72eb54d97e5a2133b487fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: Why there is power in that village?
+  Text: Why is there power in that village?
   NextSentence: {fileID: 8257685254926419775}
   Action: {fileID: 0}
 --- !u!1 &6800919212028040674
