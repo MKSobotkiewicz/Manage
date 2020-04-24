@@ -2024,6 +2024,8 @@ GameObject:
   - component: {fileID: 2896033357158580301}
   - component: {fileID: 2896033357158580299}
   - component: {fileID: 2896033357158580300}
+  - component: {fileID: 8525914865536336730}
+  - component: {fileID: 8226260195500358117}
   m_Layer: 0
   m_Name: Endurance
   m_TagString: Untagged
@@ -2090,6 +2092,66 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'ENDURANCE:'
+--- !u!114 &8525914865536336730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033357158580302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8226260195500358117}
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8226260195500358117}
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &8226260195500358117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033357158580302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b072c78db77ac4e8a344ab2dcfbcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupPrefab: {fileID: 2443168752137542348, guid: 0ea2136d86dbe074e92f1df6ee1c1376,
+    type: 3}
+  PopupText: "Determines character hit points.\nHigh hit points amount allow character
+    \nto sustain higher damage before death."
+  Delay: 1
 --- !u!1 &2896033357185130451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,6 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eec5f4a14ea30bf4da129086525df8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Delay: 0
 --- !u!82 &5944499585039169361
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2884,6 +2947,8 @@ GameObject:
   - component: {fileID: 2896033357937584800}
   - component: {fileID: 2896033357937584830}
   - component: {fileID: 2896033357937584831}
+  - component: {fileID: 2283722218805873760}
+  - component: {fileID: 7701950952886516261}
   m_Layer: 0
   m_Name: Stamina
   m_TagString: Untagged
@@ -2950,6 +3015,65 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'STAMINA:'
+--- !u!114 &2283722218805873760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033357937584801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7701950952886516261}
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7701950952886516261}
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7701950952886516261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033357937584801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b072c78db77ac4e8a344ab2dcfbcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupPrefab: {fileID: 2443168752137542348, guid: 0ea2136d86dbe074e92f1df6ee1c1376,
+    type: 3}
+  PopupText: Determines character speed.
+  Delay: 1
 --- !u!1 &2896033357941580486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,8 +3237,10 @@ GameObject:
   - component: {fileID: 2896033357993857277}
   - component: {fileID: 2896033357993857275}
   - component: {fileID: 2896033357993857276}
+  - component: {fileID: 2689796835232631944}
+  - component: {fileID: 4868890366215055055}
   m_Layer: 0
-  m_Name: Cunning
+  m_Name: Command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3178,7 +3304,68 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CUNNING:'
+  m_Text: 'COMMAND:'
+--- !u!114 &2689796835232631944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033357993857278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4868890366215055055}
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4868890366215055055}
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &4868890366215055055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033357993857278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b072c78db77ac4e8a344ab2dcfbcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupPrefab: {fileID: 2443168752137542348, guid: 0ea2136d86dbe074e92f1df6ee1c1376,
+    type: 3}
+  PopupText: "Decreases abilities load time. \nLower load time means abilities \ncan
+    be used more often. All characters \ncommand is added and used to calculate \nabilities
+    load time."
+  Delay: 1
 --- !u!1 &2896033358092090497
 GameObject:
   m_ObjectHideFlags: 0
@@ -3430,6 +3617,8 @@ GameObject:
   - component: {fileID: 2896033358153226573}
   - component: {fileID: 2896033358153226571}
   - component: {fileID: 2896033358153226572}
+  - component: {fileID: 2606249680145112640}
+  - component: {fileID: 6727327022768444714}
   m_Layer: 0
   m_Name: Charisma
   m_TagString: Untagged
@@ -3496,6 +3685,65 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'CHARISMA:'
+--- !u!114 &2606249680145112640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033358153226574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6727327022768444714}
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6727327022768444714}
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &6727327022768444714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033358153226574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b072c78db77ac4e8a344ab2dcfbcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupPrefab: {fileID: 2443168752137542348, guid: 0ea2136d86dbe074e92f1df6ee1c1376,
+    type: 3}
+  PopupText: Does nothing. Yet.
+  Delay: 1
 --- !u!1 &2896033358313363759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,7 +3756,7 @@ GameObject:
   - component: {fileID: 2896033358313363756}
   - component: {fileID: 2896033358313363757}
   m_Layer: 0
-  m_Name: CharacterID_cunning
+  m_Name: CharacterID_command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3815,6 +4063,8 @@ GameObject:
   - component: {fileID: 2896033358709576051}
   - component: {fileID: 2896033358709576049}
   - component: {fileID: 2896033358709576050}
+  - component: {fileID: 5042508895544951642}
+  - component: {fileID: 7051795046301187170}
   m_Layer: 0
   m_Name: Marksmanship
   m_TagString: Untagged
@@ -3881,6 +4131,66 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'MARKSMANSHIP:'
+--- !u!114 &5042508895544951642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033358709576052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7051795046301187170}
+          m_MethodName: Enter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7051795046301187170}
+          m_MethodName: Exit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &7051795046301187170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896033358709576052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b072c78db77ac4e8a344ab2dcfbcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopupPrefab: {fileID: 2443168752137542348, guid: 0ea2136d86dbe074e92f1df6ee1c1376,
+    type: 3}
+  PopupText: "Descreases weapon spread.\nLower weapon spread allows \ncharacter to
+    shoot more accrately."
+  Delay: 1
 --- !u!1 &2896033358804614032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,7 +7055,7 @@ GameObject:
   - component: {fileID: 6557947384934153111}
   - component: {fileID: 6082274527053414698}
   m_Layer: 0
-  m_Name: AddCunning
+  m_Name: AddCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6851,7 +7161,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2896033357321036864}
-        m_MethodName: AddCunning
+        m_MethodName: AddCommand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8400,12 +8710,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca541d1e12911e74bb8f659fe4d62974, type: 3}
---- !u!224 &8169024334187157780 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1141473468590284915, guid: ca541d1e12911e74bb8f659fe4d62974,
-    type: 3}
-  m_PrefabInstance: {fileID: 9117924798635456871}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &4426894843285298715 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4892630121734956924, guid: ca541d1e12911e74bb8f659fe4d62974,
@@ -8418,3 +8722,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da89d7a33e2a9854bbcfe74f1bf1db51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &8169024334187157780 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1141473468590284915, guid: ca541d1e12911e74bb8f659fe4d62974,
+    type: 3}
+  m_PrefabInstance: {fileID: 9117924798635456871}
+  m_PrefabAsset: {fileID: 0}

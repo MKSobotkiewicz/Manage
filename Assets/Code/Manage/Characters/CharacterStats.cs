@@ -13,7 +13,7 @@ namespace Manage.Characters
         private uint stamina=1;
         private uint endurance=1;
         private uint marksmanship=1;
-        private uint cunning=1;
+        private uint command=1;
         private uint charisma=1;
 
         private static Random random = new Random();
@@ -30,12 +30,12 @@ namespace Manage.Characters
             Points = 0;
         }
 
-        public CharacterStats(uint _stamina, uint _endurance, uint _marksmanship,uint _cunning,uint _charisma)
+        public CharacterStats(uint _stamina, uint _endurance, uint _marksmanship,uint _command,uint _charisma)
         {
             stamina = _stamina;
             endurance = _endurance;
             marksmanship = _marksmanship;
-            cunning = _cunning;
+            command = _command;
             charisma = _charisma;
             Points = 0;
         }
@@ -61,11 +61,11 @@ namespace Manage.Characters
             return marksmanship;
         }
 
-        public uint AddCunning()
+        public uint AddCommand()
         {
-            cunning++;
+            command++;
             Points--;
-            return cunning;
+            return command;
         }
 
         public uint AddCharisma()
@@ -90,9 +90,9 @@ namespace Manage.Characters
             return marksmanship;
         }
 
-        public uint GetCunning()
+        public uint GetCommand()
         {
-            return cunning;
+            return command;
         }
 
         public uint GetCharisma()
@@ -117,7 +117,7 @@ namespace Manage.Characters
                         characterStats.marksmanship++;
                         break;
                     case 3:
-                        characterStats.cunning++;
+                        characterStats.command++;
                         break;
                     case 4:
                         characterStats.charisma++;

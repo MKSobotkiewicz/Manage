@@ -18,7 +18,7 @@ namespace Manage.UI
         public Text ArmorStamina;
         public Text ArmorEndurance;
         public Text ArmorMarksmanship;
-        public Text ArmorCunning;
+        public Text ArmorCommand;
         public Text ArmorCharisma;
 
         private float infoTime;
@@ -35,7 +35,7 @@ namespace Manage.UI
             ArmorStamina.text = (itemType as Units.ArmorType).Stamina.ToString();
             ArmorEndurance.text = (itemType as Units.ArmorType).Endurance.ToString();
             ArmorMarksmanship.text = (itemType as Units.ArmorType).Marksmanship.ToString();
-            ArmorCunning.text = (itemType as Units.ArmorType).Cunning.ToString();
+            ArmorCommand.text = (itemType as Units.ArmorType).Command.ToString();
             ArmorCharisma.text = (itemType as Units.ArmorType).Charisma.ToString();
         }
 

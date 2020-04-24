@@ -18,7 +18,7 @@ namespace Manage.UI
         public Text HelmetStamina;
         public Text HelmetEndurance;
         public Text HelmetMarksmanship;
-        public Text HelmetCunning;
+        public Text HelmetCommand;
         public Text HelmetCharisma;
 
         private float infoTime;
@@ -35,7 +35,7 @@ namespace Manage.UI
             HelmetStamina.text = (itemType as Units.HelmetType).Stamina.ToString();
             HelmetEndurance.text = (itemType as Units.HelmetType).Endurance.ToString();
             HelmetMarksmanship.text = (itemType as Units.HelmetType).Marksmanship.ToString();
-            HelmetCunning.text = (itemType as Units.HelmetType).Cunning.ToString();
+            HelmetCommand.text = (itemType as Units.HelmetType).Command.ToString();
             HelmetCharisma.text = (itemType as Units.HelmetType).Charisma.ToString();
         }
 

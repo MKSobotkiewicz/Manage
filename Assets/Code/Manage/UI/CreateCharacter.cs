@@ -31,17 +31,17 @@ namespace Manage.UI
         public Text StaminaText;
         public Text EnduranceText;
         public Text MarksmanshipText;
-        public Text CunningText;
+        public Text CommandText;
         public Text CharismaText;
         public Button AddStaminaButton;
         public Button AddEnduranceButton;
         public Button AddMarksmanshipButton;
-        public Button AddCunningButton;
+        public Button AddCommandButton;
         public Button AddCharismaButton;
         public Button RemoveStaminaButton;
         public Button RemoveEnduranceButton;
         public Button RemoveMarksmanshipButton;
-        public Button RemoveCunningButton;
+        public Button RemoveCommandButton;
         public Button RemoveCharismaButton;
         public Button CreateButton;
         public Text HitPointsText;
@@ -64,7 +64,7 @@ namespace Manage.UI
         private uint stamina = 1;
         private uint endurance = 1;
         private uint marksmanship = 1;
-        private uint cunning = 1;
+        private uint command = 1;
         private uint charisma = 1;
 
         private static readonly System.Random random = new System.Random();
@@ -205,17 +205,17 @@ namespace Manage.UI
             UpdatePoints();
         }
 
-        public void AddCunning()
+        public void AddCommand()
         {
             points--;
-            cunning++;
+            command++;
             UpdatePoints();
         }
 
-        public void RemoveCunning()
+        public void RemoveCommand()
         {
             points++;
-            cunning--;
+            command--;
             UpdatePoints();
         }
 
@@ -249,7 +249,7 @@ namespace Manage.UI
             UnitCreator.Stamina = stamina;
             UnitCreator.Endurance = endurance;
             UnitCreator.Marksmanship = marksmanship;
-            UnitCreator.Cunning = cunning;
+            UnitCreator.Cunning = command;
             UnitCreator.Charisma = charisma;
 
             PointsText.text =  points.ToString();
@@ -265,13 +265,13 @@ namespace Manage.UI
             StaminaText.text= stamina.ToString();
             EnduranceText.text=endurance.ToString();
             MarksmanshipText.text=marksmanship.ToString();
-            CunningText.text=cunning.ToString();
+            CommandText.text=command.ToString();
             CharismaText.text=charisma.ToString();
 
             HitPointsText.text = Unit.GetHitPoints(endurance).ToString();
             SpeedText.text = Unit.GetSpeed(stamina).ToString("0.00");
             WeaponSpreadText.text = ((int)(Unit.GetWeaponSpread(marksmanship) * 100)).ToString() + "%";
-            AbilitiesLoadTimeText.text = ((int)(Unit.AbilitiesLoadTimeSingle(cunning) * 100)).ToString() + "%";
+            AbilitiesLoadTimeText.text = ((int)(Unit.AbilitiesLoadTimeSingle(command) * 100)).ToString() + "%";
 
             if (points <= 0)
             {
@@ -279,7 +279,7 @@ namespace Manage.UI
                 AddStaminaButton.gameObject.SetActive(false);
                 AddEnduranceButton.gameObject.SetActive(false);
                 AddMarksmanshipButton.gameObject.SetActive(false);
-                AddCunningButton.gameObject.SetActive(false);
+                AddCommandButton.gameObject.SetActive(false);
                 AddCharismaButton.gameObject.SetActive(false);
             }
             else
@@ -288,7 +288,7 @@ namespace Manage.UI
                 AddStaminaButton.gameObject.SetActive(true);
                 AddEnduranceButton.gameObject.SetActive(true);
                 AddMarksmanshipButton.gameObject.SetActive(true);
-                AddCunningButton.gameObject.SetActive(true);
+                AddCommandButton.gameObject.SetActive(true);
                 AddCharismaButton.gameObject.SetActive(true);
             }
 
@@ -319,13 +319,13 @@ namespace Manage.UI
                 RemoveMarksmanshipButton.gameObject.SetActive(true);
             }
 
-            if (cunning <= 1)
+            if (command <= 1)
             {
-                RemoveCunningButton.gameObject.SetActive(false);
+                RemoveCommandButton.gameObject.SetActive(false);
             }
             else
             {
-                RemoveCunningButton.gameObject.SetActive(true);
+                RemoveCommandButton.gameObject.SetActive(true);
             }
 
             if (charisma <= 1)

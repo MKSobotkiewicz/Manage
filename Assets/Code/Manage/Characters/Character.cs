@@ -24,7 +24,7 @@ namespace Manage.Characters
         public Character(uint stamina,
                          uint endurance,
                          uint marksmanship,
-                         uint cunning,
+                         uint command,
                          uint charisma,
                          EGender gender,
                          Organization organization,
@@ -42,8 +42,8 @@ namespace Manage.Characters
                                                     gender,
                                                     portrait)
         {
-            Level = (stamina+ endurance+ marksmanship+ cunning+ charisma)/5-1;
-            CharacterStats = new CharacterStats(stamina, endurance, marksmanship, cunning, charisma);
+            Level = (stamina+ endurance+ marksmanship+ command + charisma)/5-1;
+            CharacterStats = new CharacterStats(stamina, endurance, marksmanship, command, charisma);
             CharacterTraits = new CharacterTraits(Level);
             Parents = new HashSet<Character>();
             Siblings = new HashSet<Character>();

@@ -50,7 +50,7 @@ namespace Manage.UI
         private Text stamina;
         private Text endurance;
         private Text marksmanship;
-        private Text cunning;
+        private Text command;
         private Text charisma;
         private Text level;
         private HashSet<Text> traits;
@@ -139,10 +139,10 @@ namespace Manage.UI
                 marksmanship.text += "+" + unit.Inventory.GetMarksmanship();
             }
 
-            cunning.text = unit.Character.CharacterStats.GetCunning().ToString();
-            if (unit.Inventory.ArmorType.Cunning > 0)
+            command.text = unit.Character.CharacterStats.GetCommand().ToString();
+            if (unit.Inventory.ArmorType.Command > 0)
             {
-                cunning.text += "+" + unit.Inventory.GetCunning();
+                command.text += "+" + unit.Inventory.GetCommand();
             }
 
             charisma.text = unit.Character.CharacterStats.GetCharisma().ToString();
@@ -186,12 +186,12 @@ namespace Manage.UI
             UpdateStats();
         }
 
-        public void AddCunning()
+        public void AddCommand()
         {
-            cunning.text = unit.Character.CharacterStats.AddCunning().ToString();
-            if (unit.Inventory.ArmorType.Cunning > 0)
+            command.text = unit.Character.CharacterStats.AddCommand().ToString();
+            if (unit.Inventory.ArmorType.Command > 0)
             {
-                cunning.text += "+" + unit.Inventory.GetCunning();
+                command.text += "+" + unit.Inventory.GetCommand();
             }
             CheckStatPoints();
             UpdateStats();
@@ -442,10 +442,10 @@ namespace Manage.UI
                             marksmanship = transform.gameObject.AddComponent<Text>();
                         }
                         break;
-                    case "CharacterID_cunning":
-                        if (Equals(cunning = transform.GetComponent<Text>(), null))
+                    case "CharacterID_command":
+                        if (Equals(command = transform.GetComponent<Text>(), null))
                         {
-                            cunning = transform.gameObject.AddComponent<Text>();
+                            command = transform.gameObject.AddComponent<Text>();
                         }
                         break;
                     case "CharacterID_charisma":

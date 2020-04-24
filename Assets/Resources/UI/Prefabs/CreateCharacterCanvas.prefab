@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4590213329230591802}
   - component: {fileID: 767048208036423674}
   m_Layer: 0
-  m_Name: AddCunning
+  m_Name: AddCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1716362461089206729}
-        m_MethodName: AddCunning
+        m_MethodName: AddCommand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 2134709626981643514}
   - component: {fileID: 6095537196584065489}
   m_Layer: 0
-  m_Name: Cunning
+  m_Name: Command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CUNNING:'
+  m_Text: 'COMMAND:'
 --- !u!114 &2134709626981643514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   PopupPrefab: {fileID: 2443168752137542348, guid: 0ea2136d86dbe074e92f1df6ee1c1376,
     type: 3}
   PopupText: "Decreases abilities load time. \nLower load time means abilities \ncan
-    be used more often. All characters \ncunning is added and used to calculate \nabilities
+    be used more often. All characters \ncommand is added and used to calculate \nabilities
     load time."
   Delay: 1
 --- !u!1 &598456383597465913
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 1153161685903827939}
   - component: {fileID: 2054514573528600477}
   m_Layer: 0
-  m_Name: CharacterID_cunning
+  m_Name: CharacterID_command
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3132,17 +3132,17 @@ MonoBehaviour:
   StaminaText: {fileID: 4928045400183482093}
   EnduranceText: {fileID: 3936401239832786126}
   MarksmanshipText: {fileID: 4036541918420139909}
-  CunningText: {fileID: 2054514573528600477}
+  CommandText: {fileID: 2054514573528600477}
   CharismaText: {fileID: 1704290835288158722}
   AddStaminaButton: {fileID: 6813063680500687659}
   AddEnduranceButton: {fileID: 1690332605586865202}
   AddMarksmanshipButton: {fileID: 8539543870373609077}
-  AddCunningButton: {fileID: 767048208036423674}
+  AddCommandButton: {fileID: 767048208036423674}
   AddCharismaButton: {fileID: 4023574311077884248}
   RemoveStaminaButton: {fileID: 6602264141190510219}
   RemoveEnduranceButton: {fileID: 4247426750436043048}
   RemoveMarksmanshipButton: {fileID: 3914916408940380240}
-  RemoveCunningButton: {fileID: 6998371219418468194}
+  RemoveCommandButton: {fileID: 6998371219418468194}
   RemoveCharismaButton: {fileID: 3897299238500627325}
   CreateButton: {fileID: 2434777405594947451}
   HitPointsText: {fileID: 7085285703211776382}
@@ -5731,7 +5731,7 @@ GameObject:
   - component: {fileID: 5031959559497646082}
   - component: {fileID: 6998371219418468194}
   m_Layer: 0
-  m_Name: RemoveCunning
+  m_Name: RemoveCommand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5848,7 +5848,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1716362461089206729}
-        m_MethodName: RemoveCunning
+        m_MethodName: RemoveCommand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

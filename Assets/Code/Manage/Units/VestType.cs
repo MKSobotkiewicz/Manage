@@ -11,7 +11,7 @@ namespace Manage.Units
             uint stamina,
             uint endurance,
             uint marksmanship,
-            uint cunning,
+            uint command,
             uint charisma,
             string femalePrefabPath,
             string malePrefabPath) : base(
@@ -22,7 +22,7 @@ namespace Manage.Units
                 stamina,
                 endurance,
                 marksmanship,
-                cunning,
+                command,
                 charisma,
                 femalePrefabPath,
                 malePrefabPath)

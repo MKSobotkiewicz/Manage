@@ -8,7 +8,7 @@ namespace Manage.Units
         public uint Stamina { get; private set; }
         public uint Endurance { get; private set; }
         public uint Marksmanship { get; private set; }
-        public uint Cunning { get; private set; }
+        public uint Command { get; private set; }
         public uint Charisma { get; private set; }
         public string FemalePrefabPath { get; private set; }
         public string MalePrefabPath { get; private set; }
@@ -20,7 +20,7 @@ namespace Manage.Units
                           uint stamina,
                           uint endurance,
                           uint marksmanship,
-                          uint cunning,
+                          uint command,
                           uint charisma,
                           string femalePrefabPath,
                           string malePrefabPath) : base(name, info, iconPath)
@@ -29,7 +29,7 @@ namespace Manage.Units
             Stamina = stamina;
             Endurance = endurance;
             Marksmanship = marksmanship;
-            Cunning = cunning;
+            Command = command;
             Charisma = charisma;
             FemalePrefabPath = femalePrefabPath;
             MalePrefabPath = malePrefabPath;

@@ -249,17 +249,17 @@ namespace Manage.Units
 
         public static float AbilitiesLoadTime(Player.Player player)
         {
-            uint cunning = 0;
+            uint command = 0;
             foreach (var _unit in player.Units)
             {
-                cunning += _unit.Cunning();
+                command += _unit.Command();
             }
-            return (float)Math.Pow(0.98, cunning - 1);
+            return (float)Math.Pow(0.98, command - 1);
         }
 
-        public static float AbilitiesLoadTimeSingle(uint cunning)
+        public static float AbilitiesLoadTimeSingle(uint command)
         {
-            return (float)Math.Pow(0.98, cunning - 1);
+            return (float)Math.Pow(0.98, command - 1);
         }
 
         public bool Arm(WeaponType weaponType)
@@ -586,9 +586,9 @@ namespace Manage.Units
             return Character.CharacterStats.GetMarksmanship() + Inventory.GetMarksmanship();
         }
 
-        public uint Cunning()
+        public uint Command()
         {
-            return Character.CharacterStats.GetCunning() + Inventory.GetCunning();
+            return Character.CharacterStats.GetCommand() + Inventory.GetCommand();
         }
 
         public uint Charisma()

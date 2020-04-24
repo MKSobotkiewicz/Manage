@@ -18,7 +18,7 @@ namespace Manage.UI
         public Text VestStamina;
         public Text VestEndurance;
         public Text VestMarksmanship;
-        public Text VestCunning;
+        public Text VestCommand;
         public Text VestCharisma;
 
         private float infoTime;
@@ -35,7 +35,7 @@ namespace Manage.UI
             VestStamina.text = (itemType as Units.VestType).Stamina.ToString();
             VestEndurance.text = (itemType as Units.VestType).Endurance.ToString();
             VestMarksmanship.text = (itemType as Units.VestType).Marksmanship.ToString();
-            VestCunning.text = (itemType as Units.VestType).Cunning.ToString();
+            VestCommand.text = (itemType as Units.VestType).Command.ToString();
             VestCharisma.text = (itemType as Units.VestType).Charisma.ToString();
         }
 

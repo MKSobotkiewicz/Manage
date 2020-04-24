@@ -88,20 +88,20 @@ namespace Manage.Units
             return marksmanship;
         }
 
-        public uint GetCunning()
+        public uint GetCommand()
         {
             uint cunning = 0;
             if (ArmorType != null)
             {
-                cunning += ArmorType.Cunning;
+                cunning += ArmorType.Command;
             }
             if (Vest != null)
             {
-                cunning += Vest.VestType.Cunning;
+                cunning += Vest.VestType.Command;
             }
             if (Helmet != null)
             {
-                cunning += Helmet.HelmetType.Cunning;
+                cunning += Helmet.HelmetType.Command;
             }
             return cunning;
         }
