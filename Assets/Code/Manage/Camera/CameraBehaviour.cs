@@ -6,6 +6,7 @@ namespace Manage.Camera
 {
     public class CameraBehaviour : MonoBehaviour
     {
+        public bool Locked = true;
 
         public float Smooth = 10.0F;
         public float Speed = 0.01F;
@@ -36,6 +37,10 @@ namespace Manage.Camera
 
         void Update()
         {
+            if (Locked)
+            {
+                return;
+            }
             if (Input.GetAxis("Middle Mouse Button") > 0 && !Input.GetKey(KeyCode.LeftAlt))
             {
                 movingCamera = true;

@@ -45,21 +45,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f2dd42dd13628d47bfc40187084b7c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CreateOnStart: 1
   Player: {fileID: 0}
+  MainCanvas: {fileID: 0}
   WeaponType: 0
   ArmorType: 0
   HelmetType: 0
   VestType: 0
+  GrenadeType: 0
   VehicleType: 0
   Organization: 4
   CharacterCulture: 0
   Level: 1
+  Stamina: 1
+  Endurance: 1
+  Marksmanship: 1
+  Cunning: 1
+  Charisma: 1
   Gender: 0
   FirstName: Brenden
   Surname: Kinkel
-  Nickname: Honey Bun
+  Nickname: Sugar Mouse
   Age: 25
   Portrait: {fileID: 2800000, guid: 4dd95e3a5ba8036449bc966e430f63de, type: 3}
+  Dialog: {fileID: 0}
+  AddUnitsToPlayer: {fileID: 0}
 --- !u!33 &6884195230521373612
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -82,6 +92,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

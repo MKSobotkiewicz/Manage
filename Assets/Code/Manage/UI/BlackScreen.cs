@@ -11,6 +11,8 @@ namespace Manage.UI
 {
     public class BlackScreen : MonoBehaviour
     {
+        public Camera.CameraBehaviour CameraBehaviour;
+
         public void Close()
         {
             LeanTween.alpha(GetComponent<RectTransform>(), 0, 2f).setOnComplete(Destroy).setEase(LeanTweenType.easeInCubic);
@@ -18,6 +20,10 @@ namespace Manage.UI
 
         private void Destroy()
         {
+            if (CameraBehaviour != null)
+            {
+                CameraBehaviour.Locked = false;
+            }
             Destroy(gameObject);
         }
     }
