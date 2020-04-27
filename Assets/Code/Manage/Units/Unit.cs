@@ -116,6 +116,7 @@ namespace Manage.Units
 
         public void Start()
         {
+            UnitShaderController.SetColor(this,Player);
             unitsScreamsManager = GetComponentInChildren<Audio.UnitsScreamsManager>();
             footsteps = GetComponentInChildren<Audio.Footsteps>();
             AttackedBy = new Dictionary<Unit, float>();
@@ -379,6 +380,18 @@ namespace Manage.Units
             }
         }
 
+        public void Select()
+        {
+            Selected = true;
+            //UnitShaderController.SetSelected(this);
+        }
+
+        public void Unselect()
+        {
+            Selected = false;
+            //UnitShaderController.SetUnselected(this);
+        }
+
         public void AttackWithGrenade(Unit _target)
         {
             if (_target == null || _target.Dead || Shot)
@@ -436,11 +449,6 @@ namespace Manage.Units
         {
             navMeshAgent.velocity = new Vector3(0, 0, 0);
             navMeshAgent.isStopped = true;
-        }
-
-        public void Select()
-        {
-
         }
 
         public void StartReload()
@@ -637,6 +645,7 @@ namespace Manage.Units
 
         public void Kill()
         {
+            Unselect();
             Inventory.Drop(transform);
             if (unitsScreamsManager != null && Inventory.VehicleType == null)
             {

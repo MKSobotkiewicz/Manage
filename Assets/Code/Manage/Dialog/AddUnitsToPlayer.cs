@@ -23,6 +23,7 @@ namespace Manage.Dialog
                 unit.Player = Player;
                 unit.Character.Organization = Player.Organization;
                 Player.Units.Add(unit);
+                UnitShaderController.SetColor(unit, Player);
             }
             UnitIds.Reset();
         }

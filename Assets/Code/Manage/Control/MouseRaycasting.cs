@@ -128,7 +128,7 @@ namespace Manage.Control
                 SelectionSquare.gameObject.SetActive(false);
                 foreach (var unit in SelectedUnits)
                 {
-                    unit.Selected = false;
+                    unit.Unselect();
                 }
                 foreach (var unitSelectionParticle in UnitSelectionParticles)
                 {
@@ -164,7 +164,7 @@ namespace Manage.Control
                 foreach (var unit in SelectedUnits)
                 {
                     UnityEngine.Debug.Log("Selected");
-                    unit.Selected = true;
+                    unit.Select();
                     var selection = Instantiate(UnitSelection);
                     UnitSelectionParticles.Add(selection);
                     selection.transform.parent = unit.transform;

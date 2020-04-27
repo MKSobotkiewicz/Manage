@@ -58,11 +58,12 @@ namespace Manage.Units
             if (player != null)
             {
                 unit.Player = player;
-                if (character.Organization == player.Organization)
+                if (Equals(character.Organization, player.Organization))
                 {
                     player.Units.Add(unit);
                 }
             }
+            UnitShaderController.SetColor(unit,player);
             AllUnitsList.Units.Add(unit);
             return unit;
         }

@@ -175,6 +175,7 @@
      <Compile Include="Assets\Code\Manage\Units\UnitCreator.cs" />
      <Compile Include="Assets\Code\Manage\Units\UnitFactory.cs" />
      <Compile Include="Assets\Code\Manage\Units\UnitGenerator.cs" />
+     <Compile Include="Assets\Code\Manage\Units\UnitShaderController.cs" />
      <Compile Include="Assets\Code\Manage\Units\UnitType.cs" />
      <Compile Include="Assets\Code\Manage\Units\UnitTypes.cs" />
      <Compile Include="Assets\Code\Manage\Units\VehicleBehaviour.cs" />
