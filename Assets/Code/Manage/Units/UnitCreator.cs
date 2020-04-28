@@ -45,6 +45,7 @@ namespace Manage.Units
         public Texture2D Portrait;
         public Dialog.Dialog Dialog;
         public AddUnitsToPlayer AddUnitsToPlayer;
+        public Orders.Order Order;
 
         public void Start()
         {
@@ -110,6 +111,10 @@ namespace Manage.Units
             if (AddUnitsToPlayer != null)
             {
                 AddUnitsToPlayer.Units.Add(unit);
+            }
+            if (Order != null)
+            {
+                Order.Units.Add(unit);
             }
             return unit;
         }

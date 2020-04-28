@@ -85,6 +85,8 @@
      <Compile Include="Assets\Code\Manage\Dialog\DialogManager.cs" />
      <Compile Include="Assets\Code\Manage\Dialog\DialogOption.cs" />
      <Compile Include="Assets\Code\Manage\Dialog\Sentence.cs" />
+     <Compile Include="Assets\Code\Manage\Orders\Order.cs" />
+     <Compile Include="Assets\Code\Manage\Orders\OrderUnitsToAttackWhenEntered.cs" />
      <Compile Include="Assets\Code\Manage\Organizations\FlagLoader.cs" />
      <Compile Include="Assets\Code\Manage\Organizations\Info.cs" />
      <Compile Include="Assets\Code\Manage\Organizations\Organization.cs" />
