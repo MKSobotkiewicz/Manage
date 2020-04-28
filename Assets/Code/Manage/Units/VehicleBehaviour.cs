@@ -58,11 +58,11 @@ namespace Manage.Units
             float currentAngularVelocity;
             if (Vector3.Cross(currentFacing, lastFacing).y<0)
             {
-                currentAngularVelocity = Vector3.Angle(currentFacing, lastFacing) / Time.fixedDeltaTime;
+                currentAngularVelocity = Vector3.Angle(currentFacing, lastFacing) / Time.deltaTime;
             }
             else
             {
-                currentAngularVelocity = -Vector3.Angle(currentFacing, lastFacing) / Time.fixedDeltaTime;
+                currentAngularVelocity = -Vector3.Angle(currentFacing, lastFacing) / Time.deltaTime;
             }
             lastFacing = currentFacing;
 
@@ -81,7 +81,7 @@ namespace Manage.Units
 
             foreach (var wheel in Elements.Wheels)
             {
-                wheel.Rotate(new Vector3(Speed * Time.fixedDeltaTime * 40.84f,0 , 0));
+                wheel.Rotate(new Vector3(Speed * Time.deltaTime * 40.84f,0 , 0));
             }
             foreach (var axle in Elements.Axles)
             {
@@ -105,9 +105,9 @@ namespace Manage.Units
             Vector3 barrelTargetDirection = Target.transform.position - Elements.Turret.transform.position;
             Quaternion turretToRotation = Quaternion.LookRotation(turretTargetDirection, Elements.Turret.transform.up);
             Quaternion barrelToRotation = Quaternion.LookRotation(barrelTargetDirection, Elements.Turret.transform.up);
-            Elements.Turret.transform.rotation = Quaternion.Lerp(Elements.Turret.transform.rotation, turretToRotation, traverseSpeed * Time.fixedDeltaTime);
+            Elements.Turret.transform.rotation = Quaternion.Lerp(Elements.Turret.transform.rotation, turretToRotation, traverseSpeed * Time.deltaTime);
             Elements.Turret.localEulerAngles= new Vector3(0,Elements.Turret.transform.localRotation.eulerAngles.y, 0);
-            Elements.Barrel.transform.rotation = Quaternion.Lerp(Elements.Barrel.transform.rotation, barrelToRotation, turretSpeed * Time.fixedDeltaTime);
+            Elements.Barrel.transform.rotation = Quaternion.Lerp(Elements.Barrel.transform.rotation, barrelToRotation, turretSpeed * Time.deltaTime);
             
             if (Elements.Barrel.localEulerAngles.x < 180)
             {

@@ -14,7 +14,7 @@ namespace Manage.Particles
 
         public void Update()
         {
-            lifetime -= Time.fixedDeltaTime;
+            lifetime -= Time.deltaTime;
             if (lifetime<=0)
             {
                 Destroy(gameObject);

@@ -151,7 +151,7 @@ namespace Manage.Units
             {
                 if (randomTime >= 0)
                 {
-                    randomTime -= Time.fixedDeltaTime;
+                    randomTime -= Time.deltaTime;
                 }
                 else
                 {
@@ -161,7 +161,7 @@ namespace Manage.Units
                 }
                 if (HealTime >= 0)
                 {
-                    HealTime -= Time.fixedDeltaTime;
+                    HealTime -= Time.deltaTime;
                 }
                 else
                 {
@@ -190,7 +190,7 @@ namespace Manage.Units
                             }
                         }
                     }
-                    ThrowingGrenadeTime -= Time.fixedDeltaTime;
+                    ThrowingGrenadeTime -= Time.deltaTime;
                     if (ThrowingGrenadeTime <= 0)
                     {
                         EndTossGrenade();
@@ -203,7 +203,7 @@ namespace Manage.Units
                     Attack(target);
                     if (Inventory.VehicleType == null)
                     {
-                        grenadeTime -= Time.fixedDeltaTime;
+                        grenadeTime -= Time.deltaTime;
                     }
                     if (grenadeTime <= 0)
                     {
@@ -211,7 +211,7 @@ namespace Manage.Units
                         StartTossGrenade();
                     }
                 }
-                shotTime -= Time.fixedDeltaTime;
+                shotTime -= Time.deltaTime;
                 if (shotTime <= 0)
                 {
                     shotTime = 0;

@@ -53,7 +53,7 @@ namespace Manage.Units
             lastPosition = transform.position;
             if (dying)
             {
-                lifetime -= Time.fixedDeltaTime;
+                lifetime -= Time.deltaTime;
                 if (lifetime <= 0)
                 {
                     Destroy(gameObject);

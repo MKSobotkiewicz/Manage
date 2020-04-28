@@ -56,10 +56,10 @@ namespace Manage.Units
 
         public void Update()
         {
-            TimeSinceLastShot += Time.fixedDeltaTime;
+            TimeSinceLastShot += Time.deltaTime;
             if (isReloading)
             {
-                TimeSinceReloadStart += Time.fixedDeltaTime;
+                TimeSinceReloadStart += Time.deltaTime;
                 if (TimeSinceReloadStart > WeaponType.ReloadTime)
                 {
                     ReloadComplete();

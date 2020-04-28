@@ -228,6 +228,7 @@ namespace Manage.UI
         public void Rearm(WeaponType weaponType)
         {
             unit.Rearm(weaponType);
+            unitId.Weapon.texture = unit.Inventory.Weapon.WeaponType.CombatIcon();
         }
 
         public void ChangeArmor(ArmorType armorType)

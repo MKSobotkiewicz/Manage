@@ -10,7 +10,7 @@ namespace Manage.Units
 
         public void Update()
         {
-            Timer -= Time.fixedDeltaTime;
+            Timer -= Time.deltaTime;
             if (Timer <= 0)
             {
                 Timer = 9999;

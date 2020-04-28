@@ -14,6 +14,7 @@ namespace Manage.UI
         public Text UnitIdLife;
         public Text UnitIdAmmo;
         public Text UnitIdX;
+        public Text UnitIdPlus;
         public Image Outline;
         public RawImage Portrait;
         public RawImage Weapon;
@@ -33,11 +34,14 @@ namespace Manage.UI
         private int lastHitPoints=0;
         private float lastClick=0;
 
+        private bool isDead = false;
+
         public void Generate( Unit _unit,Player.Player _player)
         {
             Unit = _unit;
             player = _player;
             UnitIdX.enabled = false;
+            UnitIdPlus.enabled = false;
             if (Unit.Character.Nickname == "")
             {
                 UnitIdNickname.text = Unit.Character.Surname;
@@ -60,12 +64,13 @@ namespace Manage.UI
 
         public void Update()
         {
-            lastClick -= Time.fixedDeltaTime;
+            lastClick -= Time.deltaTime;
             if (Unit != null)
             {
                 SetHitPoints();
                 SetAmmo();
                 SetSelected();
+                SetLevelUp();
             }
         }
 
@@ -115,6 +120,19 @@ namespace Manage.UI
             Destroy(gameObject);
         }
 
+        public void SetLevelUp()
+        {
+
+            if (Unit.Character.CharacterStats.Points != 0 && !isDead)
+            {
+                UnitIdPlus.enabled = true;
+            }
+            else
+            {
+                UnitIdPlus.enabled = false;
+            }
+        }
+
         private void SetAmmo()
         {
             if (Unit.Inventory.VehicleType == null)
@@ -140,7 +158,9 @@ namespace Manage.UI
         {
             if (Unit.HitPoints() <= 0)
             {
-                UnitIdX.enabled=true;
+                UnitIdX.enabled = true;
+                UnitIdPlus.enabled = false;
+                isDead = true;
             }
             else
             {

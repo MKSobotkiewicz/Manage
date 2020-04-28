@@ -48,7 +48,7 @@ namespace Manage.UI
 
             if (infoTime < timeToShowTooltip)
             {
-                infoTime += Time.fixedDeltaTime;
+                infoTime += Time.deltaTime;
             }
             else
             {

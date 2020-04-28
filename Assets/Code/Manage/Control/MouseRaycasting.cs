@@ -184,7 +184,8 @@ namespace Manage.Control
                 var go = hit.transform.gameObject;
                 var point = hit.point;
                 var hitUnit = go.GetComponentInParent<Unit>();
-                if (hitUnit != null)
+                var hitChest = go.GetComponentInParent<Chest>();
+                if (hitUnit != null&& hitChest==null)
                 {
                     if (SelectedUnits.Last().Character.Organization.Enemies.Contains(hitUnit.Character.Organization) ||
                         hitUnit.Character.Organization.Enemies.Contains(SelectedUnits.Last().Character.Organization))
@@ -220,7 +221,6 @@ namespace Manage.Control
                 }
                 else
                 {
-                    var hitChest = go.GetComponentInParent<Chest>();
                     if (hitChest != null)
                     {
                         hitChest.SetPlayer(Player);

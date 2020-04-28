@@ -30,14 +30,14 @@ namespace Manage.Control
 
         public void Update()
         {
-            time += Time.fixedDeltaTime;
+            time += Time.deltaTime;
             if (time >= 1)
             {
                 OneSecondUpdate();
                 time = 0;
             }
-            manouverTime -= Time.fixedDeltaTime;
-            timeToSpreadout -= Time.fixedDeltaTime;
+            manouverTime -= Time.deltaTime;
+            timeToSpreadout -= Time.deltaTime;
         }
 
         public void OneSecondUpdate()

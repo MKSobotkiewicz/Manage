@@ -25,7 +25,7 @@ namespace Manage.Units
 
         public void Update()
         {
-            timer -= Time.fixedDeltaTime;
+            timer -= Time.deltaTime;
             if (timer <= 0)
 
             {
