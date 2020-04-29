@@ -40,6 +40,8 @@ namespace Manage.Units
         private Unit target;
         private Unit grenadeTarget;
 
+        private static readonly string bloodPath = "Units/GroundBlood";
+
         private static readonly System.Random random = new System.Random();
 
         public Unit()
@@ -622,6 +624,7 @@ namespace Manage.Units
                 StartShot();
                 shotTime = (float)((random.NextDouble() + 0.5) * (3 - Character.CharacterTraits.Contains(CharacterTraitsList.Unyielding) * 2));
                 hitPoints -= Mathf.Max(value - Inventory.GetArmor() - Character.CharacterTraits.Contains(CharacterTraitsList.Tough) * 5, 0);
+                UnitShaderController.SetBlood(this, 1f-((float)hitPoints / (float)GetMaxHitPoints()));
             }
             else
             {
@@ -647,6 +650,8 @@ namespace Manage.Units
         {
             Unselect();
             Inventory.Drop(transform);
+            var blood=Instantiate(UnityEngine.Resources.Load(bloodPath) as GameObject,gameObject.transform);
+            blood.transform.localPosition += new Vector3(0,0.05f,0);
             if (unitsScreamsManager != null && Inventory.VehicleType == null)
             {
                 unitsScreamsManager.Play();
@@ -719,6 +724,7 @@ namespace Manage.Units
         public void Heal(int value)
         {
             hitPoints += value;
+            UnitShaderController.SetBlood(this, 1f - ((float)hitPoints / (float)GetMaxHitPoints()));
             if (hitPoints >= GetMaxHitPoints())
             {
                 hitPoints = GetMaxHitPoints();

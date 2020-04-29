@@ -4,9 +4,12 @@
     {
         _MainTex ("Albedo", 2D) = "white" {}
 		_MetallicGlossMap("Metallic", 2D) = "black" {}
+		_RandomTex("Random", 2D) = "black" {}
 		_BumpMap("Normal", 2D) = "bump" {}
 		_MainColor("Diffuse Color", Color) = (1,1,1,1)
+		_BloodColor("Blood Color", Color) = (1,0,0,1)
 		_Dist("Shift", Range(-1, 1)) = 0
+		_BloodLevel("Blood Level", Range(0, 1)) = 0
     }
     SubShader
     {
@@ -65,7 +68,10 @@
 
         sampler2D _MainTex;
 		sampler2D _MetallicGlossMap;
+		sampler2D _RandomTex;
 		sampler2D _BumpMap;
+		float4 _BloodColor;
+		float _BloodLevel;
 
         struct Input
         {
@@ -74,12 +80,14 @@
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
+			fixed r = tex2D(_RandomTex, IN.uv_MainTex).r;
+			fixed b = saturate(r - 1 + _BloodLevel.r);
             fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
 			fixed4 m = tex2D(_MetallicGlossMap, IN.uv_MainTex);
 			fixed3 n = UnpackNormal(tex2D(_BumpMap, IN.uv_MainTex));
-            o.Albedo = c.rgb;
-            o.Metallic = m.rgb;
-            o.Smoothness = m.a;
+            o.Albedo = lerp(c.rgb,_BloodColor, b);
+            o.Metallic = lerp(m.rgb,0,b);
+            o.Smoothness = lerp(m.a,0.9, b);
 			o.Normal = n;
             o.Alpha = c.a;
         }

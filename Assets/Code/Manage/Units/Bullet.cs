@@ -73,11 +73,11 @@ namespace Manage.Units
                 dying = true;
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 var damage = random.Next((int)(BulletType.Damage*0.5), (int)(BulletType.Damage*1.5));
+                InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
                 unit.Damage(damage, Player);
             }
             if (this is ExplosiveShell)
             {
-                UnityEngine.Debug.Log("Brain aunerysm");
                 ((ExplosiveShell)this).Hit(collision);
             }
             else
@@ -97,20 +97,20 @@ namespace Manage.Units
         {
             if (dying is false)
             {
-                switch (collision.gameObject.tag)
+            switch (collision.gameObject.tag)
                 {
-                    case "Metal":
-                        InstantiateBulletHit("Bullets/BulletHitMetal", collision);
-                        break;
-                    case "Flesh":
-                        InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
-                        break;
-                    case "Concrete":
-                        InstantiateBulletHit("Bullets/BulletHitConcrete", collision);
-                        break;
-                    default:
-                        InstantiateBulletHit("Bullets/BulletHit", collision);
-                        break;
+                case "Metal":
+                    InstantiateBulletHit("Bullets/BulletHitMetal", collision);
+                    break;
+                case "Flesh":
+                    InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
+                    break;
+                case "Concrete":
+                    InstantiateBulletHit("Bullets/BulletHitConcrete", collision);
+                    break;
+                default:
+                    InstantiateBulletHit("Bullets/BulletHit", collision);
+                    break;
                 }
             }
             rigidbody.velocity /= 2;

@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 5613882288273317405}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Flesh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 5527529161275067250}
   m_Layer: 0
   m_Name: basic_male
-  m_TagString: Untagged
+  m_TagString: Flesh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

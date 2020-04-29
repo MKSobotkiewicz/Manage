@@ -13,6 +13,26 @@ namespace Manage.Units
         public static Color Enemy = new Color(1, 0, 0);
         public static Color Neutral = new Color(1, 1, 0);
 
+        public static void SetBlood(Unit unit,float value)
+        {
+            var meshRenderers = unit.GetComponentsInChildren<MeshRenderer>();
+            var skinnedMeshRenderers = unit.GetComponentsInChildren<SkinnedMeshRenderer>();
+            foreach (var skinnedMeshRenderer in skinnedMeshRenderers)
+            {
+                foreach (var material in skinnedMeshRenderer.materials)
+                {
+                    material.SetFloat("_BloodLevel", value);
+                }
+            }
+            foreach (var meshRenderer in meshRenderers)
+            {
+                foreach (var material in meshRenderer.materials)
+                {
+                    material.SetFloat("_BloodLevel", value);
+                }
+            }
+        }
+
         public static void SetColor(Unit unit, Player.Player player)
         {
             var meshRenderers = unit.GetComponentsInChildren<MeshRenderer>();
