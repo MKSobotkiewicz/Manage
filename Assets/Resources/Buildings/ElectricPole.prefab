@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2004858811486414835}
   - component: {fileID: 5255200611095173898}
   - component: {fileID: 232558079646294465}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ElectricPole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 4380370459888224419}
   - component: {fileID: 2661655698984118977}
   - component: {fileID: 8749671681614847511}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ElectricPole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,6 +532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cable (4)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
 --- !u!4 &5148202538479048780 stripped
@@ -632,6 +637,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
@@ -734,6 +744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cable (3)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
 --- !u!4 &7406829229058960353 stripped
@@ -834,6 +849,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
@@ -936,6 +956,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
 --- !u!1 &3494968346876864026 stripped
@@ -1036,6 +1061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
@@ -1138,6 +1168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cable (7)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
 --- !u!1 &1955991732092379083 stripped
@@ -1238,6 +1273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 35abebb495c04364e9aaf60b65e55a79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35abebb495c04364e9aaf60b65e55a79, type: 3}
