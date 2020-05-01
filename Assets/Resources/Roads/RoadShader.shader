@@ -10,16 +10,16 @@
     {
         Tags { "Queue" = "AlphaTest"
 			   "IgnoreProjector" = "True"
-			   "RenderType" = "Transparent" }
+			   "RenderType" = "Opaque" }
+		Blend SrcAlpha OneMinusSrcAlpha
+		Lighting On
 		Cull Off
-		Lighting Off
-		ZWrite Off
-		Blend One OneMinusSrcAlpha
+		//Blend One OneMinusSrcAlpha
         LOD 200
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows nofog alphatest:_Cutoff addshadow
+        #pragma surface surf Standard fullforwardshadows nofog  alphatest:_Cutoff addshadow
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 5.0
@@ -43,7 +43,7 @@
 			o.Metallic = m.rgb;
 			o.Smoothness = m.a;
 			o.Normal = n;
-			o.Alpha = c.a;
+			o.Alpha = c.a*0.9;
         }
         ENDCG
     }

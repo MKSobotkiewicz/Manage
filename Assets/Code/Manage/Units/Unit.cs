@@ -385,13 +385,13 @@ namespace Manage.Units
         public void Select()
         {
             Selected = true;
-            //UnitShaderController.SetSelected(this);
+            UnitShaderController.SetSelected(this);
         }
 
         public void Unselect()
         {
             Selected = false;
-            //UnitShaderController.SetUnselected(this);
+            UnitShaderController.SetUnselected(this);
         }
 
         public void AttackWithGrenade(Unit _target)

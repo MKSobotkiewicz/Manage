@@ -15,7 +15,7 @@
     {
 		/// first pass
 
-		Tags { "IgnoreProjector" = "True" "RenderType" = "Transparent" }
+		Tags { "IgnoreProjector" = "True" "RenderType" = "Transparent" "Queue" = "AlphaTest" }
 		LOD 200
 		Blend SrcAlpha OneMinusSrcAlpha
 		Lighting Off

@@ -165,10 +165,10 @@ namespace Manage.Control
                 {
                     UnityEngine.Debug.Log("Selected");
                     unit.Select();
-                    var selection = Instantiate(UnitSelection);
-                    UnitSelectionParticles.Add(selection);
-                    selection.transform.parent = unit.transform;
-                    selection.transform.localPosition = new Vector3(0, 0.05f, 0);
+                    //var selection = Instantiate(UnitSelection);
+                    //UnitSelectionParticles.Add(selection);
+                   // selection.transform.parent = unit.transform;
+                    //selection.transform.localPosition = new Vector3(0, 0.05f, 0);
                 }
             }
         }

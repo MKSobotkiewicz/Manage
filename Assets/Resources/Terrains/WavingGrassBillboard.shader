@@ -17,7 +17,7 @@
 			ColorMask RGB
 
 		CGPROGRAM
-		#pragma surface surf Lambert vertex:WavingGrassVert addshadow fullforwardshadows nolightmap alpha:fade Blend SrcAlpha OneMinusSrcAlpha
+		#pragma surface surf Standard vertex:WavingGrassVert addshadow fullforwardshadows nolightmap alpha:fade Blend SrcAlpha OneMinusSrcAlpha
 		#include "TerrainEngine.cginc"
 
 		sampler2D _MainTex;
@@ -27,7 +27,7 @@
 			fixed4 color : COLOR;
 		};
 
-		void surf(Input IN, inout SurfaceOutput o) {
+		void surf(Input IN, inout SurfaceOutputStandard o) {
 			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * IN.color;
 			o.Albedo = c.rgb;
 			o.Alpha = c.a;
