@@ -83,10 +83,15 @@ namespace Manage.UI
             MouseRaycasting.beganSelecting = false;
             if (Input.GetAxis("MultiChoose")<=0)
             {
+                foreach (var unit in MouseRaycasting.SelectedUnits)
+                {
+                    unit.Unselect();
+                }
                 MouseRaycasting.SelectedUnits.Clear();
             }
             lastClick = 1;
             MouseRaycasting.SelectedUnits.Add(Unit);
+            Unit.Select();
         }
 
         public void SetHitPoints()

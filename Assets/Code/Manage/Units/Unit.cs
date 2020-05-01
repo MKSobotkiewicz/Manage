@@ -79,7 +79,10 @@ namespace Manage.Units
 
             unit.Inventory.Weapon.Ammo = Inventory.Weapon.Ammo;
 
-            unit.Selected = Selected;
+            if (Selected)
+            {
+                unit.Select();
+            }
             unit.Dead = Dead;
             unit.Attacking = Attacking;
             unit.Reloading = Reloading;

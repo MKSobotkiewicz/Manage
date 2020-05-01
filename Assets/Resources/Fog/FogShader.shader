@@ -43,7 +43,7 @@
 			half c12 = tex2D(_Random, IN.worldPos.xz*_Scale + cos(_Time.r * _Speed*1.3)).g;
 			half c13 = tex2D(_Random, IN.worldPos.xz*_Scale*0.9 + tan(_Time.r * _Speed*0.15)).b;
 			half c1 = c11 * c12*c13;
-            fixed4 tex = tex2D (_Alpha, IN.uv_MainTex)*5 *c1;
+            fixed4 tex = saturate(tex2D (_Alpha, IN.uv_MainTex)*3 *c1);
             o.Albedo = _Color;
             o.Metallic = 0;
             o.Smoothness = 0;
