@@ -1,5 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
+﻿
 Shader "Projector/AdditiveTint" 
 {
 	Properties
@@ -12,6 +11,7 @@ Shader "Projector/AdditiveTint"
 			Tags {"Queue" = "Transparent"}
 			Pass
 			{
+				ZTest Off
 				ZWrite Off
 				ColorMask RGB
 				Blend SrcAlpha One 
