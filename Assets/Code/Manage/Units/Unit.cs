@@ -35,6 +35,7 @@ namespace Manage.Units
         private float HealTime = 0;
         private NavMeshAgent navMeshAgent;
         private Audio.UnitsScreamsManager unitsScreamsManager;
+        private Audio.UnitsTalkManager unitsTalkManager;
         private Audio.Footsteps footsteps;
 
         private Unit target;
@@ -123,6 +124,7 @@ namespace Manage.Units
         {
             UnitShaderController.SetColor(this,Player);
             unitsScreamsManager = GetComponentInChildren<Audio.UnitsScreamsManager>();
+            unitsTalkManager = GetComponentInChildren<Audio.UnitsTalkManager>();
             footsteps = GetComponentInChildren<Audio.Footsteps>();
             AttackedBy = new Dictionary<Unit, float>();
             hitPoints = GetMaxHitPoints();
@@ -460,6 +462,7 @@ namespace Manage.Units
         {
             Stop();
             Reloading = true;
+            unitsTalkManager.PlayReloading(this);
             SetAnimatorsBool("Reloading", Reloading);
         }
 
@@ -469,9 +472,20 @@ namespace Manage.Units
             SetAnimatorsBool("Reloading", Reloading);
         }
 
+        public void EnemyKilled()
+        {
+            unitsTalkManager.PlayEnemyKilled(this);
+        }
+
+        public void PlayMoveAudio()
+        {
+            unitsTalkManager.PlayMove(this);
+        }
+
         private void StartShot()
         {
             Shot = true;
+            unitsTalkManager.PlayAttacking(this);
             SetAnimatorsBool("Crouching", Shot);
         }
 
@@ -534,7 +548,9 @@ namespace Manage.Units
                                                                            distance / 10 + 10,
                                                                            distance / 4 + 1), ForceMode.VelocityChange);
             grenade.GetComponent<Rigidbody>().AddTorque(new Vector3((float)random.NextDouble(), (float)random.NextDouble(), (float)random.NextDouble()));
-            grenade.GetComponent<GrenadeBehaviour>().Player = Player;
+            var gb = grenade.GetComponent<GrenadeBehaviour>();
+            gb.Player = Player;
+            gb.Unit = this;
             ThrowingGrenade = false;
             SetAnimatorsBool("Toss Grenade", false);
         }
@@ -616,10 +632,10 @@ namespace Manage.Units
 
         public bool Damage(int value)
         {
-            return Damage(value,null);
+            return Damage(value,null,null);
         }
 
-        public bool Damage(int value,Player.Player damagingPlayer)
+        public bool Damage(int value,Player.Player damagingPlayer, Unit damagingUnit)
         {
             if (Inventory.VehicleType == null)
             {
@@ -642,6 +658,10 @@ namespace Manage.Units
                 if (damagingPlayer != null)
                 {
                     damagingPlayer.ExperienceManager.AddExperienceToUnits(Character.ExperienceFromCharacter());
+                }
+                if (damagingUnit != null)
+                {
+                    damagingUnit.EnemyKilled();
                 }
                 Kill();
                 return true;

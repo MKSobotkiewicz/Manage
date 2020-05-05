@@ -14,12 +14,13 @@ namespace Manage.Units
         protected Vector3 lastPosition;
         protected Organizations.Organization organization;
         public Player.Player Player;
+        protected Unit unit;
         protected bool dying = false;
         protected float lifetime;
 
         private static System.Random random = new System.Random();
 
-        public static Bullet Create(BulletType bulletType, Unit unit, Vector3 position, Vector3 target)
+        public static Bullet Create(BulletType bulletType, Unit _unit, Vector3 position, Vector3 target)
         {
             var go = Instantiate(UnityEngine.Resources.Load(bulletType.PrefabPath) as GameObject);
             if (Equals(go, null))
@@ -39,12 +40,13 @@ namespace Manage.Units
             bullet.rigidbody.mass = (float)bulletType.Mass;
             bullet.rigidbody.AddRelativeForce(new Vector3(-(float)bulletType.Velocity, 0, 0), ForceMode.VelocityChange);
             bullet.lifetime = 2;
-            if (unit != null)
+            if (_unit != null)
             {
-                bullet.organization = unit.Character.Organization;
-                bullet.Player = unit.Player;
+                bullet.organization = _unit.Character.Organization;
+                bullet.Player = _unit.Player;
             }
-            
+            bullet.unit = _unit;
+
             return bullet;
         }
 
@@ -74,7 +76,7 @@ namespace Manage.Units
                 rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 var damage = random.Next((int)(BulletType.Damage*0.5), (int)(BulletType.Damage*1.5));
                 InstantiateBulletHit("Bullets/BulletHitFlesh", collision);
-                unit.Damage(damage, Player);
+                unit.Damage(damage, Player, unit);
             }
             if (this is ExplosiveShell)
             {

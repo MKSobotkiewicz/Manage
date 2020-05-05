@@ -212,6 +212,7 @@ namespace Manage.Control
                             }
                             unit.Stop();
                             unit.Move(hitUnit.transform.position);
+                            unit.PlayMoveAudio();
                             if (!Equals(hitUnit.DialogManager, null))
                             {
                                 hitUnit.DialogManager.PoolDialog(unit);
@@ -235,6 +236,7 @@ namespace Manage.Control
                     foreach (var unit in SelectedUnits)
                     {
                         unit.Move(orderPositionOfUnits[i]);
+                        unit.PlayMoveAudio();
                         i++;
                     }
                     i = 0;

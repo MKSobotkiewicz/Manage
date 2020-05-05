@@ -12,6 +12,7 @@ namespace Manage.Units
         public GameObject Explosion;
         public int Damage;
         public Player.Player Player;
+        public Unit Unit;
 
         private float timer=4f;
 
@@ -71,7 +72,7 @@ namespace Manage.Units
                         continue;
                     }
                     var damage = random.Next((int)(Damage * 0.5), (int)(Damage * 1.5));
-                    unit.Damage(damage, Player);
+                    unit.Damage(damage, Player,Unit);
                     damagedUnitList.Add(unit);
                     if (unit.Inventory.VehicleType == null)
                     {
