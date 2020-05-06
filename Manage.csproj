@@ -59,6 +59,7 @@
      <Compile Include="Assets\Code\Manage\Area\Area.cs" />
      <Compile Include="Assets\Code\Manage\Area\Neighbour.cs" />
      <Compile Include="Assets\Code\Manage\Audio\Footsteps.cs" />
+     <Compile Include="Assets\Code\Manage\Audio\MusicManager.cs" />
      <Compile Include="Assets\Code\Manage\Audio\SoundManager.cs" />
      <Compile Include="Assets\Code\Manage\Audio\UnitsScreamsManager.cs" />
      <Compile Include="Assets\Code\Manage\Audio\UnitsTalkManager.cs" />

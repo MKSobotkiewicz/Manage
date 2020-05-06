@@ -179,11 +179,10 @@ MonoBehaviour:
   FemaleAttacking:
   - {fileID: 8300000, guid: 17f8d740d4eafaf4bb70b21ba564d4e8, type: 3}
   - {fileID: 8300000, guid: a75955f521a046d409d7484a6aa53d93, type: 3}
-  - {fileID: 8300000, guid: 76c8ada75dda98147afdfdb3e0d098e9, type: 3}
+  - {fileID: 8300000, guid: 8a90678e91375244aaf80cc3749d3873, type: 3}
   - {fileID: 8300000, guid: 3ac4c945ae44c9e4ea323df27e88fef5, type: 3}
   - {fileID: 8300000, guid: a925eaf351a051149a16b7cf68d97a47, type: 3}
   - {fileID: 8300000, guid: 3a9b7ad1d9bb8f94a98a77d90f603fef, type: 3}
-  - {fileID: 8300000, guid: 8a90678e91375244aaf80cc3749d3873, type: 3}
   MaleMove:
   - {fileID: 8300000, guid: a74c3a3ca74085b41ac7e883b92a46d7, type: 3}
   - {fileID: 8300000, guid: 905d346476a024840bee1be8306668db, type: 3}
