@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speaker: {fileID: 0}
   Text: "Didn\u2019t I told you already? Bunch of low life assholes. They call themselves
-    Red Rats."
+    Red Battalion."
   NextSentence: {fileID: 581704712569185154}
   DialogOptions: []
 --- !u!1 &159782918452487939
