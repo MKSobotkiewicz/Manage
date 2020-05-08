@@ -14,7 +14,7 @@
 
 		Blend SrcAlpha OneMinusSrcAlpha
 		Lighting Off
-		ZWrite off
+		ZWrite on
 		ZTest Always
 		Cull Off
         LOD 200
@@ -31,7 +31,10 @@
         {
             float2 uv_MainTex;
 			half3 worldPos;
-        };
+			float3 worldNormal;
+			float3 viewDir;
+			INTERNAL_DATA
+        }; 
 
         fixed4 _Color;
 		half _Scale;
@@ -43,11 +46,14 @@
 			half c12 = tex2D(_Random, IN.worldPos.xz*_Scale + cos(_Time.r * _Speed*1.3)).g;
 			half c13 = tex2D(_Random, IN.worldPos.xz*_Scale*0.9 + tan(_Time.r * _Speed*0.15)).b;
 			half c1 = c11 * c12*c13;
-            fixed4 tex = clamp(tex2D (_Alpha, IN.uv_MainTex)*5 *c1,0,0.5);
+			float fresnel = dot(IN.worldNormal, IN.viewDir);
+			fresnel = saturate(fresnel);
+			fixed depth = saturate( (_WorldSpaceCameraPos.y-IN.worldPos.y-10)/20);
+            fixed4 tex = tex2D (_Alpha, IN.uv_MainTex)*5 *c1;
             o.Albedo = _Color;
             o.Metallic = 0;
             o.Smoothness = 0;
-            o.Alpha = tex.r;
+			o.Alpha = clamp(tex.r*fresnel* depth, 0, 0.5);
         }
         ENDCG
     }
