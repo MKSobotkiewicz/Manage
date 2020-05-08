@@ -10,7 +10,7 @@ using Manage.Characters;
 
 namespace Manage.Units
 {
-    public class Unit : MonoBehaviour, IPositioned, IDestructable
+    public class Unit : MonoBehaviour, IPositioned, IDestructable, ITalkable
     {
         public Inventory Inventory { get; set; }
         public Character Character { get; set; }
@@ -23,8 +23,8 @@ namespace Manage.Units
         public Player.Player Player { get; set; }
         public List<Animator> Animators = new List<Animator>();
         public Dictionary<Unit, float> AttackedBy;
-        public Dialog.DialogManager DialogManager;
         public UI.FloatingLifePanel FloatingLifePanel;
+        public Dialog.DialogManager DialogManager;
 
         private int hitPoints;
 
@@ -756,6 +756,40 @@ namespace Manage.Units
             {
                 FloatingLifePanel.SetHitPoints();
             }
+        }
+
+        public string GetName()
+        {
+            return Character.Nickname == "" ?
+                   Character.FirstName + " " + Character.Surname :
+                   Character.Nickname;
+        }
+
+        public string GetFullName()
+        {
+            return (Character.Nickname == "") ?
+                    Character.FirstName + Environment.NewLine + Character.Surname :
+                    Character.FirstName + Environment.NewLine + "\"" + Character.Nickname + "\"" + Environment.NewLine + Character.Surname;
+        }
+
+        public GameObject GameObject()
+        {
+            return gameObject;
+        }
+
+        public Transform Transform()
+        {
+            return transform;
+        }
+
+        public void SetDialogManager(Dialog.DialogManager dialogManager)
+        {
+            DialogManager = dialogManager;
+        }
+
+        public Texture2D GetPortrait()
+        {
+            return Character.Portrait;
         }
     }
 }

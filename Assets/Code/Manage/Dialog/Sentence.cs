@@ -12,7 +12,7 @@ namespace Manage.Dialog
 {
     public class Sentence : MonoBehaviour
     {
-        public Unit Speaker;
+        public ITalkable Speaker;
         [TextArea(15, 20)]
         public string Text;
         public Sentence NextSentence;
@@ -20,9 +20,7 @@ namespace Manage.Dialog
 
         public new string ToString()
         {
-            var speakerName = Speaker.Character.Nickname == "" ? 
-                Speaker.Character.FirstName + " " + Speaker.Character.Surname : 
-                Speaker.Character.Nickname;
+            var speakerName = Speaker.GetName(); 
             return "<color=#88ff88ff>[" + speakerName + "]:</color> " + Text;
         }
 

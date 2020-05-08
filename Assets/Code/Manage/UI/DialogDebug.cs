@@ -26,7 +26,7 @@ namespace Manage.UI
             var dialog = go.GetComponent<Dialog>();
             dialog.transform.SetParent(transform.parent);
             dialog.ThisDialog = Dialog;
-            dialog.MainCharacter = AllUnitsList.Units.First();
+            dialog.MainTalkable = AllUnitsList.Units.First();
             dialog.Begin();
         }
     }

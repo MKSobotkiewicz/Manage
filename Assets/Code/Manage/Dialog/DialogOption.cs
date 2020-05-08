@@ -26,16 +26,13 @@ namespace Manage.Dialog
             return "<color=#88ff88ff>" + Text + "[END CONVERSATION]</color>";
         }
 
-        public string ToString(Character character)
+        public string ToString(ITalkable speaker)
         {
-            if (character is null)
+            if (speaker is null)
             {
                 return Text;
             }
-            var speakerName = character.Nickname == "" ?
-                character.FirstName + " " + character.Surname :
-                character.Nickname;
-            return "<color=#ccffccff>[" + speakerName + "]:</color> " + Text ;
+            return "<color=#ccffccff>[" + speaker.GetName() + "]:</color> " + Text ;
         }
     }
 }

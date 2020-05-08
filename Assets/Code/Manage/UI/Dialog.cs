@@ -24,7 +24,7 @@ namespace Manage.UI
         public AudioSource ClickingSource;
 
         public Manage.Dialog.Dialog ThisDialog;
-        public Unit MainCharacter;
+        public ITalkable MainTalkable;
 
         private string currentText;
         private string targetText;
@@ -58,10 +58,8 @@ namespace Manage.UI
                 dialogOption.text = "";
                 dialogOption.gameObject.SetActive(false);
             }
-            Portrait2.texture = MainCharacter.Character.Portrait;
-            Name2.text = (MainCharacter.Character.Nickname == "") ?
-                MainCharacter.Character.FirstName + Environment.NewLine + MainCharacter.Character.Surname :
-                MainCharacter.Character.FirstName + Environment.NewLine + "\"" + MainCharacter.Character.Nickname + "\"" + Environment.NewLine + MainCharacter.Character.Surname;
+            Portrait2.texture = MainTalkable.GetPortrait();
+            Name2.text = MainTalkable.GetFullName();
             Click();
         }
 
@@ -159,12 +157,12 @@ namespace Manage.UI
             {
                 dialogOptionsSelectPanel.enabled = false;
             }
-            UnityEngine.Debug.Log(ThisDialog.NextDialogOptions[i].ToString(MainCharacter.Character));
+            UnityEngine.Debug.Log(ThisDialog.NextDialogOptions[i].ToString(MainTalkable));
             if (ThisDialog.NextDialogOptions[i].Action != null)
             {
                 ThisDialog.NextDialogOptions[i].Action.Do();
             }
-            AddTextToDialogTextbox(ThisDialog.NextDialogOptions[i].ToString(MainCharacter.Character));
+            AddTextToDialogTextbox(ThisDialog.NextDialogOptions[i].ToString(MainTalkable));
             if (!ThisDialog.SetNextSentence(ThisDialog.NextDialogOptions[i]))
             {
                 End();
@@ -173,10 +171,8 @@ namespace Manage.UI
 
         private void WriteSentence(Manage.Dialog.Sentence sentence)
         {
-            Portrait1.texture = sentence.Speaker.Character.Portrait;
-            Name1.text = (sentence.Speaker.Character.Nickname == "") ?
-                sentence.Speaker.Character.FirstName + Environment.NewLine + sentence.Speaker.Character.Surname :
-                sentence.Speaker.Character.FirstName + Environment.NewLine+"\""+ sentence.Speaker.Character.Nickname+"\"" + Environment.NewLine + sentence.Speaker.Character.Surname;
+            Portrait1.texture = sentence.Speaker.GetPortrait();
+            Name1.text = sentence.Speaker.GetFullName();
             AddTextToDialogTextbox(sentence.ToString());
         }
 

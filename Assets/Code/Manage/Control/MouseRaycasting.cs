@@ -185,6 +185,7 @@ namespace Manage.Control
                 var point = hit.point;
                 var hitUnit = go.GetComponentInParent<Unit>();
                 var hitChest = go.GetComponentInParent<Chest>();
+                var hitPda = go.GetComponentInParent<Pda>();
                 if (hitUnit != null&& hitChest==null)
                 {
                     if (SelectedUnits.Last().Character.Organization.Enemies.Contains(hitUnit.Character.Organization) ||
@@ -225,6 +226,16 @@ namespace Manage.Control
                     if (hitChest != null)
                     {
                         hitChest.SetPlayer(Player);
+                    }
+                    if (hitPda!=null)
+                    {
+                        foreach (var unit in SelectedUnits)
+                        {
+                            if (!Equals(hitPda.DialogManager, null))
+                            {
+                                hitPda.DialogManager.PoolDialog(unit);
+                            }
+                        }
                     }
                     var currentPositionOfUnits = new List<Vector3>();
                     foreach (var unit in SelectedUnits)

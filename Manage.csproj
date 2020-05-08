@@ -172,9 +172,12 @@
      <Compile Include="Assets\Code\Manage\Units\HelmetType.cs" />
      <Compile Include="Assets\Code\Manage\Units\HelmetTypes.cs" />
      <Compile Include="Assets\Code\Manage\Units\IDestructable.cs" />
+     <Compile Include="Assets\Code\Manage\Units\ITalkable.cs" />
      <Compile Include="Assets\Code\Manage\Units\Inventory.cs" />
      <Compile Include="Assets\Code\Manage\Units\InventoryFactory.cs" />
      <Compile Include="Assets\Code\Manage\Units\ItemType.cs" />
+     <Compile Include="Assets\Code\Manage\Units\Pda.cs" />
+     <Compile Include="Assets\Code\Manage\Units\PdaCreator.cs" />
      <Compile Include="Assets\Code\Manage\Units\Unit.cs" />
      <Compile Include="Assets\Code\Manage\Units\UnitCreator.cs" />
      <Compile Include="Assets\Code\Manage\Units\UnitFactory.cs" />
