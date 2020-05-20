@@ -9,6 +9,7 @@ namespace Manage.Units
     public class Weapon: MonoBehaviour
     {
         public WeaponType WeaponType { get; private set; }
+        public Audio.ReloadSoundManager ReloadSoundManager;
 
         public int Ammo { get; set; }
         public double TimeSinceLastShot { get; private set; }
@@ -50,6 +51,7 @@ namespace Manage.Units
 
         public void Start()
         {
+            ReloadSoundManager = GetComponentInChildren<Audio.ReloadSoundManager>();
             transform = GetComponent<Transform>();
             animator = GetComponent<Animator>();
         }
@@ -93,6 +95,7 @@ namespace Manage.Units
         public void ReloadStart(Unit reloading)
         {
             isReloading = true;
+            ReloadSoundManager.Play();
             unit = reloading;
             unit.StartReload();
         }

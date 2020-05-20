@@ -9,7 +9,7 @@ namespace Manage.Audio
         public List<AudioClip> AudioClips=new List<AudioClip>();
         public bool PlayOnAwake=false;
 
-        private AudioSource audioSource;
+        protected AudioSource audioSource;
 
         protected static System.Random random = new System.Random();
 

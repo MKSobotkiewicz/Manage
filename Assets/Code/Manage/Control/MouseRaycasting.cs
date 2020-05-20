@@ -137,28 +137,19 @@ namespace Manage.Control
                 }
                 UnitSelectionParticles.Clear();
                 SelectedUnits.Clear();
-                RaycastHit hit;
                 UnityEngine.Debug.Log("Unselect");
+
                 var minX = Mathf.Min((int)corners[0].x, (int)corners[1].x);
                 var maxX = Mathf.Max((int)corners[0].x, (int)corners[1].x);
                 var minY = Mathf.Min((int)corners[0].y, (int)corners[1].y);
                 var maxY = Mathf.Max((int)corners[0].y, (int)corners[1].y);
-                for (int i = minX; i <= maxX; i += 5)
+                foreach (var unit in AllUnitsList.Units)
                 {
-                    for (int j = minY; j <= maxY; j += 3)
+                    var position=UnityEngine.Camera.main.WorldToScreenPoint(unit.transform.position);
+                    if (position.x> minX&& position.x< maxX&& position.y > minY && position.y < maxY&&
+                        Equals(unit.Character.Organization, Player.Organization))
                     {
-                        var ray = UnityEngine.Camera.main.ScreenPointToRay(new Vector3(i, j, 0));
-                        if (Physics.Raycast(ray, out hit, 200))
-                        {
-                            var unit = hit.transform.gameObject.GetComponentInParent<Unit>();
-                            if (unit != null)
-                            {
-                                if (Equals(unit.Character.Organization, Player.Organization))
-                                {
-                                    SelectedUnits.Add(unit);
-                                }
-                            }
-                        }
+                        SelectedUnits.Add(unit);
                     }
                 }
                 foreach (var unit in SelectedUnits)
